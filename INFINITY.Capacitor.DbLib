@@ -1,0 +1,77 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=MICROSOFT.JET.OLEDB.4.0;Data Source=D:\yandex.disk\Projects\bitbucket.org\infinity.library\INFINITY.Capacitor\INFINITY.Capacitor.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel
+LibraryDatabasePath=INFINITY.Capacitor\INFINITY.Capacitor.xls
+DatabasePathRelative=1
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=0
+SchemaName=
+LastFocusedTable=Tantal#SMD$
+[Table1]
+SchemaName=
+TableName=Ceramic#SMD$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table2]
+SchemaName=
+TableName=Tantal#SMD$
+Enabled=True
+UserWhere=0
+UserWhereText=
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Library Ref0=126|Footprint Ref0=126|Library Path0=234|Footprint Path0=234|Description0=242|Part Number Factory0=127|Resume0=242|Comment0=242|Category0=69|Destination0=83|Type0=46|Value0=52|Precision0=69|Temperature range0=120|Model0=107|Resistance0=77|Inductance0=80|Impedance0=79|Capacitance0=85|Unity0=50|Frequency0=76|Input Voltage Range 0=133|Input Current Range 0=132|Output Current Range 0=142|Output Voltage Range 0=143|Power Dissipation0=116|Gender0=61|Factory0=60|Package0=65|Dielectric material0=114|Series0=53|Pins count0=77|Row count0=79|Pitch0=48|Replacement0=89|Commentary0=87|Datasheet link0=97
+[FieldMap1]
+Options=FieldName=Ceramic#SMD$.Part Number Factory|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=Ceramic#SMD$.Library Ref|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=Ceramic#SMD$.Footprint Ref|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=Ceramic#SMD$.Library Path|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=Ceramic#SMD$.Footprint Path|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=Ceramic#SMD$.Description|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=Ceramic#SMD$.Precision|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Precision|FieldType=1|ParameterName=Precision|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=Ceramic#SMD$.Capacitance|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=Ceramic#SMD$.Package|TableNameOnly=Ceramic#SMD$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=Tantal#SMD$.Library Ref|TableNameOnly=Tantal#SMD$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=Tantal#SMD$.Footprint Ref|TableNameOnly=Tantal#SMD$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=Tantal#SMD$.Library Path|TableNameOnly=Tantal#SMD$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=Tantal#SMD$.Footprint Path|TableNameOnly=Tantal#SMD$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=Tantal#SMD$.Description|TableNameOnly=Tantal#SMD$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=Tantal#SMD$.Part Number Factory|TableNameOnly=Tantal#SMD$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap16]
+Options=FieldName=Tantal#SMD$.Resistance|TableNameOnly=Tantal#SMD$|FieldNameOnly=Resistance|FieldType=1|ParameterName=Resistance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap17]
+Options=FieldName=Tantal#SMD$.Capacitance|TableNameOnly=Tantal#SMD$|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap18]
+Options=FieldName=Tantal#SMD$.Input Voltage Range |TableNameOnly=Tantal#SMD$|FieldNameOnly=Input Voltage Range |FieldType=1|ParameterName=Input Voltage Range |VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap19]
+Options=FieldName=Tantal#SMD$.Factory|TableNameOnly=Tantal#SMD$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap20]
+Options=FieldName=Tantal#SMD$.Package|TableNameOnly=Tantal#SMD$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0

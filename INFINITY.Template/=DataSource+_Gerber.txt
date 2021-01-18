@@ -1,0 +1,4 @@
+=NameOfProject+=NumberOfBoardVersion
+=ProjectName+_PickPlaceRobot
+=DataSource+_Gerber+CurrentDate+CurrentTime
+=DataSource+_Gerber+'_Rev.'+CurrentDate+_+CurrentTime

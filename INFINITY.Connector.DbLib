@@ -1,0 +1,110 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\yandex.disk\Projects\bitbucket.org\INFINITY.Library\INFINITY.Connector\INFINITY.Connector.xlsx;Extended Properties="Excel 12.0 Xml;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel 2007
+LibraryDatabasePath=INFINITY.Connector\INFINITY.Connector.xlsx
+DatabasePathRelative=1
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=0
+SchemaName=
+LastFocusedTable=Jack$
+[Table1]
+SchemaName=
+TableName=Jack$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table2]
+SchemaName=
+TableName=Pin Male$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table3]
+SchemaName=
+TableName=Socket Female$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[FieldMap1]
+Options=FieldName=Jack$.Part Number Factory|TableNameOnly=Jack$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=Jack$.Library Ref|TableNameOnly=Jack$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=Jack$.Footprint Ref|TableNameOnly=Jack$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=Jack$.Library Path|TableNameOnly=Jack$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=Jack$.Footprint Path|TableNameOnly=Jack$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=Jack$.Description|TableNameOnly=Jack$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=Jack$.Category|TableNameOnly=Jack$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=Jack$.Type|TableNameOnly=Jack$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=Jack$.Destination|TableNameOnly=Jack$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=Jack$.Factory|TableNameOnly=Jack$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=Jack$.Model|TableNameOnly=Jack$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=Jack$.Mounting Style|TableNameOnly=Jack$|FieldNameOnly=Mounting Style|FieldType=1|ParameterName=Mounting Style|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=Pin Male$.Part Number Factory|TableNameOnly=Pin Male$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=Pin Male$.Library Ref|TableNameOnly=Pin Male$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=Pin Male$.Footprint Ref|TableNameOnly=Pin Male$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap16]
+Options=FieldName=Pin Male$.Library Path|TableNameOnly=Pin Male$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap17]
+Options=FieldName=Pin Male$.Footprint Path|TableNameOnly=Pin Male$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap18]
+Options=FieldName=Pin Male$.Description|TableNameOnly=Pin Male$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap19]
+Options=FieldName=Pin Male$.Category|TableNameOnly=Pin Male$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap20]
+Options=FieldName=Pin Male$.Type|TableNameOnly=Pin Male$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap21]
+Options=FieldName=Pin Male$.Factory|TableNameOnly=Pin Male$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap22]
+Options=FieldName=Pin Male$.Model|TableNameOnly=Pin Male$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap23]
+Options=FieldName=Pin Male$.Package|TableNameOnly=Pin Male$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap24]
+Options=FieldName=Pin Male$.Series|TableNameOnly=Pin Male$|FieldNameOnly=Series|FieldType=1|ParameterName=Series|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap25]
+Options=FieldName=Socket Female$.Part Number Factory|TableNameOnly=Socket Female$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap26]
+Options=FieldName=Socket Female$.Library Ref|TableNameOnly=Socket Female$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap27]
+Options=FieldName=Socket Female$.Footprint Ref|TableNameOnly=Socket Female$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap28]
+Options=FieldName=Socket Female$.Library Path|TableNameOnly=Socket Female$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap29]
+Options=FieldName=Socket Female$.Footprint Path|TableNameOnly=Socket Female$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap30]
+Options=FieldName=Socket Female$.Description|TableNameOnly=Socket Female$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap31]
+Options=FieldName=Socket Female$.Category|TableNameOnly=Socket Female$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap32]
+Options=FieldName=Socket Female$.Destination|TableNameOnly=Socket Female$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap33]
+Options=FieldName=Socket Female$.Factory|TableNameOnly=Socket Female$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap34]
+Options=FieldName=Socket Female$.Model|TableNameOnly=Socket Female$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap35]
+Options=FieldName=Socket Female$.Mounting Style|TableNameOnly=Socket Female$|FieldNameOnly=Mounting Style|FieldType=1|ParameterName=Mounting Style|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0

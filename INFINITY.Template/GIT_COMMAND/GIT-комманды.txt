@@ -1,0 +1,56 @@
+git log --pretty=format:"%h %an %s %cd" --graph
+git log --pretty=format:"%h %ad | %d%s [%an]" --graph --date=short	https://githowto.com/ru/history
+git log --pretty=format:"%h    %ad    %an    %d%s" --graph --date=short
+git log --pretty=format:"%h    %ad    %ae    %d%s" --date=short
+
+git tag -a DOKLTD.Infinity.Receiver.EnergyModule.v1.b151117 -m " текущее имя проекта"
+git push origin master --tags
+
+$ git log --pretty=oneline --all показывает все ветки и все коммиты, независимо от того, на каком коммите в прошлом я сейчас нахожусь 
+git config --global core.quotepath off	- это включает правильный вывод русских буков в консоли Гита https://github.com/msysgit/msysgit/wiki/Git-for-Windows-Unicode-Support
+git ls-tree --name-only -r <commit-ish> показать список файлов в указанном хеше коммита http://qaru.site/questions/456/how-to-list-all-the-files-in-a-commit
+$ git log --graph --oneline --decorate --all точно показывает график с ветками в консоле  https://git-scm.com/book/ru/v2/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-Git-%D0%9F%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%83%D1%82%D0%BE%D0%B5-%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5 
+$ git log --pretty=oneline --abbrev-commit 	https://git-scm.com/book/ru/v1/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-Git-%D0%92%D1%8B%D0%B1%D0%BE%D1%80-%D1%80%D0%B5%D0%B2%D0%B8%D0%B7%D0%B8%D0%B8
+ 
+
+ПРОБЛЕМА1 - Не полуается запушить, тк на сервере есть новый коммит
+d.konev@sbolshanin-dok MINGW64 /p/ELECTRONICA.Library (master)
+$ git push
+To https://bitbucket.org/KonevDN/electronica.library.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://KonevDN@bitbucket.org/KonevDN/electronica.library.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+РЕШЕНИЕ 1  Осторожно: данное решение затрет данные на сервере
+https://toster.ru/q/201863
+
+d.konev@sbolshanin-dok MINGW64 /p/ELECTRONICA.Library (master)
+$ git push -f origin master
+Counting objects: 476, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (470/470), done.
+Writing objects:   4% (21/476), 1.52 MiB | 77.00 KiB/s
+
+ПРОБЛЕМА1 - Не полуается запушить, тк на сервере есть новый коммит
+d.konev@sbolshanin-dok MINGW64 /p/RADIOMASTER.Library (master)
+$ git push --set-upstream origin master
+To https://bitbucket.org/KonevDN/radiomaster.library.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://KonevDN@bitbucket.org/KonevDN/radiomaster.library.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+РЕШЕНИЕ 2: Хорошее решение, оно берет коммит с сервера и копирует его в локальное хранилище
+https://habrahabr.ru/post/136847/
+
+d.konev@sbolshanin-dok MINGW64 /p/RADIOMASTER.Library (master)
+$ git rebase origin/master
+First, rewinding head to replay your work on top of it...
+Applying:  Перенос файлов на Бибтбакет
+
+

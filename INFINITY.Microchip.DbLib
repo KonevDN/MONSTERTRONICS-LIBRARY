@@ -1,0 +1,269 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=MICROSOFT.ACE.OLEDB.12.0;Data Source=Z:\Project\Electronics\infinity.library\INFINITY.Microchip\INFINITY.Microchip.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel
+LibraryDatabasePath=INFINITY.Microchip\INFINITY.Microchip.xls
+DatabasePathRelative=1
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=0
+SchemaName=
+LastFocusedTable=Microcontroller$
+[Table1]
+SchemaName=
+TableName=BiasCurrentController$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table2]
+SchemaName=
+TableName=DC-DC-Converter$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table3]
+SchemaName=
+TableName=LinearVoltageRegulator(LDO)$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table4]
+SchemaName=
+TableName=Microcontroller$
+Enabled=True
+UserWhere=0
+UserWhereText=
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Library Ref0=305|Footprint Ref0=104|Library Path0=238|Footprint Path0=238|Part Number Factory0=127|Category0=69|Destination0=103|Factory0=68|Package0=65|Model0=106|Maximum Clock Frequency0=159|Type0=87|Resume0=305|Comment0=305|Precision0=69|Mounting Style0=102|Temperature range0=120|Value0=52|Resistance0=77|Inductance0=80|Impedance0=79|Capacitance0=85|Unity0=50|Frequency0=76|Resolution0=79|Input Voltage Range 0=133|Output Voltage Range 0=143|Input Current Range 0=132|Output Current Range 0=142|Max Voltage Dropout0=134|Power Dissipation0=116|Gender0=61|Dielectric material0=114|Series0=63|Pins count0=77|Row count0=79|Pitch0=48|Datasheet link0=665|Commentary0=87|Replacement0=89
+[Table5]
+SchemaName=
+TableName=PhaseFrequencyDetector(PFD)$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table6]
+SchemaName=
+TableName=TemperatureSensor$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table7]
+SchemaName=
+TableName=Transceiver$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table8]
+SchemaName=
+TableName=VoltageControlledOscillator$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[FieldMap1]
+Options=FieldName=BiasCurrentController$.Part Number Factory|TableNameOnly=BiasCurrentController$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=BiasCurrentController$.Library Ref|TableNameOnly=BiasCurrentController$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=BiasCurrentController$.Footprint Ref|TableNameOnly=BiasCurrentController$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=BiasCurrentController$.Library Path|TableNameOnly=BiasCurrentController$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=BiasCurrentController$.Footprint Path|TableNameOnly=BiasCurrentController$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=BiasCurrentController$.Category|TableNameOnly=BiasCurrentController$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=1|UpdateMode=0
+[FieldMap7]
+Options=FieldName=BiasCurrentController$.Type|TableNameOnly=BiasCurrentController$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=BiasCurrentController$.Factory|TableNameOnly=BiasCurrentController$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=BiasCurrentController$.Package|TableNameOnly=BiasCurrentController$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=DC-DC-Converter$.Part Number Factory|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=DC-DC-Converter$.Library Ref|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=DC-DC-Converter$.Footprint Ref|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=DC-DC-Converter$.Library Path|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=DC-DC-Converter$.Footprint Path|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=DC-DC-Converter$.Category|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=2|RemoveMode=1|UpdateMode=2
+[FieldMap16]
+Options=FieldName=DC-DC-Converter$.Type|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap17]
+Options=FieldName=DC-DC-Converter$.Destination|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap18]
+Options=FieldName=DC-DC-Converter$.Factory|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap19]
+Options=FieldName=DC-DC-Converter$.Model|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap20]
+Options=FieldName=DC-DC-Converter$.Package|TableNameOnly=DC-DC-Converter$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap21]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Library Ref|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap22]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Footprint Ref|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap23]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Library Path|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap24]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Footprint Path|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap25]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Part Number Factory|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap26]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Category|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap27]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Destination|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap28]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Factory|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap29]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Package|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=2|RemoveMode=0|UpdateMode=0
+[FieldMap30]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Model|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap31]
+Options=FieldName=LinearVoltageRegulator(LDO)$.Type|TableNameOnly=LinearVoltageRegulator(LDO)$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap32]
+Options=FieldName=Microcontroller$.Library Ref|TableNameOnly=Microcontroller$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap33]
+Options=FieldName=Microcontroller$.Footprint Ref|TableNameOnly=Microcontroller$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap34]
+Options=FieldName=Microcontroller$.Library Path|TableNameOnly=Microcontroller$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap35]
+Options=FieldName=Microcontroller$.Footprint Path|TableNameOnly=Microcontroller$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap36]
+Options=FieldName=Microcontroller$.Part Number Factory|TableNameOnly=Microcontroller$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap37]
+Options=FieldName=Microcontroller$.Category|TableNameOnly=Microcontroller$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap38]
+Options=FieldName=Microcontroller$.Destination|TableNameOnly=Microcontroller$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap39]
+Options=FieldName=Microcontroller$.Factory|TableNameOnly=Microcontroller$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap40]
+Options=FieldName=Microcontroller$.Package|TableNameOnly=Microcontroller$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap41]
+Options=FieldName=Microcontroller$.Model|TableNameOnly=Microcontroller$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap42]
+Options=FieldName=Microcontroller$.Maximum Clock Frequency|TableNameOnly=Microcontroller$|FieldNameOnly=Maximum Clock Frequency|FieldType=1|ParameterName=Maximum Clock Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap43]
+Options=FieldName=Microcontroller$.Type|TableNameOnly=Microcontroller$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap44]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Part Number Factory|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap45]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Library Ref|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap46]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Footprint Ref|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap47]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Library Path|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap48]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Footprint Path|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap49]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Category|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap50]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Destination|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap51]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Factory|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap52]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Package|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap53]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Model|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap54]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Frequency|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Frequency|FieldType=1|ParameterName=Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap55]
+Options=FieldName=PhaseFrequencyDetector(PFD)$.Type|TableNameOnly=PhaseFrequencyDetector(PFD)$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap56]
+Options=FieldName=TemperatureSensor$.Library Ref|TableNameOnly=TemperatureSensor$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap57]
+Options=FieldName=TemperatureSensor$.Footprint Ref|TableNameOnly=TemperatureSensor$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap58]
+Options=FieldName=TemperatureSensor$.Library Path|TableNameOnly=TemperatureSensor$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap59]
+Options=FieldName=TemperatureSensor$.Footprint Path|TableNameOnly=TemperatureSensor$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap60]
+Options=FieldName=TemperatureSensor$.Part Number Factory|TableNameOnly=TemperatureSensor$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap61]
+Options=FieldName=TemperatureSensor$.Category|TableNameOnly=TemperatureSensor$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap62]
+Options=FieldName=TemperatureSensor$.Destination|TableNameOnly=TemperatureSensor$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap63]
+Options=FieldName=TemperatureSensor$.Factory|TableNameOnly=TemperatureSensor$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap64]
+Options=FieldName=TemperatureSensor$.Package|TableNameOnly=TemperatureSensor$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap65]
+Options=FieldName=TemperatureSensor$.Model|TableNameOnly=TemperatureSensor$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap66]
+Options=FieldName=TemperatureSensor$.Temperature range|TableNameOnly=TemperatureSensor$|FieldNameOnly=Temperature range|FieldType=1|ParameterName=Temperature range|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap67]
+Options=FieldName=TemperatureSensor$.Frequency|TableNameOnly=TemperatureSensor$|FieldNameOnly=Frequency|FieldType=1|ParameterName=Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap68]
+Options=FieldName=TemperatureSensor$.Type|TableNameOnly=TemperatureSensor$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap69]
+Options=FieldName=TemperatureSensor$.Precision|TableNameOnly=TemperatureSensor$|FieldNameOnly=Precision|FieldType=1|ParameterName=Precision|VisibleOnAdd=True|AddMode=2|RemoveMode=0|UpdateMode=0
+[FieldMap70]
+Options=FieldName=TemperatureSensor$.Resolution|TableNameOnly=TemperatureSensor$|FieldNameOnly=Resolution|FieldType=1|ParameterName=Resolution|VisibleOnAdd=True|AddMode=2|RemoveMode=0|UpdateMode=0
+[FieldMap71]
+Options=FieldName=Transceiver$.Part Number Factory|TableNameOnly=Transceiver$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap72]
+Options=FieldName=Transceiver$.Library Ref|TableNameOnly=Transceiver$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap73]
+Options=FieldName=Transceiver$.Footprint Ref|TableNameOnly=Transceiver$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap74]
+Options=FieldName=Transceiver$.Library Path|TableNameOnly=Transceiver$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap75]
+Options=FieldName=Transceiver$.Footprint Path|TableNameOnly=Transceiver$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap76]
+Options=FieldName=Transceiver$.Category|TableNameOnly=Transceiver$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap77]
+Options=FieldName=Transceiver$.Type|TableNameOnly=Transceiver$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap78]
+Options=FieldName=Transceiver$.Destination|TableNameOnly=Transceiver$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap79]
+Options=FieldName=Transceiver$.Factory|TableNameOnly=Transceiver$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap80]
+Options=FieldName=Transceiver$.Package|TableNameOnly=Transceiver$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap81]
+Options=FieldName=Transceiver$.Mounting Style|TableNameOnly=Transceiver$|FieldNameOnly=Mounting Style|FieldType=1|ParameterName=Mounting Style|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap82]
+Options=FieldName=Transceiver$.Model|TableNameOnly=Transceiver$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap83]
+Options=FieldName=Transceiver$.Frequency|TableNameOnly=Transceiver$|FieldNameOnly=Frequency|FieldType=1|ParameterName=Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap84]
+Options=FieldName=Transceiver$.Description|TableNameOnly=Transceiver$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap85]
+Options=FieldName=VoltageControlledOscillator$.Library Ref|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap86]
+Options=FieldName=VoltageControlledOscillator$.Footprint Ref|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap87]
+Options=FieldName=VoltageControlledOscillator$.Library Path|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap88]
+Options=FieldName=VoltageControlledOscillator$.Footprint Path|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap89]
+Options=FieldName=VoltageControlledOscillator$.Description|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap90]
+Options=FieldName=VoltageControlledOscillator$.Part Number Factory|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap91]
+Options=FieldName=VoltageControlledOscillator$.Type|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap92]
+Options=FieldName=VoltageControlledOscillator$.Destination|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap93]
+Options=FieldName=VoltageControlledOscillator$.Factory|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap94]
+Options=FieldName=VoltageControlledOscillator$.Package|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap95]
+Options=FieldName=VoltageControlledOscillator$.Precision|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Precision|FieldType=1|ParameterName=Precision|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap96]
+Options=FieldName=VoltageControlledOscillator$.Model|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap97]
+Options=FieldName=VoltageControlledOscillator$.Frequency|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Frequency|FieldType=1|ParameterName=Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap98]
+Options=FieldName=VoltageControlledOscillator$.Category|TableNameOnly=VoltageControlledOscillator$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0

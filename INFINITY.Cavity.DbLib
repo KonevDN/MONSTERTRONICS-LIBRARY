@@ -1,0 +1,50 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=MICROSOFT.JET.OLEDB.4.0;Data Source=K:\Projects\INFINITY.Library\INFINITY.Cavity\INFINITY.Cavity.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel
+LibraryDatabasePath=INFINITY.Cavity\INFINITY.Cavity.xls
+DatabasePathRelative=1
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=0
+SchemaName=
+LastFocusedTable=Rectangle$
+[Table1]
+SchemaName=
+TableName=Rectangle$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[FieldMap1]
+Options=FieldName=Rectangle$.Part Number Factory|TableNameOnly=Rectangle$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=Rectangle$.Library Ref|TableNameOnly=Rectangle$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=Rectangle$.Footprint Ref|TableNameOnly=Rectangle$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=Rectangle$.Library Path|TableNameOnly=Rectangle$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=Rectangle$.Footprint Path|TableNameOnly=Rectangle$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=Rectangle$.Category|TableNameOnly=Rectangle$|FieldNameOnly=Category|FieldType=1|ParameterName=Category|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=Rectangle$.Type|TableNameOnly=Rectangle$|FieldNameOnly=Type|FieldType=1|ParameterName=Type|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=Rectangle$.Destination|TableNameOnly=Rectangle$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=Rectangle$.Factory|TableNameOnly=Rectangle$|FieldNameOnly=Factory|FieldType=1|ParameterName=Factory|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=Rectangle$.Package|TableNameOnly=Rectangle$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=Rectangle$.Model|TableNameOnly=Rectangle$|FieldNameOnly=Model|FieldType=1|ParameterName=Model|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0

@@ -1,0 +1,11 @@
+﻿(ObjectKind = 'Text') And (StringType = 'Designator') And (Layer = 'TopOverlay')
+(ObjectKind = 'Text') And (StringType = 'Designator') And (Layer='Top Overlay') 
+And (Hide = 'False') And InAnyComponent And OnTopLayer
+(ObjectKind = 'Text') And (StringType = 'Designator') And (Layer = 'BottomOverlay')
+(ObjectKind = 'Component') And (Layer = 'Bottom Layer')
+((ObjectKind = 'Text') And (StringType = 'Designator') And (Layer = 'BottomOverlay')) And (InAnyComponent And OnBottom)
+((ObjectKind = 'Text') And (StringType = 'Designator') And (Layer = 'TopOverlay')) And (InAnyComponent And OnTop)
+((ObjectKind = 'Text') And (StringType = 'Designator') And (Layer = 'TopOverlay')) And (InAnyComponent And OnBottom)
+InComponent('X1') and (ObjectKind = 'Via')
+(ObjectKind = 'Poly') And (Name = 'GND_L03_P010')
+(ObjectKind = 'Poly') And (Name = 'GND_L03_P010')

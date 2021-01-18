@@ -1,0 +1,85 @@
+[OutputDatabaseLinkFile]
+Version=1.1
+[DatabaseLinks]
+ConnectionString=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\yandex.disk\Projects\bitbucket.org\INFINITY.Library\INFINITY.Diod\INFINITY.Diod.xlsx;Extended Properties="Excel 12.0 Xml;HDR=Yes;IMEX=1"
+AddMode=3
+RemoveMode=1
+UpdateMode=2
+ViewMode=0
+LeftQuote=[
+RightQuote=]
+QuoteTableNames=1
+UseTableSchemaName=0
+DefaultColumnType=VARCHAR(255)
+LibraryDatabaseType=Microsoft Excel 2007
+LibraryDatabasePath=INFINITY.Diod\INFINITY.Diod.xlsx
+DatabasePathRelative=1
+TopPanelCollapsed=0
+LibrarySearchPath=
+OrcadMultiValueDelimiter=,
+SearchSubDirectories=1
+SchemaName=
+LastFocusedTable=Rectifiers$
+[Table1]
+SchemaName=
+TableName=Light(LED)$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[Table2]
+SchemaName=
+TableName=Rectifiers$
+Enabled=True
+UserWhere=0
+UserWhereText=
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Part Number Factory0=127|Resume0=390|Comment0=390|Description0=390|Library Ref0=252|Footprint Ref0=121|Library Path0=186|Footprint Path0=186|Category0=69|Destination0=83|Type0=55|Factory0=121|Package0=93|Precision0=69|Mounting Style0=102|Model0=64|Temperature range0=120|Value0=52|Resistance0=77|Inductance0=80|Impedance0=79|Capacitance0=85|Unity0=50|Frequency0=76|Color0=51|Viewing Angle0=98|Input Voltage Range 0=133|Output Voltage Range 0=143|Input Current Range 0=132|Output Current Range 0=142|Max Voltage Dropout0=134|Power Dissipation0=116|Millicandela Rating0=122|Gender0=61|Dielectric material0=114|Series0=53|Pins count0=77|Row count0=79|Pitch0=48|Datasheet link0=97|Commentary0=87|Replacement0=89
+[Table3]
+SchemaName=
+TableName=Schottky$
+Enabled=True
+UserWhere=0
+UserWhereText=
+[FieldMap1]
+Options=FieldName=Light(LED)$.Part Number Factory|TableNameOnly=Light(LED)$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap2]
+Options=FieldName=Light(LED)$.Library Ref|TableNameOnly=Light(LED)$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap3]
+Options=FieldName=Light(LED)$.Footprint Ref|TableNameOnly=Light(LED)$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap4]
+Options=FieldName=Light(LED)$.Library Path|TableNameOnly=Light(LED)$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap5]
+Options=FieldName=Light(LED)$.Footprint Path|TableNameOnly=Light(LED)$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap6]
+Options=FieldName=Light(LED)$.Description|TableNameOnly=Light(LED)$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap7]
+Options=FieldName=Light(LED)$.Destination|TableNameOnly=Light(LED)$|FieldNameOnly=Destination|FieldType=1|ParameterName=Destination|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap8]
+Options=FieldName=Light(LED)$.Package|TableNameOnly=Light(LED)$|FieldNameOnly=Package|FieldType=1|ParameterName=Package|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap9]
+Options=FieldName=Light(LED)$.Color|TableNameOnly=Light(LED)$|FieldNameOnly=Color|FieldType=1|ParameterName=Color|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap10]
+Options=FieldName=Light(LED)$.Viewing Angle|TableNameOnly=Light(LED)$|FieldNameOnly=Viewing Angle|FieldType=1|ParameterName=Viewing Angle|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=Rectifiers$.Part Number Factory|TableNameOnly=Rectifiers$|FieldNameOnly=Part Number Factory|FieldType=0|ParameterName=Part Number Factory|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=Rectifiers$.Description|TableNameOnly=Rectifiers$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=Rectifiers$.Library Ref|TableNameOnly=Rectifiers$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=Rectifiers$.Footprint Ref|TableNameOnly=Rectifiers$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=Rectifiers$.Library Path|TableNameOnly=Rectifiers$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap16]
+Options=FieldName=Rectifiers$.Footprint Path|TableNameOnly=Rectifiers$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap17]
+Options=FieldName=Schottky$.Library Ref|TableNameOnly=Schottky$|FieldNameOnly=Library Ref|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap18]
+Options=FieldName=Schottky$.Footprint Ref|TableNameOnly=Schottky$|FieldNameOnly=Footprint Ref|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap19]
+Options=FieldName=Schottky$.Library Path|TableNameOnly=Schottky$|FieldNameOnly=Library Path|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap20]
+Options=FieldName=Schottky$.Footprint Path|TableNameOnly=Schottky$|FieldNameOnly=Footprint Path|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap21]
+Options=FieldName=Schottky$.Description|TableNameOnly=Schottky$|FieldNameOnly=Description|FieldType=1|ParameterName=[Description]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
