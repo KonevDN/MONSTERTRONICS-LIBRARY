@@ -1,0 +1,3 @@
+Руководство пользователя расширения GOSTBOM 2.0: https://altium-ru.com/sites/default/files/attachments/GOSTBOM_2_0_Руководство_пользователя.pdf.
+Тестовый проект, демонстрирующий возможности модуля GOSTBOM: https://www.altium-ru.com/sites/default/files/attachments/Alternate_PRJ.zip.
+Демонстрационный проект, который содержит механические детали (Винты, Гайки, Шайбы, Прокладки, Радиатор): https://www.altium-ru.com/sites/default/files/attachments/Item_PRT_ASM_WEB.zip
