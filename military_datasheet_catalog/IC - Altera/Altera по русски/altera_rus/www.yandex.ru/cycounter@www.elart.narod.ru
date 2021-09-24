@@ -1,0 +1,1 @@
+<HTML><HEAD><META HTTP-EQUIV="Refresh" CONTENT="0; URL=../yandex.ru/cycounter@www.elart.narod.ru"><TITLE>302 File moved</TITLE></HEAD></HTML>

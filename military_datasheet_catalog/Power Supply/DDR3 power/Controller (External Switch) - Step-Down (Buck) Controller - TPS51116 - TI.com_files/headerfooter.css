@@ -1,0 +1,152 @@
+﻿body { font:75% Arial, sans-serif; margin:0; padding:0; color:#525252;}
+#megaheader { background-color:#fff; margin:0; padding:0; position:relative; z-index:10001;}
+#megaheader .container h1 { font-size:3em; line-height:1; margin:0 0 .5em 0; }
+#megaheader .container h2 { font-size:2em; margin:0 0 .75em 0; }
+#megaheader .container h3 { font-size:1.5em; line-height:1; margin:0 0 1em 0; }
+#megaheader .container h4 { font-size:1.2em; line-height:1.25; margin:0 0 1.25em 0; }
+#megaheader .container h5 { font-size:1em; margin:0 0 1.5em 0; }
+#megaheader .container h6 { font-size:1em; }
+#megaheader .container p { font-size:1em; line-height:1.5em; margin-bottom:1.5em; }
+#megaheader .container a, #megaheader .container a:active, #megaheader .container a:visited { color:#333; text-decoration:none; }
+#megaheader .container a:hover { color:#CC0000; text-decoration:underline; }
+#megaheader .container ul { margin:0; padding:0; font-size:inherit; line-height:inherit; }
+#megaheader .container li { margin:0 0 .8em 0; padding:0 0; list-style-type:none; background-image:none; line-height:inherit; }
+#megaheader .container a img { border:none; outline:none; }
+#megaheader .container sup { vertical-align:top; position:relative; top:inherit; bottom:inherit; font-size:90%; text-decoration:none; }
+#megaheader .container sup { bottom:.5em; }
+#megaheader div.clear { clear:left; }
+#megaheader td { font-size:inherit; font-family:inherit; }
+/* LAYOUT */
+#megaheader	.container { width:1000px; margin:0; padding:0; background-color:none; border:0; /*position:relative;*/}
+#megaheader { background-color:#fff; }
+#megaheader	#tihdrtop { position:relative; width:1000px; min-height:46px; *height:46px; }
+#megaheader	#tilogo { margin:10px 0 0 19px; }
+#megaheader	#menu { padding:0; margin:0; background:#111; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000'); background:-webkit-gradient(linear, left top, left bottom, from(#666666), to(#000000)); background:-moz-linear-gradient(top,  #666666,  #000000); width:100%; border:0;}
+#footnote { margin:1.5em 0 0 0; padding:20px 0 30px 0; color:#555; border-top:1px solid #999; text-decoration:none; margin:0; font-size:12px; }
+#footnote .container { border:0; }
+#footnote #footerseal {display:none;}
+#footnote div.social { margin:0 30px 15px 0; }
+#footnote div.social h5 { display:inline; margin:0 1em 0 0; font-size:1em; font-weight:normal; }
+#footnote div.social img { vertical-align:middle; width:16px; height:16px; border:0; }
+#footnote a img { border:none; }
+#footerbadge{display: none}
+#megaheader a.flyout-close { position:absolute; top:10px; right:10px; width:18px; height:18px; padding:0; margin:0; background:url(../../images/homepage/fly_closer.png) no-repeat 0 0; text-indent:-9999px; }
+#megaheader a.flyout-close:hover { background:url(../../images/homepage/fly_closer.png) no-repeat 0 -18px; }
+/* TOP NAV LINKS */
+#megaheader #hdrtoplinks { /*position:absolute; bottom:3px; right:8px; margin:0; padding:0; font-size:12px; color:#9b9b9b; border:0 solid #cc0000; white-space:inherit; font:inherit;*/ float:right; margin-top:28px; *margin-top:-20px;}
+#megaheader #hdrtoplinks a, #footnote a { color:#555; text-decoration:none; margin:0 5px; }
+#megaheader #hdrtoplinks li{ display:inline; top:0; padding:0; zoom:none; margin:0 0 3px 0; }
+#megaheader #hdrtoplinks a:hover, #footnote a:hover { color:#CC0000; text-decoration:underline; }
+#megaheader div.langbox { border:1px solid #333; background-color:#fff; color:#333; padding:5px; position:absolute; left:-65px; top:15px; text-align:left; width:180px; -moz-box-shadow:4px 4px 2px #888; -webkit-box-shadow:4px 4px 2px #888; box-shadow:4px 4px 2px #ccc; display:none; /*z-index: 10007;*/}
+#megaheader div.langbox li { margin:0 0 4px 0; padding:4px 0; float:none; list-style-type:none; display:block; }
+#megaheader div.langbox li a, #megaheader .langbox li a:visited { color:#cc0000; font-weight:normal; text-decoration:none; font-size:1em; margin:0; padding:4px 0; display:block; }
+#megaheader div.langbox li a:hover { color:#cc0000; text-decoration:underline; }
+#megaheader #langarrow { padding-right:12px; background:url(../../images/homepage/lang-arrow.png) no-repeat top right; }
+#megaheader #language { padding-right:8px; position:relative;}
+/* NAVIGATION */
+#megaheader ul#nav { padding:0; border-top:0 solid #666; border-bottom:0 solid #666; border:0 solid #000; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; list-style-type:none; margin:0 0 0 20px; max-width:none; }
+#megaheader ul#nav li.mega { padding:0 ; margin:0 18px 0 0; display:block; float:left; max-width:none; }
+#megaheader ul#nav li.mega a.nav { display:block; text-decoration:none; padding:0 10px; margin:0; font-size:14px; font-weight:normal; line-height:34px; color:#fff; outline:0; }
+#megaheader ul#nav li.mega:hover a.nav, #megaheader ul#nav li.active a.nav { color:#000; outline:0; }
+#megaheader li.mega:hover, #megaheader li.active { background-color:#fff; color:#333; outline:0; }
+#megaheader div.sub { border:1px solid #cc0000; background-color:#fff; color:#333; padding:20px 10px 10px 10px; position:absolute; left:19px; /*top:34px;*/ text-align:left; width:960px; -moz-box-shadow:4px 4px 2px #888; -webkit-box-shadow:4px 4px 2px #888; box-shadow:7px 7px 7px #ccc; border-top:none; display:none; /*z-index: 10005;*/}
+#megaheader .moreall { position:absolute; bottom:10px; right:10px;}
+#nav_products div.sub { width:930px; }
+#nav_applications div.sub { width:670px; }
+#nav_toolssoftware div.sub { width:930px; }
+#nav_supportcommunity div.sub { width:900px; }
+#nav_samplebuy div.sub { width:885px; _width:906px; }
+#nav_aboutTI div.sub { width:920px; }
+/* SEARCH */
+#megaheader #navsearch {margin:0 0 0 0; padding:0 0 0 0; height:34px; *height:31px;  *width:231px;}
+#megaheader #navsearch form{padding:4px 0 0 0; margin:0;}
+#megaheader	#navsearch p { margin:0; padding:4px 0 0 20px; max-width:inherit;}
+#megaheader	.usbarinputbox { width:170px; height:auto; padding:5px 8px; margin:0; border:0 solid #000000; background-color:#fff; color:#333; font-size:12px; font-weight:bold; vertical-align:middle; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+#megaheader	.usbtn-b { vertical-align:middle; background:url(../../images/homepage/submit-butt.png) no-repeat; cursor:pointer; width:30px; height:26px; padding:0; margin:0 0 0 4px; border:none; position:relative; left:0; }
+
+#megaheader #navsearch form .usbtn-w { vertical-align:middle; background:url(../../images/homepage/submit-butt.png) no-repeat; cursor:pointer; width:30px; height:26px; padding:0; margin:0 0 0 4px; border:none; position:relative; left:0; }
+
+#megaheader	#usautocmain { background-color:#fff; border:1px solid #ccc; display:none; padding:8px; width:400px; position:absolute; left:565px; top:80px; /*z-index:10008;*/ }
+
+#usautocmain1 { background-color: #FFFFFF; border: 1px solid #CCCCCC; display: none; left: 0; padding: 8px; position: absolute; top: 30px; width: 350px; z-index: 100;}
+#usautocmain1 p { border-bottom: 1px solid #F1F1F1; margin: 2px 0; padding: 0; text-align: left;}
+
+*:first-child+html #usautocmain { left:-20px; }
+#usautocmain p { border-bottom:1px solid #f1f1f1; margin:2px 0; padding:0; text-align:left; }
+/* MISC */
+#megaheader	.right-arrow { border-color:transparent black; border-style:solid; border-width:4px 0 4px 4px; height:0; width:0; margin:3px 0 0 4px; float:right; }
+#megaheader	#e2epromo { position:relative; text-align:center; margin:0 auto; padding:10px 0 0 0; width:210px; height:175px; background:url(../../images/homepage/e2eBanner.jpg) no-repeat; }
+#e2epromotxt { text-align:center; margin:0 auto; width:200px; position:absolute; bottom:25px; }
+/* MEGA FLY */
+#megaheader img { border:0; }
+#megaheader img.#cc0000linkicon { padding:2px 0 0 .5em; }
+#megaheader a:hover, #megaheader a.#cc0000link { color:#ee0000 !important; }
+#megaheader #menu #nav li.mega div.sub { color:#000; }
+#megaheader #menu #nav li.mega div.sub h3, .megatabcontent h3 { font-size:1.45em; }
+#megaheader #menu #nav li.mega div.sub h4, .megatabcontent h4 { margin-bottom:.8em; }
+#megaheader .bold { font-weight:bold; }
+#megaheader .black { color:#000; }
+#megaheader .linespace4 { line-height:4em; }
+#megaheader .linespace1 { line-height:1em; }
+#megaheader .linespace2 { line-height:2em; }
+#megaheader .offscreen { text-indent:-9999px; line-height:0; }
+#megaheader .inputfield { position:relative; }
+#megaheader .inputfield label { position:absolute; top:.3em; left:0; /*z-index:1;*/ }
+#megaheader .inputfield label.inlined { padding-left:6px; font-weight:normal; font-size:12px; opacity:0.75; }
+#megaheader .inputfield label.focus { opacity:0.35; }
+#megaheader .inputfield label.has-text { opacity:0.0; }
+#megaheader .inputfield .input-text { border:1px solid #cfcfcf; background:transparent; }
+#megaheader .inputfield .input-text { position:relative; /*z-index:2;*/ }
+#megaheader .ti_products .browseproducts { width:509px; float:left; margin-left:30px; _margin-left:20px; border-right:1px solid #999; }
+#megaheader .ti_products .browseproducts ul { width:49%; float:left; }
+#megaheader .ti_products .browseproducts ul.sublist { width:100%; float:none; }
+#megaheader .ti_products .browseproducts ul.sublist li { background:url(../../images/homepage/ul-dash.gif) no-repeat .8em 1.2em; padding:.7em 0 .3em 1.4em; margin:0; }
+#megaheader .ti_products .browseproducts ul li { margin-left:0; }
+#megaheader .ti_products .browseproducts ul.col { margin-left:34px; }
+#megaheader .ti_products .onlinetools { padding-left:35px; margin-right:39px; padding:0 0 10px 35px; /*width:251px;*/ float:left; }
+#megaheader .ti_products .onlinetools .parameterictool div.select { background:transparent; }
+#megaheader .ti_products .onlinetools .parameterictool div#nav_parameterictool { padding:.3em 0 0 .3em; width:200px; float:left; }
+#megaheader .ti_products .onlinetools .parameterictool div#nav_parameterictool a.btn1 { display:block; width:100%; height:auto; text-align:center; white-space:normal; color:#ffffff; padding:5px 0; }
+#megaheader .onlinetools .parameterictool div#nav_parameterictool a.btn1:hover, #megaheader .onlinetools .parameterictool div#nav_parameterictool a.btn1:visited { color:#fff !important; text-decoration:none; }
+#megaheader .onlinetools .parameterictool .select .icon { width:18px; float:right; overflow:hidden; vertical-align:top; line-height:1em; background:#CC0000; cursor:pointer; }
+#megaheader .ti_applications { padding:0 0 0 30px; }
+#megaheader .ti_applications ul { float:left; width:208px; }
+#megaheader #nav_supportcommunity div.sub { padding:0 0 0 35px !important; }
+#megaheader .ti_tools { padding:0 0 0 10px; overflow:hidden; }
+#megaheader .ti_tools div.section { float:left; padding:0 20px; border-right:0 solid #999; }
+#megaheader .ti_tools div.section ul { margin:0; }
+#megaheader .ti_tools .ti_tools_analog { width:280px; }
+#megaheader .ti_tools .ti_tools_dsp { width:310px; border-left:1px solid #999; }
+#megaheader .ti_tools .ti_tools_dsp h4 { font-size:1.05em; margin-bottom:.25em; }
+#megaheader .ti_tools .ti_tools_mcu { width:200px; }
+#megaheader .ti_tools .ti_tools_mcu h4 { font-size:1.05em; margin-bottom:.25em; }
+#megaheader .ti_tools .ti_tools_mcu ul.mcutoollist { margin:.5em 0 2em 0; }
+#megaheader .ti_supportcommunity { width:900px; float:left; }
+#megaheader .ti_supportcommunity img.header { margin:15px 0; display:block; }
+#megaheader .ti_supportcommunity .listcontainer { float:left; width:380px; }
+#megaheader .sub .ti_supportcommunity { padding:20px 0 20px 5px; }
+#megaheader .ti_supportcommunity .listcontainer h3 a, #megaheader .ti_supportcommunity .listcontainer h3 a:visited { color:#000; font-weight:bold; text-decoration:none; }
+#megaheader .ti_supportcommunity .supportforums { width:180px; float:left; margin-left:0; padding:0 .6em 0 0; color:#000; }
+#megaheader .ti_supportcommunity div.links { overflow:hidden; }
+#megaheader .ti_supportcommunity div.links a { margin-bottom:.75em; font-weight:bold; color:#000; display:block; line-height:1em; }
+#megaheader .ti_supportcommunity div.links a img.#cc0000linkicon { vertical-align:middle; padding:0 0 0 .5em; }
+#megaheader .ti_supportcommunity .otherlinks { float:left; width:225px; border-left:1px solid #999; padding-left:20px; }
+#megaheader .ti_supportcommunity .otherlinks h5 { margin-bottom:.5em; }
+#megaheader .ti_supportcommunity .otherlinks ul { margin-bottom:1.5em; padding-left:0; }
+#megaheader .ti_supportcommunity .otherlinks ul li { line-height:1.25em; }
+#megaheader .ti_supportcommunity .otherlinks ul.corporate { margin-bottom:1.5em; }
+#megaheader .ti_samplebuy div.section { width:254px; margin-left:20px; float:left; }
+#megaheader #nav .ti_samplebuy div.sectionlast { margin-right:20px; }
+#megaheader .ti_samplebuy div.borderright { border-right:1px solid #999; }
+#megaheader .ti_samplebuy ul.samplelinks { margin:0 0 1.5em 0; }
+#megaheader .ti_samplebuy .section .sectiongraphic { margin-bottom:34px; }
+#megaheader .ti_samplebuy a, #megaheader .ti_samplebuy a:visited { color:#000; }
+#megaheader .ti_samplebuy a:hover {color:#CC0000;}
+#megaheader .ti_about .section { width:230px; margin:0 20px; float:left; }
+#megaheader .ti_about .section .sectiongraphic { margin-bottom:0; }
+#megaheader .ti_about .section ul { width:220px; margin-bottom:20px; }
+#megaheader .ti_about .section ul li { margin:0 0 .4em 0; }
+#megaheader .ti_about .section h3 { margin-top:5px; margin-bottom:10px; font-weight:bold; }
+#megaheader  span.alertfont { background:#FF9; color:#ee0000; font-weight:bold; }
+/* Fix for headers in LiveSite pages*/
+.ls-canvas #ls-row-1 .ls-area, .ls-canvas #ls-row-1 .ls-area-body { overflow:visible; }

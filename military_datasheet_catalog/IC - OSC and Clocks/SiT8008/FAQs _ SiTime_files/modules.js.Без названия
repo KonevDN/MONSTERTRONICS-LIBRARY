@@ -1,0 +1,3401 @@
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module awards
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.awards',
+		init: function(){
+      var wrapper = this.$el.find('.awards__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module about
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.about',
+		init: function(){
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module blog-entry
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.blog-entry',
+		init: function(){
+      var wrapper = this.$el.find('.blog-entry__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module blog-list
+ */
+(function($, window, document){
+	var apiUrl = "/api/blog";
+	var pageSize = 1;
+	var _params = {
+		page : 1,
+		start : null,
+		year : null,
+		keyword : null
+	}
+	var _helper = {
+			getDataFromAPI : function (path, callback) {
+				var res = new XMLHttpRequest()
+				res.open("get", path)
+				res.send()
+				res.onload = function() {
+					callback(res.response);
+				}
+			},
+
+			updateUrlParams : function () {
+				var query =  '' + (_params.start ? "&start=" + (_params.start + 1) : '' ) + (_params.year ? "&year=" + _params.year : '') + (_params.keyword ? "&search=" + _params.keyword : '');
+				apiUrl = "/api/blog?" + query;
+			}
+		};
+
+	window.defineModule({
+		el: '.blogs',
+		init: function(){
+      var wrapper = this.$el.find('.blogs__wrapper');
+			var templateSource = this.$el.find('#items-template').html(); //get html from inside the script tags
+			var target = this.$el.find('.blog-list__items');
+			var $archive = this.$el.find('#archive');
+			var $loadButton = this.$el.find('#load-more');
+			var $search = this.$el.find('#search');
+			var template = _.template(templateSource);
+			var templateData = { articles : [], dropdownOpt : []};
+			var initData = true;
+			var listItems = [];
+			loadData();
+
+			///click events on the load more button
+			$loadButton.click(function (event) {
+				event.preventDefault();
+        _params.start = _params.start ? _params.start + pageSize : pageSize;
+        if (pageSize < 1){
+          loadButton.hide()
+          return;
+        }
+        _helper.updateUrlParams();
+        loadData();
+			});
+
+			$archive.change(function (event) {
+				event.preventDefault();
+				_params.start = null;
+				_params.year = parseInt($(this).find(":selected").val());
+				templateData.articles = [];
+				_helper.updateUrlParams();
+				loadData();
+			});
+
+			$search.keyup(function (event) {
+				event.preventDefault();
+				if (event.keyCode == 13) {
+					_params.keyword = $(this).val();
+					_params.start = null;
+					_params.year = null;
+					$archive.val("Select Year")
+					templateData.articles = [];
+					_helper.updateUrlParams();
+					loadData();
+					$(this).val(null)
+				}
+			});
+
+			////get intial data
+			function loadData() {
+				_helper.getDataFromAPI(apiUrl, function (response) {
+					var responseJSON = JSON.parse(response);
+          pageSize = responseJSON.articles.length;
+          templateData.articles = templateData.articles.concat(responseJSON.articles);
+          target.html(template({items : templateData.articles}));
+					if (initData) {
+						initData = false;
+						templateData.dropdownOpt = responseJSON.years;
+						$.each(templateData.dropdownOpt, function (key, value) {
+							$archive.append($("<option />").val(value).text(value));
+						});
+					}
+				});
+			}
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module button-grid
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.button-grid',
+		init: function(){
+      var wrapper = this.$el.find('.button-grid__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module button-section
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.button-section',
+		init: function(){
+      var wrapper = this.$el.find('.button-section__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module career-search
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.career-search',
+		init: function(){
+			this.setupFilters();
+    },
+		setupFilters: function(){
+			var _this = this;
+			var filterTemplate = _.template(this.$el.find('#filter-template').html());
+			var filtersContainer = this.$el.find('.career-search__filters');
+			var filters = _.map(this.$el.find('td[filter-column]'), function(chEl){
+				return $(chEl).attr('filter-column');
+			});
+			filters = _.map(_.uniq(filters), function(column){
+				var values = _.uniq(_.map(_this.$el.find('td[filter-column="'+column+'"]'), function(el){
+					return $(el).attr('filter-value');
+				}));
+				return {name: column, values: values};
+			});
+			filtersContainer.html(filterTemplate({filters: filters}));
+			filtersContainer.find('select').on('change', function(e){
+				var name = $(e.currentTarget).attr('name');
+				var value = $(e.currentTarget).val();
+				_this.applyFilter(name, value);
+			});
+		},
+		applyFilter: function(name, value){
+			var _this = this;
+			this.currentFilters = this.currentFilters || {};
+			this.currentFilters[name] = value;
+			_.each(this.$el.find('tbody tr'), function(row){
+				var shouldHide = false;
+        for(var key in _this.currentFilters){
+          if(_this.currentFilters.hasOwnProperty(key)){
+          	_.each($(row).find('td'), function(cell){
+              if($(cell).attr('filter-column') === key && _this.currentFilters[key] !== 'all' && $(cell).attr('filter-value') !== _this.currentFilters[key]){
+              	shouldHide = true;
+              }
+						});
+          }
+        }
+        if(shouldHide) $(row).addClass('js-hidden');
+				else $(row).removeClass('js-hidden');
+      });
+			var showing = this.$el.find('tbody tr:not(.js-hidden)');
+			if(showing.length < 1){
+        this.$el.find('.career-search__no-results').addClass('js-visible');
+			} else {
+        this.$el.find('.career-search__no-results').removeClass('js-visible');
+      }
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module centered-copy
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.centered-copy',
+		init: function(){
+      var wrapper = this.$el.find('.centered-copy__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el() here instead of $(), otherwise selections will not be scoped.
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.color-teasers',
+		init: function(){
+			this.normalizeHeights();
+    },
+
+    /**
+		 * Normalizes heights across all elements to match the greatest element height in the set.
+		 * This is done on a debounced screen resize to ensure integrity after resizing the window
+		 * @returns module
+     */
+		normalizeHeights: function(){
+      var items = this.$el.find('.color-teasers__item');
+      var _doHeights = function(){
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+			}
+			_doHeights();
+			$(window).on('resize', _.debounce(_doHeights, 100));
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module column-list
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.column-list',
+		init: function(){
+      var wrapper = this.$el.find('.column-list__wrapper');
+    	this.buildColumns();
+		},
+		buildColumns: function(){
+			var _this = this;
+			var numCols = parseInt(this.$el.attr('list-columns'), 10);
+			var items = this.$el.find('.column-list__item').detach();
+      this.$el.find('.column-list__items').remove();
+      var columnsEl = $('<div class="column-list__columns"></div>');
+      columnsEl.appendTo(_this.$el.find('.column-list__wrapper'));
+      _.each(_.chunk(items, (Math.ceil(items.length / numCols))), function(column){
+      	var columnEl = $('<ul class="column-list__items"></ul>');
+      	for(var i = 0; i < column.length; i++){
+      		columnEl.append(column[i]);
+				}
+				columnsEl.append(columnEl);
+      });
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module contact-form
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.contact-form',
+		init: function(){
+      var wrapper = this.$el.find('.contact-form__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module contained-table
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.contained-table',
+		init: function(){
+      var wrapper = this.$el.find('.contained-table__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module create-account
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.create-account',
+		init: function(){
+      var wrapper = this.$el.find('.create-account__wrapper');
+      this.wrapElements();
+      this.termsLink();
+      this.select2();
+    },
+    wrapElements: function() {
+      // user register form
+      $('#user-register-form #edit-account, #user-form #edit-account').wrapAll('<fieldset data-drupal-selector="edit-fieldset-wrapper-user" id="edit-fieldset-wrapper-user" class="js-form-item form-item js-form-wrapper form-wrapper"><div class="fieldset-wrapper"></div></fieldset>');
+      $('#edit-fieldset-wrapper-user').prepend('<legend><span class="fieldset-legend">User Information</span></legend>');
+      $('#user-register-form #edit-field-first-name-wrapper,#edit-field-last-name-wrapper,#edit-field-occupation-wrapper,#edit-field-cb-industry-wrapper,#edit-field-company-wrapper,#edit-field-address-wrapper,#edit-field-city-wrapper,#edit-field-state-wrapper,#edit-field-zip-code-wrapper,#edit-field-user-country-wrapper,#edit-field-phone-wrapper').wrapAll('<fieldset data-drupal-selector="edit-fieldset-wrapper-contact" id="edit-fieldset-wrapper-contact" class="js-form-item form-item js-form-wrapper form-wrapper"><div class="fieldset-wrapper"></div></fieldset>');
+      $('#edit-fieldset-wrapper-contact').prepend('<legend><span class="fieldset-legend"> Contact Information</span></legend>');
+      //$('#edit-field-cb-salespartner-wrapper').wrapAll('<fieldset data-drupal-selector="edit-radios" id="edit-radios--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper"><div class="fieldset-wrapper"></div></fieldset>');
+      //$('#edit-radios--wrapper').prepend('<legend><span class="fieldset-legend"> SiTime Sales Partner</span></legend>');
+      // fix checkbox classes
+      $('#edit-field-cb-salespartner-wrapper .form-item,#edit-field-cb-notifications-wrapper .form-item,#edit-field-accepted-terms-wrapper .form-item').addClass('form-type-checkbox');
+    },
+    termsLink: function() {
+      $('label[for="edit-field-accepted-terms-value"]').html('Accept <a href="/terms-of-use" target="_blank">Terms of Use</a> and <a href="/privacy-policy" target="_blank">Privacy Policy</a>');
+    },
+    select2: function () {
+      $('select[data-drupal-selector="edit-field-user-country-0-value"]').select2();
+    }
+  });
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module design-partners
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.design-partners',
+		init: function(){
+      var wrapper = this.$el.find('.design-partners__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module distr-finder
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.distr-finder',
+		init: function(){
+			this.setupTemplates();
+			this.getLocations();
+      this.breadcrumbs = ['All'];
+			this.render();
+			this.bindEvents();
+    },
+		setupTemplates: function(){
+			this.templates = {
+				breadcrumbs: _.template(this.$el.find('#breadcrumbs-template').html()),
+				locations: _.template(this.$el.find('#locations-template').html()),
+				distributors: _.template(this.$el.find('#distributors-template').html())
+			}
+		},
+		getLocations: function(fn){
+      this.locations = window.locations;
+      if(typeof fn === 'function') fn.call(this);
+		},
+		getDistributors: function(fn, distributors){
+			this.distributors = distributors;
+      if(typeof fn === 'function') fn.call(this);
+		},
+		render: function(){
+			var _this = this;
+			var locations = _.clone(this.locations);
+      var _distributors = [];
+			_.each(this.breadcrumbs, function(breadcrumb){
+				if(breadcrumb === 'All' || !locations) return;
+				locations = _.find(locations, function(loc){
+					return loc.location === breadcrumb;
+        });
+				if(locations && locations.subs && locations.subs.length){
+					locations = locations.subs;
+        } else {
+          _distributors = locations.distributors;
+					locations = false;
+        }
+			});
+			if(locations){
+        locations = _.map(locations, function(loc){ return loc.location });
+        if(locations.length > 5){ locations = locations.sort() };
+        this.$el.find('.distr-finder__content').html(this.templates.locations({locations: locations}));
+        this.$el.find('.distr-finder__breadcrumbs').html(this.templates.breadcrumbs({breadcrumbs: this.breadcrumbs}));
+        if(locations.length < 5){
+          this.$el.find('.distr-finder__content').addClass('js-small-set');
+				} else {
+          this.$el.find('.distr-finder__content').removeClass('js-small-set');
+        }
+			} else {
+        this.getDistributors(function(){
+          this.$el.find('.distr-finder__content').html(this.templates.distributors({distributors: _this.distributors}));
+          this.$el.find('.distr-finder__breadcrumbs').html(this.templates.breadcrumbs({breadcrumbs: this.breadcrumbs}));
+        }, _distributors);
+			}
+			if(this.breadcrumbs.length < 2){
+        this.$el.find('.distr-finder__breadcrumbs').addClass('js-hidden');
+      } else{
+        this.$el.find('.distr-finder__breadcrumbs').removeClass('js-hidden');
+      }
+		},
+		bindEvents: function(){
+			var _this = this;
+			this.$el.on('click', '[data-location]', function(e){
+				var location = $(e.currentTarget).attr('data-location');
+        _gaq.push(['_trackEvent', "Contact Sales", location]);
+        _this.breadcrumbs.push(location);
+        _this.render();
+      });
+			this.$el.on('click', '[data-breadcrumb]', function(e){
+				var breadcrumb = $(e.currentTarget).attr('data-breadcrumb');
+        _gaq.push(['_trackEvent', "Contact Sales", breadcrumb]);
+				if(breadcrumb === 'All'){
+          _this.breadcrumbs = ['All'];
+				} else {
+          _this.breadcrumbs = _.dropRightWhile(_this.breadcrumbs, function(bc){ return bc !== breadcrumb; });
+				}
+        _this.render();
+      });
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module distr-grid
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.distr-grid',
+		init: function(){
+      var wrapper = this.$el.find('.distr-grid__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module download-grid
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.download-grid',
+		init: function(){
+			this.normalizeHeights();
+    },
+
+
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeHeights: function(){
+      var items = this.$el.find('.download-grid__container');
+      var _this = this;
+      var _doHeights = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+        _this.$el.attr('style', '');
+      }
+      _doHeights();
+      $(window).on('resize', _.debounce(_doHeights, 100));
+    }
+
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module event-listing
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.event-listing',
+		init: function(){
+      var wrapper = this.$el.find('.event-listing__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module example
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.example',
+		init: function(){
+      var wrapper = this.$el.find('.example__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module faqs
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.faqs',
+		init: function(){
+			var _this = this;
+      this.$el.find('.faqs__filter-select').on('change', function(e){
+      	var cat = $(e.currentTarget).val();
+      	if(cat === 'all'){
+      		_this.$el.find('[category]').show();
+				} else {
+          _this.$el.find('[category]').hide();
+          _this.$el.find('[category="'+cat+'"]').show();
+				}
+			});
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$() here instead of $(), otherwise selections will not be scoped. this.$ is basically a proxy for $(moduleEl).find()
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.feature-grid',
+		init: function(){
+      var wrapper = this.$el.find('.feature-grid__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module feature-info
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.feature-info',
+		init: function(){
+      this.buildColumns();
+    },
+    buildColumns: function(){
+      var _this = this;
+      var numCols = 2;
+      this.$el.find('.feature-info__feature').each(function(){
+        var list = $(this);
+        var items = list.find('.feature-info__item').detach();
+        list.find('.feature-info__items').remove();
+        var columnsEl = $('<div class="feature-info__items-container"></div>');
+        list.append(columnsEl);
+        _.each(_.chunk(items, (Math.ceil(items.length / numCols))), function(column){
+          var columnEl = $('<ul class="feature-info__items"></ul>');
+          for(var i = 0; i < column.length; i++){
+            columnEl.append(column[i]);
+          }
+          columnsEl.append(columnEl);
+        });
+      });
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module feature-list
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.feature-list',
+		init: function(){
+      var wrapper = this.$el.find('.feature-list__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module featured-news
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.featured-news',
+		init: function(){
+      var wrapper = this.$el.find('.featured-news__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module featured-spread
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.featured-spread',
+		init: function(){
+      var wrapper = this.$el.find('.featured-spread__wrapper');
+      var items = this.$el.find('.featured-spread__item');
+      if(items.length > 6) {
+        this.$el.addClass('featured-spread--multi-row')
+      }
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+/*
+ * @module filter-search
+ */
+(function($, window, document){
+	var PAGE_SIZE = 10000;
+	var _helper = {
+		arrayHas: function(array, has){
+			var doesHave = true;
+			_.each(has, function(h){
+				if(array.indexOf(h) < 0) doesHave = false;
+			});
+			return doesHave;
+		},
+		arrayHasAny: function(array, has){
+			var doesHave = false;
+			_.each(has, function(h){
+				if(array.indexOf(h) > 0) doesHave = true;
+			});
+			return doesHave;
+		},
+    getDataFromAPI: function (path, callback) {
+      var res = new XMLHttpRequest()
+      res.open("get", path)
+      res.send()
+      res.onload = function () {
+        callback(JSON.parse(res.response));
+      }
+    },
+		getCountForFilter: function(filter, filters, data){
+			var totalWFilter = _.filter(data.results, function(result){
+				var filterTest = _.concat(filters, [filter]);
+				if(_helper.arrayHas(result.categories, filterTest)) return true;
+        else return false;
+			});
+      return totalWFilter.length;
+		},
+		getCountForCat: function(cat, filters, data){
+			var results = [];
+      var catFilterIds = _.map(cat.filters, function(filter){ return filter.id; });
+      results = _.filter(data.results, function(result){
+        return _helper.arrayHasAny(catFilterIds, result.categories);
+      });
+			if(filters && filters.length){
+				results = _.filter(results, function(result){
+          return _helper.arrayHas(result.categories, filters);
+				});
+      }
+			return results.length;
+		}
+  }
+
+  window.defineModule({
+
+		el: '.filter-search',
+
+		init: function(){
+			var _this = this;
+			this.type = this.$el.attr('type');
+			this.endpoint = this.$el.attr('endpoint');
+			this.setupTemplates();
+      this.page = 1;
+      this.filters = [];
+      this.getData();
+      this.bindEvents();
+    },
+    getUrlParamFilters: function(){
+		  var _this = this;
+      var urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+        if (results==null) return null;
+        else return results[1] || 0;
+      }
+      if(urlParam('filter')){
+          var filters = urlParam('filter').split(',');
+          filters = _.map(filters, function(filter){
+            return decodeURIComponent(filter);
+          });
+          _this.filters = [];
+          _.each(filters, function(filter){
+            _this.filters.push(filter);
+            _this.filters = _.uniq(_this.filters);
+          });
+          _this.page = 1;
+          _this.renderResults();
+          _this.updateFilters();
+        }
+		},
+		getData: function(fn){
+			var _this = this;
+      this.$el.addClass('js-loading');
+      _helper.getDataFromAPI(this.endpoint, function(res){
+        _this.data = res;
+        _this.getUrlParamFilters();
+        _this.renderResults();
+        _this.renderFilters();
+        if(fn) fn();
+      });
+		},
+		setupTemplates: function(){
+			var tableTemplate = '#filter-search__table-template--' + this.type;
+			this.templates = {
+				table: _.template(this.$el.find(tableTemplate).html()),
+				pagination: _.template(this.$el.find('#filter-search__pagination-template').html()),
+				filters: _.template(this.$el.find('#filter-search__filters-template').html())
+			}
+		},
+		generateParams: function(){
+			var paramString = '?';
+			paramString += 'page='+this.page;
+			paramString += ('&cat=' + _.join(this.filters, ','));
+			return paramString;
+		},
+		renderResults: function(){
+
+			var _this = this;
+
+			//generate tags
+			var tags = _.map(this.filters, function(filter){
+				var filterName;
+				_.each(_this.data.cats, function(cat){
+				  var matchedFilter = _.find(cat.filters, function(catFilter){
+				    return catFilter.id == filter;
+          });
+					if(matchedFilter) filterName = matchedFilter.name;
+				});
+				return {filter: filter, name: filterName};
+			});
+
+			//generate total result set from selected filters
+			var results = [];
+			if(this.filters && this.filters.length > 0){
+        _.each(this.data.results, function(result){
+          if(_helper.arrayHas(result.categories, _this.filters)){
+            results.push(result);
+          }
+        });
+			} else {
+        results = this.data.results;
+			}
+
+      //generate paging information from results set
+			var paging = {};
+      var pages = _.chunk(results, PAGE_SIZE);
+			this.paging = {
+        total: pages.length,
+        current: this.page,
+        count: results.length,
+      };
+
+			this.$el.find('.filter-search__results').html(this.templates.table({data: this.data, results: pages[this.page - 1], _:_, tags: tags, paging: this.paging}));
+			this.$el.find('.filter-search__paging').html(this.templates.pagination({data: this.data, _:_, paging: this.paging}));
+      this.$el.removeClass('js-loading');
+      $(window).scrollTop(this.$el.offset().top - 40);
+    },
+		renderFilters: function(){
+      this.$el.find('.filter-search__filter-container').html(this.templates.filters({data: this.data, filters: this.filters, _:_}));
+      this.updateFilters();
+		},
+		updateFilters: function(){
+			var _this = this;
+			var filterMeta = [];
+			var catMeta = [];
+			_.each(this.data.cats, function(cat){
+			  var catFilters = cat.filters;
+        _.each(catFilters, function(filter){
+          filterMeta.push(filter.id);
+        })
+			});
+
+			filterMeta = _.map(filterMeta, function(filterId){
+				var count = _helper.getCountForFilter(filterId, _this.filters, _this.data);
+				return {filter: filterId, count: count};
+			});
+
+			catMeta = _.map(this.data.cats, function(cat){
+				var count = _helper.getCountForCat(cat, _this.filters, _this.data);
+				return {cat: cat.name, count: count};
+			});
+
+      this.$el.find('[filter]').removeClass('js-selected');
+      _.each(this.filters, function(filter){
+        _this.$el.find('[filter="'+filter+'"]').addClass('js-selected');
+      })
+			this.$el.find('[filter]').each(function(){
+				var $el = $(this);
+        var meta = _.find(filterMeta, function(fMeta){return fMeta.filter === $el.attr('filter')});
+        $el.attr('data-count', meta.count);
+			});
+			this.$el.find('[category]').each(function(){
+				var $el = $(this);
+        var meta = _.find(catMeta, function(fMeta){return fMeta.cat === $el.attr('category')});
+        $el.attr('data-count', meta.count);
+			});
+			if(this.filters && this.filters.length && window.history.pushState){
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?filter='+_.join(this.filters, ',');
+        window.history.replaceState({path:newurl},'',newurl);
+      }
+    },
+		bindEvents: function(data){
+			var _this = this;
+			this.$el.on('click', '[filter]', function(e){
+				var $el = $(e.currentTarget);
+				var filter = $el.attr('filter');
+				if(parseInt( $el.attr('data-count') ,10) < 1){
+					return false;
+				}
+				if(_.find(_this.filters, function(item){return item == filter;})){
+          _this.filters = _.without(_this.filters,filter);
+				} else {
+					_this.filters.push(filter);
+          _this.filters = _.uniq(_this.filters);
+        }
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+			});
+			this.$el.on('click', '.filter-search__apply-filters, .filter-search__filters-close', function(e){
+        _this.$el.removeClass('js-filters-open');
+        $('html').removeClass('js-filters-open');
+      });
+			this.$el.on('click', '.filter-search__open-filters', function(e){
+        _this.$el.addClass('js-filters-open');
+        $('html').addClass('js-filters-open');
+      });
+			this.$el.on('click', '[clear-category]', function(e){
+        var $el = $(e.currentTarget);
+				var category = $el.attr('clear-category');
+				var filters = _.map(
+          _.find(_this.data.cats, function(cat){return cat.name === category}).filters,
+          function(filter){return filter.id}
+        );
+        _.remove(_this.filters, function(existing){
+        	return _.find(filters, function(remove){
+        		return existing == remove;
+					});
+				});
+        _this.page = 1;
+        _this.renderResults();
+				_this.updateFilters();
+      });
+			this.$el.on('click', '[clear-filter]', function(e){
+        var $el = $(e.currentTarget);
+				var filter = $el.attr('clear-filter');
+        _.remove(_this.filters, function(existing){
+        		return existing == filter;
+				});
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      });
+			this.$el.on('click', '.filter-search__filter-category-title', function(e){
+        var $el = $(e.currentTarget);
+        var $parent = $el.parents('.filter-search__filter-category');
+        $parent.toggleClass('js-open');
+			});
+			this.$el.on('click', '[goto-page]', function(e){
+				var type = $(e.currentTarget).attr('goto-page');
+				switch(type){
+					case 'first': _this.page = 1; break;
+					case 'prev': _this.page--; break;
+					case 'next': _this.page++; break;
+					case 'last': _this.page = _this.paging.total; break;
+					default: break;
+				}
+
+				_this.renderResults();
+			});
+		}
+	});
+})(jQuery, window, document);
+
+
+
+"use strict";
+/*
+ * @module resource-lister
+ */
+(function($, window, document){
+  var PAGE_SIZE = 10000;
+  var _helper = {
+    applySearchFilter: function(items, searchString){
+      var fuse = new Fuse(items, {keys: ['fields.title', 'fields.type']});
+      return fuse.search(searchString);
+      // searchString = searchString.toLowerCase();
+      // return _.filter(items, function(i){
+      //   return i.fields.title.toLowerCase().indexOf(searchString) > -1;
+      // });
+    },
+    applyAdditiveFilters: function(items, filters){
+      if(filters.length){
+        var filtered = _.reduce(items, function(newItems, item){
+          var pass = false;
+          for(var i = 0; i < filters.length; i++){
+            if(item.categories.indexOf(filters[i]) > -1) pass = true;
+          }
+          if(pass) newItems.push(item);
+          return newItems;
+        }, []);
+        return filtered;
+      } else {
+        return items;
+      }
+    },
+    applyReductiveFilters: function(items, filters){
+      if(filters.length){
+        var filtered = _.reduce(items, function(newItems, item){
+          var pass = true;
+          if(_.intersection(item.categories, filters).length < 1) pass = false;
+          if(pass) newItems.push(item);
+          return newItems;
+        }, []);
+        return filtered;
+      } else {
+        return items;
+      }
+    },
+
+    getDataFromAPI: function (path, callback) {
+      var res = new XMLHttpRequest()
+      res.open("get", path)
+      res.send()
+      res.onload = function () {
+        callback(JSON.parse(res.response));
+      }
+    }
+  }
+
+  window.defineModule({
+
+    el: '.resource-lister',
+
+    init: function(){
+      var _this = this;
+      this.type = this.$el.attr('type');
+      this.endpoint = this.$el.attr('endpoint');
+      this.setupTemplates();
+      this.page = 1;
+      this.filters = [];
+      this.getData();
+      this.bindEvents();
+    },
+    getUrlParamFilters: function(){
+      var _this = this;
+      var urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href);
+        if (results==null) return null;
+        else return results[1] || 0;
+      }
+      if(urlParam('filter')){
+        var filters = urlParam('filter').split(',');
+        filters = _.map(filters, function(filter){
+          return decodeURIComponent(filter);
+        });
+        _this.filters = [];
+        _.each(filters, function(filter){
+          _this.filters.push(filter);
+          _this.filters = _.uniq(_this.filters);
+        });
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      }
+    },
+    getData: function(fn){
+      var _this = this;
+      this.$el.addClass('js-loading');
+      _helper.getDataFromAPI(this.endpoint, function(res){
+        _this.data = res;
+        _this.getUrlParamFilters();
+        _this.renderResults();
+        _this.renderFilters();
+        if(fn) fn();
+      });
+    },
+    setupTemplates: function(){
+      var tableTemplate = '#resource-lister__table-template--' + this.type;
+      this.templates = {
+        table: _.template(this.$el.find(tableTemplate).html()),
+        pagination: _.template(this.$el.find('#resource-lister__pagination-template').html()),
+        filters: _.template(this.$el.find('#resource-lister__filters-template').html())
+      }
+    },
+    generateParams: function(){
+      var paramString = '?';
+      paramString += 'page='+this.page;
+      paramString += ('&cat=' + _.join(this.filters, ','));
+      return paramString;
+    },
+    renderResults: function(){
+      var _this = this;
+
+      //generate tags
+      var tags = _.map(this.filters, function(filter){
+        var filterName;
+        _.eachDeep(_this.data.cats, function(value, key, parent){
+          if(filterName) return;
+          if(key === 'id' && value == filter) filterName = parent.name;
+        });
+        return {filter: filter, name: filterName || "unknown"};
+      });
+
+      var results = _.clone(this.data.results);
+
+      //first... reduce set by search string if exists:
+      if(this.searchString){
+        results = _helper.applySearchFilter(results, this.searchString);
+      }
+
+      //get each set of filters grouped by category
+      var groupedFilters = [];
+      _.each(_this.data.cats, function(category){
+        var categoryFilters = [];
+        _.eachDeep(category, function(value, key, parent){
+          if(key === 'id' && _this.filters.indexOf(value) > -1) categoryFilters.push(value);
+        });
+        if(categoryFilters.length){
+          groupedFilters.push(categoryFilters);
+        }
+      });
+
+      //Now for each group, get an additive set for each group and push them into groupedResults
+      var groupedResults = [];
+      _.each(groupedFilters, function(filterGroup){
+        var resultSet = _helper.applyAdditiveFilters(results, filterGroup);
+        groupedResults.push(resultSet);
+      });
+
+
+      //Now only show the intersection if there are more than one group
+      var finalResults;
+      if(groupedResults.length > 1){
+        groupedResults.push('fields.title'); //append the iterator to the end of the argument array
+        finalResults = _.intersectionBy.apply(this, groupedResults);
+      } else if(groupedResults.length > 0) {
+        finalResults = groupedResults[0];
+      } else {
+        finalResults = results;
+      }
+
+
+      //generate paging information from results set
+      var paging = {};
+      var pages = _.chunk(finalResults, PAGE_SIZE);
+      this.paging = {
+        total: pages.length,
+        current: this.page,
+        count: finalResults.length,
+      };
+
+      this.$el.find('.resource-lister__results').html(this.templates.table({data: this.data, searchString: this.searchString, results: pages[this.page - 1], _:_, tags: tags, paging: this.paging}));
+      // this.$el.find('.resource-lister__paging').html(this.templates.pagination({data: this.data, _:_, paging: this.paging}));
+      this.$el.removeClass('js-loading');
+      $(window).scrollTop(this.$el.offset().top - 40);
+    },
+    renderFilters: function(){
+      this.$el.find('.resource-lister__filter-container').html(this.templates.filters({data: this.data, filters: this.filters, _:_}));
+      this.updateFilters();
+    },
+    updateFilters: function(){
+      var _this = this;
+      var filterMeta = [];
+      var catMeta = [];
+      _.each(this.data.cats, function(cat){
+        var catFilters = cat.filters;
+        _.each(catFilters, function(filter){
+          filterMeta.push(filter.id);
+        })
+      });
+
+      this.$el.find('[filter]').removeClass('js-selected');
+      _.each(this.filters, function(filter){
+        _this.$el.find('[filter="'+filter+'"]').addClass('js-selected');
+      })
+
+      if(this.filters && this.filters.length && window.history.pushState){
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?filter='+_.join(this.filters, ',');
+        window.history.replaceState({path:newurl},'',newurl);
+      }
+    },
+    bindEvents: function(data){
+      var _this = this;
+
+      this.$el.on('click', '.resource-lister__filter-select, .resource-lister__filter-select + span', function(e){
+        e.stopPropagation();
+        var $el = $(e.currentTarget).parent('[filter]');
+        var filter = $el.attr('filter');
+
+        if(_.find(_this.filters, function(f){return f == filter}))
+          _this.filters = _.without(_this.filters, filter);
+        else
+          _this.filters = _.union(_this.filters, [filter]);
+
+        var $parents = $el.parents('.js-selected');
+        var $children = $el.find('.resource-lister__filter-item');
+
+        if($parents.length || $children.length){
+          if($parents.length && !_.find(_this.filters, function(f){return f == filter}))
+            _this.filters = _.without(_this.filters, $parents.eq(0).attr('filter'));
+          if(_.find(_this.filters, function(f){return f == filter})) { //if we are adding the filter
+            $parents.each(function () {_this.filters = _.without(_this.filters, $parents.eq(0).attr('filter'))});
+            $children.each(function () {_this.filters = _.without(_this.filters, $(this).attr('filter'))});
+          }
+          // else //if we are removing the filter
+          //   $children.each(function(){_this.filters = _.without(_this.filters, $(this).attr('filter'))});
+        }
+
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      });
+
+
+      this.$el.on('keyup', '.resource-lister__search-input', _.debounce(function(e){
+        _this.searchString = $(e.currentTarget).val();
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+        var $inputEl = _this.$el.find('.resource-lister__search-input').focus();
+        _this.$el.find('.resource-lister__search-input').focus();
+        if ($inputEl[0].setSelectionRange) {
+          var len = $inputEl.val().length * 2;
+          $inputEl[0].setSelectionRange(len, len);
+        } else {
+          $inputEl.val($inputEl.val());
+        }
+      }, 1200));
+
+
+      this.$el.on('click', '.resource-lister__apply-filters, .resource-lister__filters-close', function(e){
+        _this.$el.removeClass('js-filters-open');
+        $('html').removeClass('js-filters-open');
+      });
+
+
+      this.$el.on('click', '.resource-lister__open-filters', function(e){
+        _this.$el.addClass('js-filters-open');
+        $('html').addClass('js-filters-open');
+      });
+
+
+      this.$el.on('click', '[clear-category]', function(e){
+        var $el = $(e.currentTarget);
+        var category = $el.attr('clear-category');
+        var filters = _.map(
+          _.find(_this.data.cats, function(cat){return cat.name === category}).filters,
+          function(filter){return filter.id}
+        );
+        _.remove(_this.filters, function(existing){
+          return _.find(filters, function(remove){
+            return existing == remove;
+          });
+        });
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      });
+
+
+      this.$el.on('click', '.resource-lister__tag-clear', function(e){
+        _this.filters = [];
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      });
+
+
+      this.$el.on('click', '[clear-filter]', function(e){
+        var $el = $(e.currentTarget);
+        var filter = $el.attr('clear-filter');
+        _.remove(_this.filters, function(existing){
+          return existing == filter;
+        });
+        _this.page = 1;
+        _this.renderResults();
+        _this.updateFilters();
+      });
+
+
+      this.$el.on('click', '.resource-lister__filter-category-title', function(e){
+        var $el = $(e.currentTarget);
+        var $parent = $el.parents('.resource-lister__filter-category');
+        $parent.toggleClass('js-open');
+      });
+
+
+      this.$el.on('click', '.resource-lister__filter-item--sub > svg, .resource-lister__filter-item--sub > svg + span', function(e){
+        var $el = $(e.currentTarget).parent();
+        $el.toggleClass('js-open');
+      });
+
+
+      this.$el.on('click', '[goto-page]', function(e){
+        var type = $(e.currentTarget).attr('goto-page');
+        switch(type){
+          case 'first': _this.page = 1; break;
+          case 'prev': _this.page--; break;
+          case 'next': _this.page++; break;
+          case 'last': _this.page = _this.paging.total; break;
+          default: break;
+        }
+
+        _this.renderResults();
+      });
+
+      this.$el.on('click', '.resource-lister__expand-all', function(e){
+        _this.$el.find('.resource-lister__filter-item--sub, .resource-lister__filter-category').addClass('js-open');
+      });
+      this.$el.on('click', '.resource-lister__collapse-all', function(e){
+        _this.$el.find('.resource-lister__filter-item--sub, .resource-lister__filter-category').removeClass('js-open');
+      });
+    }
+  });
+})(jQuery, window, document);
+
+
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module footer
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.footer',
+		init: function(){
+      var wrapper = this.$el.find('.footer__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module generic-content
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.generic-content',
+		init: function(){}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module header-and-copy
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.header-and-copy',
+		init: function(){
+      var wrapper = this.$el.find('.header-and-copy__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+*  @module header-bar
+*  @author Jordan Sullivan
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+
+		el: '.header-bar',
+
+
+		init: function(){
+			var _this = this;
+			this.buildMobile();
+			this.buildDesktop();
+			this.applySticky();
+      this.setupTreeBehavior();
+    },
+
+    /**
+		 * apply sticky functionality to desktop
+     */
+		applySticky: function(){
+			var win = $(window);
+			var _this = this;
+			win.on('scroll', _.throttle(function(){
+				if(win.scrollTop() > 80){
+					_this.$el.addClass('js-scrolled');
+				} else {
+          _this.$el.removeClass('js-scrolled');
+        }
+			}, 20));
+		},
+
+		/**
+		 * Builds markup and events around the menu behavior.
+		 * We need to build like this so markup can stay manageable
+		 * for any CMS integration
+		 *
+		 * Basically just moves the mega menu from outside the link markup into a
+		 * dedicated mega-menu container. Then it sets up hover events between links
+		 * and their respective menus.
+		 *
+		 * @return module
+		 */
+		buildDesktop: function(){
+
+			this.$el.addClass('header-bar--desktop');
+      this.$el.find('.header-bar__mega-tree-mobile').remove();
+			var parent = this.$el.parent();
+			var megaMenus = $('<div class="header-bar__megas"></div>');
+			var i = 0;
+
+			// move mega-menus out into a dedicated container:
+			this.$('.header-bar__link').each(function(){
+				var el = $(this),
+						mega = el.find('.header-bar__mega');
+				if(!mega || !mega.length) return;
+				el.attr('data-mega', i);
+				mega.attr('data-mega', i)
+					.detach().appendTo(megaMenus);
+				i++;
+			});
+
+			megaMenus.appendTo(this.$el);
+
+			this.$el.prepend('<div class="header-bar__mobile-open"><svg><use xlink:href="#burger"></use></svg></div>');
+
+			// setup events
+			var _this = this;
+			this.$el.find('.header-bar__link').on('mouseenter', function(e){
+				var megaId = $(e.currentTarget).attr('data-mega');
+        _this.closeMegaMenus();
+        _this.openMegaMenu(megaId);
+			});
+			this.$el.find('.header-bar__mega').on('mouseleave', function(e){
+				_this.closeMegaMenus();
+			});
+			this.$el.on('mouseleave', function(e){
+				_this.closeMegaMenus();
+			});
+      this.$el.find('.header-bar__mobile-open').on('click', function(e){
+        $('html').addClass('st-mobile-menu-open');
+      });
+
+      this.$el.find('.header-bar__search-input').on('focus', function(e){
+        $(e.currentTarget).parents('.header-bar__search').addClass('js-search-active');
+      });
+      this.$el.find('.header-bar__search-input').on('blur', function(e){
+        $(e.currentTarget).parents('.header-bar__search').removeClass('js-search-active');
+      });
+
+			return this;
+		},
+
+
+		/**
+		 * Open a mega menu via state class on concerned elements
+		 *
+		 * @param  {string} id - string identifier from the data-mega attribute
+		 * @return module
+		 */
+		openMegaMenu: function(id){
+			this.$el.find('[data-mega="'+id+'"]').addClass('st-open');
+			return this;
+		},
+
+
+		/**
+		 * Close all mega menus
+		 *
+		 * @return module
+		 */
+		closeMegaMenus: function(){
+			this.$el.find('[data-mega]').removeClass('st-open');
+			return this;
+		},
+
+
+		/**
+		 * We need a seperately generated mobile menu as display is *completely*
+		 * different than desktop.
+		 * Important: This needs to be called first before desktop menu modifications
+		 *
+		 * @return module
+		 */
+		buildMobile: function(){
+			var parent = this.$el.parent();
+			var mobileMenu = this.$el.clone().addClass('header-bar--mobile').prependTo(parent);
+      mobileMenu.find('.header-bar__mega-tree-desktop').remove();
+      mobileMenu.prepend('<div class="header-bar__mobile-close"><svg><use xlink:href="#x"></use></svg></div>')
+      // move mega-menus out into a dedicated container:
+      mobileMenu.find('.header-bar__link').each(function(){
+        var el = $(this),
+            mega = el.find('.header-bar__mega');
+        if(mega && mega.length) el.addClass('st-has-children');
+      });
+
+			mobileMenu.find('.header-bar__link.st-has-children').on('click', function(e){
+				e.preventDefault();
+				$(e.currentTarget).toggleClass('st-active');
+			});
+			mobileMenu.find('.header-bar__link .header-bar__mega').on('click', function(e){
+				e.stopPropagation();
+			});
+      mobileMenu.find('.header-bar__mobile-close').on('click', function(e){
+        $('html').removeClass('st-mobile-menu-open');
+      });
+      mobileMenu.find('.header-bar__search-input').on('focus', function(e){
+        $(e.currentTarget).parents('.header-bar__search').addClass('js-search-active');
+      });
+      mobileMenu.find('.header-bar__search-input').on('blur', function(e){
+        $(e.currentTarget).parents('.header-bar__search').removeClass('js-search-active');
+      });
+
+      mobileMenu.find('.header-bar__tree-expand').on('click', function(e){
+        e.preventDefault();
+        var el = $(e.currentTarget);
+        var parent = el.parent();
+        if(parent.hasClass('st-open')){
+          parent.removeClass('st-open')
+        } else {
+          parent.siblings('li').removeClass('st-open');
+          parent.addClass('st-open');
+        }
+      });
+
+		},
+
+
+    setupTreeBehavior: function(){
+		  var tree = this.$el.find('.header-bar__mega-tree-desktop');
+		  tree.find('[data-cat]').not('st-selected').on('mouseover', function(e){
+		    var el = $(e.currentTarget);
+        tree.find('[data-cat]').removeClass('st-selected');
+		    el.addClass('st-selected');
+		    var target = el.attr('data-cat');
+		    tree.find('[data-parent]').removeClass('st-visible');
+		    tree.find('.header-bar__mega-branches [data-parent="'+target+'"]').addClass('st-visible');
+		    tree.find('.header-bar__mega-limbs').addClass('st-visible');
+		    tree.find('.header-bar__mega-branches').removeClass('st-visible');
+		    tree.find('.header-bar__mega-leaves').removeClass('st-visible');
+      });
+
+      tree.find('[data-subcat]').not('st-selected').on('mouseover', function(e){
+        var el = $(e.currentTarget);
+        tree.find('[data-subcat]').removeClass('st-selected');
+        el.addClass('st-selected');
+        var target = el.attr('data-subcat');
+        tree.find('.header-bar__mega-leaves [data-parent], .header-bar__mega-descriptions [data-parent]').removeClass('st-visible');
+        tree.find('.header-bar__mega-leaves [data-parent="'+target+'"]').addClass('st-visible');
+        tree.find('.header-bar__mega-branches').addClass('st-visible');
+        tree.find('.header-bar__mega-leaves').removeClass('st-visible');
+        var count = tree.find('.header-bar__mega-leaves [data-parent="'+target+'"]').toArray().length;
+        if(count > 8){
+          tree.find('.header-bar__mega-leaves').addClass('st-columns');
+        } else {
+          tree.find('.header-bar__mega-leaves').removeClass('st-columns')
+        }
+      });
+
+      tree.find('[data-product]').not('st-selected').on('mouseover', function(e){
+        var el = $(e.currentTarget);
+        tree.find('[data-product]').removeClass('st-selected');
+        el.addClass('st-selected');
+        var target = el.attr('data-product');
+        tree.find('.header-bar__mega-descriptions [data-parent]').removeClass('st-visible');
+        tree.find('.header-bar__mega-descriptions [data-parent="'+target+'"]').addClass('st-visible');
+        tree.find('.header-bar__mega-leaves').addClass('st-visible');
+      });
+    }
+
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$() here instead of $(), otherwise selections will not be scoped. this.$ is basically a proxy for $(moduleEl).find()
+*/
+
+(function($, window, document){
+	var _helper = {};
+
+	var SLIDEINTERVAL = 10000; //ms
+
+	window.defineModule({
+		el: '.hero',
+		init: function(){
+			var _this = this;
+			if(this.initSlides()){
+				this.goToSlide(0);
+				this.startSlideTimer();
+        setTimeout(function(){
+          _this.$el.addClass('js-init');
+        }, 1000);
+      } else {
+        this.$el.addClass('js-init');
+			}
+    },
+	 	initSlides: function(){
+			var _this = this;
+			var slides = this.$el.find('.hero__item');
+			if(slides.length < 2) return false;
+			slides.addClass('js-slide');
+			var slideCounter = $('<div class="hero__slide-counter"></div>');
+			for(var i = 0; i < slides.length; i++){
+				slideCounter.append('<div class="hero__slide-count"></div>');
+			}
+			this.$el.find('.hero__wrapper').append(slideCounter);
+			slideCounter.css('margin-top', '-'+(slideCounter.height()/2)+'px');
+			this.slides = slides;
+			this.slideCounts = this.$el.find('.hero__slide-count');
+			this.slideCounts.on('click', function(e){
+				_this.goToSlide($(e.currentTarget).index());
+			});
+			return true;
+		},
+		goToSlide: function(index){
+	 		index = index || 0;
+      if(index > this.slides.length - 1){
+        index = 0;
+      }
+      else if(index < 0){
+      	index = this.slides.length - 1;
+			}
+	 		this.$el.find('.js-active-slide').removeClass('js-active-slide');
+	 		this.slides.eq(index).addClass('js-active-slide');
+	 		this.slideCounts.eq(index).addClass('js-active-slide');
+	 		this.currentSlide = index;
+		},
+		startSlideTimer: function(){
+			var _this = this;
+			setInterval(function(){
+        if($(window).scrollTop() < 300) _this.goToSlide(_this.currentSlide + 1);
+			}, SLIDEINTERVAL)
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module hero-subtitle
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.hero-subtitle',
+		init: function(){
+      var wrapper = this.$el.find('.hero-subtitle__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module icon-points
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.icon-points',
+		init: function(){
+      var wrapper = this.$el.find('.icon-points__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module image-points
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.image-points',
+		init: function(){
+      var wrapper = this.$el.find('.image-points__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module img-txt-bar
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.img-txt-bar',
+		init: function(){
+      var wrapper = this.$el.find('.img-txt-bar__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module job-post
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.job-post',
+		init: function(){
+      var wrapper = this.$el.find('.job-post__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module info-overview
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.info-overview',
+		init: function(){
+
+    },
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module leadership
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.leadership',
+		init: function(){
+      var wrapper = this.$el.find('.leadership__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+/***************
+ *  LIGHTBOX-PLAYER
+ *  This is a little different than other modules as there is not pre-existing markup on the page. The module is invoked
+ *  through a lightbox-image attribute on a clickable element. The attribute should contain the url for the video.
+ */
+(function($, window, document){
+  var _config = {
+    parent: 'body',
+    attrName: 'lightbox-image'
+  };
+  var module = {
+    init: function(){
+      module.bindEvents();
+    },
+    bindEvents: function(){
+      $(document).on('click', '['+_config.attrName+']', function(e){
+        e.preventDefault();
+        module.launchLightbox($(this).attr(_config.attrName));
+      });
+    },
+    launchLightbox: function(imageUrl){
+      module.closeLightbox();
+      var $lightboxEl = $('<div class="lightbox-image"><div class="lightbox-image__wrapper"><div class="lightbox-image__box"><div class="lightbox-image__close"><span><svg><use xlink:href="#x"></use></svg>Close</span></div><div class="lightbox-image__display" style="background-image: url('+imageUrl+');"></div></div></div></div>');
+      $(_config.parent).append($lightboxEl);
+      $lightboxEl.find('.lightbox-image__close').on('click', module.closeLightbox);
+      $('html').addClass('modal-open');
+    },
+    closeLightbox: function(){
+      $('.lightbox-image').remove();
+      delete module.$currentPlayer;
+      $('html').removeClass('modal-open');
+    }
+  };
+
+  module.init();
+})(jQuery, window, document);
+/***************
+ *  LIGHTBOX-PLAYER
+ *  This is a little different than other modules as there is not pre-existing markup on the page. The module is invoked
+ *  through a lightbox-player attribute on a clickable element. The attribute should contain the url for the video.
+ */
+(function($, window, document){
+  var _config = {
+    parent: 'body',
+    attrName: 'lightbox-player'
+  };
+  var module = {
+    init: function(){
+      module.bindEvents();
+    },
+    bindEvents: function(){
+      $(document).on('click', '['+_config.attrName+']', function(e){
+        e.preventDefault();
+        module.launchLightbox($(this).attr(_config.attrName));
+      });
+    },
+    launchLightbox: function(videoUrl){
+      module.closeLightbox();
+      var $lightboxEl = $('<div class="lightbox-player"><div class="lightbox-player__wrapper"><div class="lightbox-player__box"><div class="lightbox-player__close"><span><svg><use xlink:href="#x"></use></svg>Close</span></div><div class="lightbox-player__display"></div></div></div></div>');
+      module.$currentPlayer = $('<iframe type="text/html" src="'+videoUrl+'" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>');
+      $lightboxEl.find('.lightbox-player__display').append(module.$currentPlayer);
+      $(_config.parent).append($lightboxEl);
+      $lightboxEl.find('.lightbox-player__close').on('click', module.closeLightbox);
+      $('html').addClass('modal-open');
+    },
+    closeLightbox: function(){
+      $('.lightbox-player').remove();
+      delete module.$currentPlayer;
+      $('html').removeClass('modal-open');
+    }
+  };
+
+  module.init();
+})(jQuery, window, document);
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module map-info
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.map-info',
+		init: function(){
+      var wrapper = this.$el.find('.map-info__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$() here instead of $(), otherwise selections will not be scoped. this.$ is basically a proxy for $(moduleEl).find()
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.minimal-teaser',
+		init: function(){
+      var wrapper = this.$el.find('.minimal-teaser__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module press-release
+ */
+
+(function($, window, document){
+	var apiUrl = "/api/mediacoverage";
+  var pageSize = 1;
+  var _params = {
+		page : 1,
+		lang : null,
+		start : null,
+		year : null,
+		keyword : null
+	}
+	var _helper = {
+			getDataFromAPI : function (path, callback) {
+				var res = new XMLHttpRequest()
+				res.open("get", path)
+				res.send()
+				res.onload = function() {
+					callback(res.response);
+				}
+			},
+
+			updateUrlParams : function () {
+				var queary =  '' + (_params.start ? "&start=" + (_params.start + 1) : '' ) + (_params.year ? "&year=" + _params.year : '')  + (_params.lang ? "&lang=" + _params.lang : '') + (_params.keyword ? "&search=" + _params.keyword : '');
+				apiUrl = "/api/mediacoverage?" + queary;
+			}
+		};
+
+	window.defineModule({
+		el: '.media-coverage',
+		init: function(){
+			var templateData = { articles : [], dropdownOpt : []};
+			var initData = true;
+      var wrapper = this.$el.find('.media-coverage__wrapper');
+			var target = this.$el.find('.media-coverage__items');
+			var archive = this.$el.find('#archive');
+      var lang = this.$el.find('#lang');
+			var search = this.$el.find('#search');
+			var loadButton = this.$el.find('#load-more');
+			var templateSource = this.$el.find('#items-template').html(); //get html from inside the script tags
+			var template = _.template(templateSource);
+			loadData();
+
+			///click events on the load more button
+      loadButton.click(function (event) {
+        event.preventDefault();
+        _params.start = _params.start ? _params.start + pageSize : pageSize;
+        if (pageSize < 1){
+          loadButton.hide()
+          return;
+        }
+        _helper.updateUrlParams();
+        loadData();
+      });
+
+			archive.change(function (event) {
+				event.preventDefault();
+				templateData.articles = [];
+				_params.start = null;
+				_params.keyword = null;
+				_params.year = parseInt($(this).find(":selected").val());
+				_helper.updateUrlParams();
+				loadData();
+			});
+
+			lang.change(function (event) {
+				event.preventDefault();
+				templateData.articles = [];
+				_params.start = null;
+				_params.keyword = null;
+				_params.lang = $(this).find(":selected").val();
+				_helper.updateUrlParams();
+				loadData();
+			});
+
+			search.keyup(function (event) {
+				event.preventDefault();
+				if (event.keyCode == 13) {
+					_params.start = null;
+					_params.year = null;
+					_params.lang = null;
+					_params.keyword = $(this).val();
+					archive.val("Select Year")
+					lang.val("Select Lang")
+					templateData.articles = [];
+					_helper.updateUrlParams();
+					loadData();
+					$(this).val(null)
+				}
+			});
+
+			////get intial data
+			function loadData() {
+				_helper.getDataFromAPI(apiUrl, function (response) {
+					var responseJSON = JSON.parse(response);
+          pageSize = responseJSON.articles.length;
+          templateData.articles = templateData.articles.concat(responseJSON.articles);
+					target.html(template({items : templateData.articles}));
+					if (initData) {
+						initData = false;
+						templateData.yearDropdown = responseJSON.years;
+						$.each(templateData.yearDropdown, function (key, value) {
+							archive.append($("<option />").val(value).text(value));
+						});
+
+						templateData.langDropdown = responseJSON.languages;
+						$.each(templateData.langDropdown, function (key, value) {
+              // Language Init
+              var initLanguage = drupalSettings.path.currentLanguage;
+              switch (initLanguage) {
+                case 'zh-hans':
+                  key == "571" ? lang.append($("<option selected='selected' />").val(key).text(value)) : lang.append($("<option />").val(key).text(value));
+                  break;
+                case 'en':
+                  key == "11" ? lang.append($("<option selected='selected' />").val(key).text(value)) : lang.append($("<option />").val(key).text(value));
+                  break;
+                default:
+                  lang.append($("<option />").val(key).text(value));
+                  break;
+              }
+						});
+            lang.change();
+					}
+				});
+			}
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module modal
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.modal',
+		init: function(){
+			var _this = this;
+      $(document).on('click', '[launch-modal]', function(e){
+      	e.preventDefault();
+      	var modalId = $(e.currentTarget).attr('launch-modal');
+      	_this.launchModal(modalId);
+			});
+    },
+		launchModal: function(id){
+			var _this = this;
+			var modal = $('[modal-id="'+id+'"]');
+			modal.addClass('js-open');
+			modal.find('.modal__close').one('click', function(e){
+				_this.closeModal(id);
+			});
+		},
+		closeModal: function(id){
+      var modal = $('[modal-id="'+id+'"]');
+      modal.removeClass('js-open');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module news-landing
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.news-landing',
+		init: function(){
+      var wrapper = this.$el.find('.news-landing__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module online-tools
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.online-tools',
+		init: function(){
+      var wrapper = this.$el.find('.online-tools__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module order-info
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.order-info',
+		init: function(){
+      var wrapper = this.$el.find('.order-info__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module press-kit
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.press-kit',
+		init: function(){
+      var wrapper = this.$el.find('.press-kit__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module press-release
+ */
+(function($, window, document){
+	var apiUrl = "/api/pressreleases";
+	var pageSize = 1;
+	var _params = {
+		page : 1,
+		start : null,
+		year : null,
+		keyword :null
+	}
+	var _helper = {
+			getDataFromAPI : function (path, callback) {
+				var res = new XMLHttpRequest()
+				res.open("get", path)
+				res.send()
+				res.onload = function() {
+					callback(res.response);
+				}
+			},
+			updateUrlParams : function () {
+				var query =  '' + (_params.start ? "&start=" + (_params.start + 1) : '1' ) + (_params.year ? "&year=" + _params.year : '') + (_params.keyword ? "&search=" + _params.keyword : '');
+				apiUrl = "/api/pressreleases?" + query;
+			}
+		};
+
+	window.defineModule({
+		el: '.press-release',
+		init: function(){
+			var templateData = { articles : [], dropdownOpt : []};
+			var initData = true;
+      var wrapper = this.$el.find('.press-release__wrapper');
+			var target = this.$el.find('.press-release__items');
+			var archive = this.$el.find('#archive');
+			var search = this.$el.find('#search');
+			var loadButton = this.$el.find('#load-more');
+			var templateSource = this.$el.find('#items-template').html(); //get html from inside the script tags
+			var template = _.template(templateSource);
+			loadData();
+
+			///click events on the load more button
+			loadButton.click(function (event) {
+				event.preventDefault();
+				_params.start = _params.start ? _params.start + pageSize : pageSize;
+				if (pageSize < 1){
+					loadButton.hide()
+					return;
+        }
+				_helper.updateUrlParams();
+				loadData();
+			});
+
+			archive.change(function (event) {
+				event.preventDefault();
+				_params.start = null;
+				_params.keyword = null;
+				templateData.articles = [];
+				_params.year = parseInt($(this).find(":selected").val());
+				_helper.updateUrlParams();
+				loadData();
+			});
+
+			search.keyup(function (event) {
+				event.preventDefault();
+				if (event.keyCode == 13) {
+					_params.keyword = $(this).val();
+					_params.start = null;
+					_params.year = null;
+					archive.val('Select Year');
+					templateData.articles = [];
+					_helper.updateUrlParams();
+					loadData();
+					$(this).val(null)
+				}
+			});
+
+			////get intial data
+			function loadData() {
+				_helper.getDataFromAPI(apiUrl, function (response) {
+					var responseJSON = JSON.parse(response);
+          pageSize = responseJSON.articles.length;
+          templateData.articles = templateData.articles.concat(responseJSON.articles);
+					target.html(template({items : templateData.articles}));
+					if (initData) {
+						initData = false;
+						templateData.dropdownOpt = responseJSON.years;
+						$.each(templateData.dropdownOpt, function (key, value) {
+							archive.append($("<option />").val(value).text(value));
+						});
+					}
+				});
+			}
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module blog-entry
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.pr-entry',
+		init: function(){
+      var wrapper = this.$el.find('.pr__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module pc-details
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.pc-details',
+		init: function(){
+      var wrapper = this.$el.find('.pc-details__wrapper');
+			var links = this.$el.find('.category-link');
+
+			links.click(function (e) {
+				var id = $(this).attr("data-id");
+					$('html, body').animate({
+						scrollTop: $("#" + id).offset().top - 70
+					}, 650);
+			});
+
+			if (window.location.hash) {
+        var anchorEl = document.querySelector(window.location.hash);
+
+        if (anchorEl) {
+          $('html, body').animate({
+            scrollTop: $(anchorEl).offset().top - 70
+          }, 650);
+        }
+			}
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el() here instead of $(), otherwise selections will not be scoped.
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.product-teasers',
+		init: function(){
+			this.normalizeHeights();
+    },
+
+    /**
+		 * Normalizes heights across all elements to match the greatest element height in the set.
+		 * This is done on a debounced screen resize to ensure integrity after resizing the window
+		 * @returns module
+     */
+		normalizeHeights: function(){
+      var items = this.$el.find('.product-teasers__item');
+      var _doHeights = function(){
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+			}
+			_doHeights();
+			$(window).on('resize', _.debounce(_doHeights, 100));
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module product-info
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.product-info',
+		init: function(){
+      this.normalizeDefinitionWidths();
+      this.splitAppplicationColumns();
+    },
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeDefinitionWidths: function(){
+      var items = this.$el.find('.product-info__definitions dt');
+      var _this = this;
+      var _doWidths = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('width', 'auto');
+        var tallestWidth = _.reduce(items, function(widest, item){
+          return Math.max(widest, $(item).outerWidth());
+        }, 0);
+        items.css('width', tallestWidth+'px');
+        items.siblings('dd').css('width', 'calc(100% - ' + tallestWidth +'px)');
+        _this.$el.attr('style', '');
+      }
+      _doWidths();
+      $(window).on('resize', _.debounce(_doWidths, 250));
+    },
+    splitAppplicationColumns: function(){
+      var _this = this;
+      var parent = this.$el.find('.product-info__applications');
+      var numCols = 2;
+      var items = this.$el.find('.product-info__application').detach();
+      parent.find('ul').remove();
+      _.each(_.chunk(items, (Math.ceil(items.length / numCols))), function(column){
+        var columnEl = $('<ul></ul>');
+        for(var i = 0; i < column.length; i++){
+          columnEl.append(column[i]);
+        }
+        parent.append(columnEl);
+      });
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module quality-history
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.quality-history',
+		init: function(){
+      var wrapper = this.$el.find('.quality-history__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module quality-reports
+ */
+(function($, window, document){
+	var _params = {
+		productType : [],
+		docs : [],
+		selectedProduct : "Select Product"
+	}
+
+	var apiUrl = "/api/qualityreports";
+
+	var _helper = {
+		getDataFromAPI : function (path, callback) {
+			var res = new XMLHttpRequest()
+			res.open("get", path)
+			res.send()
+			res.onload = function() {
+				callback(res.response);
+			}
+		},
+
+		updateUrlParams : function (existingProduct) {
+			apiUrl = "/api/qualityreports";
+			if(existingProduct){ // if an existing product has been set on the top level module, then we are changing category instead of the product
+        apiUrl += "?product=" + existingProduct;
+        apiUrl += "&cat=" + _params.selectedProduct;
+			} else {
+        apiUrl += "?product=" + _params.selectedProduct;
+			}
+		}
+	};
+
+	window.defineModule({
+		el: '.quality-reports',
+		init: function(){
+			var initData = true;
+      var wrapper = this.$el.find('.quality-reports__wrapper');
+			var archive = this.$el.find('#archive');
+			var listWrapper = this.$el.find('#quality-reports__list');
+			var existingProduct = this.$el.attr('product');
+
+      if(existingProduct){
+        apiUrl += "?product=" + existingProduct;
+      }
+
+			getData(true);
+
+			archive.change(function (event) {
+				event.preventDefault();
+				_params.selectedProduct = $(this).find(":selected").val();
+				_helper.updateUrlParams(existingProduct);
+				getData();
+			});
+
+			function getData(initial) {
+				_helper.getDataFromAPI(apiUrl, function (response) {
+					var responseJSON = JSON.parse(response);
+					if (_params.selectedProduct && !initial) {
+						_params.docs = responseJSON.docs;
+						listWrapper.html('');
+						updateDom();
+					} else {
+						listWrapper.html('');
+					}
+					if (initData) {
+						if(existingProduct){
+              _params.productType = responseJSON.cats;
+            } else {
+              _params.productType = responseJSON.products;
+						}
+						updateDropDown();
+					}
+				});
+			}
+
+			function updateDropDown() {
+				initData = false;
+				$.each(_params.productType, function (key, value) {
+					archive.append($("<option />").val(value).text(value));
+				});
+			}
+
+			function updateDom() {
+					$.each(_params.docs, function (key, value) {
+						if (value.length) {
+							var ul = $('<ul/>')
+							.addClass('list-items')
+							.text(key)
+							.appendTo(listWrapper);
+							$.each(value, function (itemKey, itemVal) {
+								var a = $('<a/>').attr("href", itemVal.link);
+                if (itemVal.gated == 1) { a.attr("gated", "true"); }
+                a.appendTo(ul);
+								var li = $('<li/>')
+								.addClass('list-items__item')
+								.text(itemVal.title)
+								.appendTo(a)
+							})
+						}
+					});
+			}
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module product-docs
+ */
+(function($, window, document){
+  var _params = {
+    productType : [],
+    docs : [],
+    selectedProduct : "Select Product"
+  }
+
+  var apiUrl = "/api/productdocs";
+
+  var _helper = {
+    getDataFromAPI : function (path, callback) {
+      var res = new XMLHttpRequest()
+      res.open("get", path)
+      res.send()
+      res.onload = function() {
+        callback(res.response);
+      }
+    },
+
+    updateUrlParams : function (existingProduct) {
+      apiUrl = "/api/productdocs";
+      if(existingProduct){ // if an existing product has been set on the top level module, then we are changing category instead of the product
+        apiUrl += "?product=" + existingProduct;
+        apiUrl += "&cat=" + _params.selectedProduct;
+      } else {
+        apiUrl += "?product=" + _params.selectedProduct;
+      }
+    }
+  };
+
+  window.defineModule({
+    el: '.product-docs',
+    init: function(){
+      var initData = true;
+      var wrapper = this.$el.find('.product-docs__wrapper');
+      var archive = this.$el.find('#archive');
+      var listWrapper = this.$el.find('#product-docs__list');
+      var existingProduct = this.$el.attr('product');
+
+      if(existingProduct){
+        apiUrl += "?product=" + existingProduct;
+      }
+
+      getData(true);
+
+      archive.change(function (event) {
+        event.preventDefault();
+        _params.selectedProduct = $(this).find(":selected").val();
+        _helper.updateUrlParams(existingProduct);
+        getData();
+      });
+
+      function getData(initial) {
+        _helper.getDataFromAPI(apiUrl, function (response) {
+          var responseJSON = JSON.parse(response);
+          if (_params.selectedProduct && !initial) {
+            _params.docs = responseJSON.docs;
+            listWrapper.html('');
+            updateDom();
+          } else {
+            listWrapper.html('');
+          }
+          if (initData) {
+            if(existingProduct){
+              _params.productType = responseJSON.cats;
+            } else {
+              _params.productType = responseJSON.products;
+            }
+            updateDropDown();
+          }
+        });
+      }
+
+      function updateDropDown() {
+        initData = false;
+        $.each(_params.productType, function (key, value) {
+          archive.append($("<option />").val(value).text(value));
+        });
+      }
+
+      function updateDom() {
+          $.each(_params.docs, function (key, value) {
+            if (value.length) {
+              var ul = $('<ul/>')
+              .addClass('list-items')
+              .text(key)
+              .appendTo(listWrapper);
+              $.each(value, function (itemKey, itemVal) {
+                var a = $('<a/>').attr("href", itemVal.link);
+                if (itemVal.gated == 1) { a.attr("gated", "true"); }
+                a.appendTo(ul);
+                if (itemVal.video != '') {
+                  a.attr("lightbox-player", itemVal.video);
+                }
+                var li = $('<li/>')
+                .addClass('list-items__item')
+                .text(itemVal.title)
+                .appendTo(a)
+              })
+            }
+          });
+      }
+    }
+  });
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module quality-warranty
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.quality-warranty',
+		init: function(){
+      var wrapper = this.$el.find('.quality-warranty__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module request-samples
+ */
+(function($, window, document){
+
+	var PART_NUMBER_URL_PARAM = 'part_number';
+	var PART_NUMBER_INPUT_NAME = 'part_number';
+
+	var _helper = {
+    parseQueryString: function() {
+    	var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      var query_string = {};
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (typeof query_string[pair[0]] === "undefined") {
+          query_string[pair[0]] = decodeURIComponent(pair[1]);
+        } else if (typeof query_string[pair[0]] === "string") {
+          var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+          query_string[pair[0]] = arr;
+        } else {
+          query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+      }
+      return query_string;
+    }
+
+  };
+	window.defineModule({
+		el: '.request-samples',
+		init: function(){
+			this.populatePartNumber();
+    },
+		populatePartNumber: function(){
+			var queries = _helper.parseQueryString();
+			var partNumber = queries[PART_NUMBER_URL_PARAM];
+			var partNumberInput = this.$el.find('input[name="'+ PART_NUMBER_INPUT_NAME +'"]');
+			partNumberInput.val(partNumber);
+		}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module resource-cards
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.resource-cards',
+    init: function(){
+      this.normalizeHeights();
+    },
+
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeHeights: function(){
+      var items = this.$el.find('.resource-cards__item-container');
+      var _this = this;
+      var _doHeights = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+        _this.$el.attr('style', '');
+      }
+      _doHeights();
+      $(window).on('resize', _.debounce(_doHeights, 100));
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module resource-table
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.resource-table',
+		init: function(){
+      var wrapper = this.$el.find('.resource-table__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module search
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.search',
+		init: function(){
+      var wrapper = this.$el.find('.search__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module section-title
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.section-title',
+		init: function(){}
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$() here instead of $(), otherwise selections will not be scoped. this.$ is basically a proxy for $(moduleEl).find()
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.simple-cta',
+		init: function(){
+      var wrapper = this.$el.find('.simple-cta__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module example
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.social-box',
+		init: function(){
+      var wrapper = this.$el.find('.social-box__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module software
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.software',
+		init: function(){
+      var wrapper = this.$el.find('.software__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module tab-bar
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.tab-bar',
+
+    /**
+		 * Tab Content Array
+		 * @private
+     */
+		_tabContent: [],
+
+		init: function(){
+			this.initTabs();
+			this.chooseTab(0);
+    },
+
+    /**
+		 * Setup tabs and tab content
+		 * @return module
+     */
+		initTabs: function(){
+			var _this = this;
+			var tabs = this.$el.find('.tab-bar__tab');
+			for(var i = 0; i < tabs.length; i++){
+        var tabContent = $($(tabs[i]).attr('tab-content'));
+        tabContent.addClass('js-tab-content');
+        this._tabContent[i] = tabContent;
+			}
+      tabs.on('click', function(e){
+      	var index = $(e.currentTarget).index();
+      	_this.chooseTab(index);
+			});
+      return this;
+		},
+
+    /**
+     * Choose tab based on the index
+		 * (e.g. left-most tab will be index 0)
+     * @return module
+     */
+		chooseTab: function(index){
+      var tabs = this.$el.find('.tab-bar__tab');
+      for(var key in this._tabContent){
+				this._tabContent[key].removeClass('js-active');
+			}
+			tabs.removeClass('js-active');
+			tabs.eq(index).addClass('js-active');
+      this._tabContent[index].addClass('js-active');
+			return this;
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module example
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.subscribe',
+		init: function(){
+      var wrapper = this.$el.find('.subscribe__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module teaser-grid
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.teaser-grid',
+    init: function(){
+      this.normalizeHeights();
+    },
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeHeights: function(){
+      var items = this.$el.find('.teaser-grid__item-container');
+      var _this = this;
+      var _doHeights = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+        _this.$el.attr('style', '');
+      }
+      setTimeout(_doHeights, 250);
+      $(window).on('resize', _.debounce(_doHeights, 100));
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module three-column-desc
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.three-column-desc',
+		init: function(){
+      var wrapper = this.$el.find('.three-column-desc__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module thumb-grid
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.thumb-grid',
+		init: function(){
+			this.normalizeHeights();
+    },
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeHeights: function(){
+      var items = this.$el.find('.thumb-grid__item-container');
+      var _this = this;
+      var _doHeights = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+        _this.$el.attr('style', '');
+      }
+      setTimeout(_doHeights, 250);
+      $(window).on('resize', _.debounce(_doHeights, 100));
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module title-bar
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.title-bar',
+		init: function(){
+      var wrapper = this.$el.find('.title-bar__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module to-top
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.to-top',
+		init: function(){
+			var _this = this;
+      this.$el.on('click', function(){
+      	$(window).scrollTop(0);
+			});
+      var footerHeight = $('footer').outerHeight();
+      $(window).on('scroll', _.throttle(function(){
+      	if($(window).scrollTop() > 300){
+      		_this.$el.addClass('js-active');
+				} else {
+          _this.$el.removeClass('js-active');
+        }
+        if(($(document).height() - ($(window).scrollTop() + $(window).height())) < (footerHeight + 100)){
+          _this.$el.css({'position':'absolute', 'bottom': '0px', 'top': 'auto'});
+        } else {
+          _this.$el.attr('style', '');
+				}
+			}, 25))
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.topic-grid',
+		init: function(){
+			this.normalizeHeights();
+			this.countItems();
+		},
+
+    countItems: function(){
+		  var parent = this.$el.find('.topic-grid__items');
+		  var items = this.$el.find('.topic-grid__item');
+		  parent.attr('item-count', items.length);
+    },
+
+    /**
+     * Normalizes heights across all elements to match the greatest element height in the set.
+     * This is done on a debounced screen resize to ensure integrity after resizing the window
+     * @returns module
+     */
+    normalizeHeights: function(){
+      var items = this.$el.find('.topic-grid__item');
+      var _this = this;
+      var _doHeights = function(){
+        _this.$el.css('display', 'block'); //incase we have stuff hidden in tabs...
+        items.css('height', 'auto');
+        var tallestHeight = _.reduce(items, function(tallest, item){
+          return Math.max(tallest, $(item).outerHeight());
+        }, 0);
+        items.css('height', tallestHeight+'px');
+        _this.$el.attr('style', '');
+      }
+      setTimeout(_doHeights, 250);
+      $(window).on('resize', _.debounce(_doHeights, 100));
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module tutorials
+ */
+(function($, window, document){
+	var _helper = {};
+	window.defineModule({
+		el: '.tutorials',
+		init: function(){
+      var wrapper = this.$el.find('.tutorials__wrapper');
+    }
+	});
+})(jQuery, window, document);
+
+"use strict";
+
+/*
+* "init" is basically the document.on('ready'), you can treat it the same.
+* ALWAYS use this.$el.find() here instead of $(), otherwise selections will not be scoped.
+*/
+
+/*
+ * @module ocrt
+ */
+(function($, window, document){
+  var _helper = {};
+  window.defineModule({
+    el: '.ocrt',
+    init: function(){
+      var wrapper = this.$el.find('.cross-reference-tool__wrapper');
+      this.bindEvents();
+    },
+		bindEvents: function () {
+      var _this = this;
+      var toolWrapper = this.$el.find('.ocrt-tool__wrapper');
+      // Swap between the single and bulk ocrt tools.
+      this.$el.find('.cross-reference-tool__nav a').on('click', function (e) {
+      	var $this = $(this);
+      	e.preventDefault();
+      	_this.$el.find('a').removeClass('active');
+      	$this.addClass('active');
+      	toolWrapper.find('div.ocrt-tool').hide();
+      	toolWrapper.find('div.ocrt-tool__' + $this.data('tool')).show();
+      })
+    }
+  });
+})(jQuery, window, document);
+
+
+
+/*
+ * @module product-detail
+ */
+(function($, window, document){
+  var _helper = {};
+  window.defineModule({
+    el: '.product-detail',
+    init: function(){
+      this.initCarousels();
+      this.initTabs();
+      this.selectTab(this.$tabs.eq(0).attr('data-tab-name'));
+    },
+    initTabs: function(){
+      var _this = this;
+      this.$tabs = this.$el.find('.product-detail__tab');
+      this.$tabBar = $('<div class="product-detail__tab-bar"></div>');
+      this.$tabs.each(function(i, el){
+        var tabName = $(el).attr('data-tab-name');
+        _this.$tabBar.append('<div data-tab="'+tabName+'">'+tabName+'</div>')
+      });
+      this.$el.find('.product-detail__tabs').prepend(this.$tabBar);
+      this.$tabBar.find('div').on('click', function(e){
+        e.preventDefault();
+        _this.selectTab($(e.currentTarget).attr('data-tab'));
+      });
+    },
+    selectTab: function(tabName){
+      this.$tabs.removeClass('js-selected');
+      this.$tabs.filter('[data-tab-name="'+tabName+'"]').addClass('js-selected');
+      this.$tabBar.find('div').removeClass('js-selected');
+      this.$tabBar.find('[data-tab="'+tabName+'"]').addClass('js-selected');
+    },
+    initCarousels: function(){
+      var $carousels = $('.product-detail__carousel');
+      $carousels.each(function(i, el) {
+        var $slides = $(el).find('li');
+
+        if ($slides.length > 1) {
+          var $dots = $('<div class="product-detail__carousel-dots"></div>').appendTo($(el));
+          $slides.each(function(){
+            $dots.append('<div></div>');
+          });
+          $dots.on('click', 'div', function(e){
+            var $target = $(e.currentTarget);
+            var index = $target.index();
+            $dots.find('div')
+              .removeClass('js-selected')
+              .eq(index).addClass('js-selected');
+            $slides
+              .removeClass('js-selected')
+              .eq(index).addClass('js-selected');
+          });
+          $slides.eq(0).addClass('js-selected');
+          $dots.find('div').eq(0).addClass('js-selected');
+        }
+        else {
+          $('.product-detail__carousel li').css('display', 'block');
+        }
+      });
+    }
+  });
+})(jQuery, window, document);

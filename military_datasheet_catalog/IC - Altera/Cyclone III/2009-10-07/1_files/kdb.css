@@ -1,0 +1,14 @@
+.heading         { display:inherit; }
+.collapsable     { display:inherit; font-weight:normal; }
+.collapsable-category     { display:inherit; font-weight:bold; }
+.non-collapsable { display:inherit; }
+
+.kdb-category { display:inline; font-weight:bold; padding-left:5px;  }
+.kdb-area { display:inline; list-style-type:none; padding-left:5px; font-weight:normal; }
+.kdb-subarea { }
+.area-listings { position:relative; left:-30px; top:-10px; font-weight:normal; }
+
+.cell-display { display:run-in; }
+
+#.non-collapsable { margin: 0.1em; padding: 0.2em; }
+#.kdb-category-separator { border-top-color:#0099FF; border-top-style:groove; border-top-width:thick; }

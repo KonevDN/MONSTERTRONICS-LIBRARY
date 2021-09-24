@@ -1,0 +1,428 @@
+/* ================================= /*
+/* overall mpl container */
+#TE_mpl_container {
+	position:fixed;
+	bottom:0px;
+	right:50px;
+	/* Decrease or increase padding-top as needed for notes */ 
+	padding-top:30px;
+	/*padding-bottom:20px;*/
+	width:370px;	
+}
+
+/* ================================= */
+/* WIDGET, STYLES FOR HEADER */
+.TE_mpl_header {
+	width:352px;
+	height:17px;
+	background-image:url(../TEimages/TE_mpl_header.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-top:6px;
+}
+.TE_mpl_header_minimized {
+/*	position:absolute;*/
+	bottom:0px;
+	left:0px;
+}
+.TE_mpl_header_scroll {
+	width:370px;
+	height:17px;
+	background-image:url(../TEimages/TE_mpl_header_scroll.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-top:6px;
+}
+.TE_mpl_header_flash {
+	width:352px;
+	height:17px;
+	background-image:url(../TEimages/TE_mpl_headerYellow.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-top:6px;
+}
+.TE_mpl_header_flash_scroll {
+	width:370px;
+	height:17px;
+	background-image:url(../TEimages/TE_mpl_headerYellow_scroll.gif);
+	background-repeat:no-repeat;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-top:6px;
+}
+.TE_mpl_header div, .TE_mpl_header_scroll div, .TE_mpl_header_flash div, .TE_mpl_header_flash_scroll div{
+	float:right;
+	display:table;
+	width:36px;
+	margin-top:-12px;
+}
+.TE_mpl_header p, .TE_mpl_header_scroll p, .TE_mpl_header_flash p, .TE_mpl_header_flash_scroll p{
+	margin:0px;
+	padding-right:5px;
+}
+.TE_mpl_plName {
+	color:#545454;
+	margin-left:8px;
+}
+.TE_mpl_plCount {
+	color:#9a9a9a;
+}
+#TE_mpl_minimize {
+	float:left;
+}
+#TE_mpl_close {
+	float:right;
+}
+/* ================================= /*
+/* WIDGET, STYLES FOR TOOLBAR */
+.TE_mpl_tbar {
+	width:343px;
+	padding-left:8px;
+	padding-bottom:3px;
+	background-color:#d3d3d3;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+	border-left:1px solid #7d7d7d;
+	border-bottom:1px solid #7d7d7d;
+	display:table;
+}
+.TE_mpl_tbar_scroll {
+	width:361px;
+	padding-left:8px;
+	padding-bottom:3px;
+	background-color:#d3d3d3;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+	border-left:1px solid #7d7d7d;
+	border-bottom:1px solid #7d7d7d;
+	display:table;
+}
+.TE_mpl_tbar p {
+	margin:0px;
+	margin-top:-12px;
+	padding-right:5px;
+	float:right;
+	font-size:10px;
+	text-align:right;
+	width:140px;
+}
+.TE_mpl_tbar_scroll p {
+	margin:0px;
+	margin-top:-12px;
+	padding-right:5px;
+	float:right;
+	font-size:10px;
+	text-align:right;
+	width:158px;
+}
+/* ================================= /*
+/* WIDGET, STYLES FOR PART AREA */
+.TE_mpl_partArea {
+	width:352px;
+	overflow:hidden;
+	background-color:#ffffff;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+}
+.TE_mpl_partArea_scroll {
+	height:168px;
+	width:368px;
+	overflow:auto;
+	background-color:#ffffff;
+}
+.TE_mpl_partArea_scrollBG {
+	height:168px;
+	width:370px;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+}
+
+/* ================================= /*
+/* WIDGET, STYLES FOR PART ROWS */
+.TE_mpl_partRow {
+	width:348px;
+	height:20px;
+	background-color:#ffffff;
+	border-left:1px solid #7d7d7d;
+	border-bottom:1px solid #7d7d7d;
+	display:table;
+}
+
+.TE_mpl_partRow_noHeight {
+	width:348px;
+	background-color:#ffffff;
+	border-left:1px solid #7d7d7d;
+	border-bottom:1px solid #7d7d7d;
+	display:table;
+}
+
+.TE_mpl_partRow_message {
+	font-size:9px;
+	padding:4px;
+}
+
+.TE_mpl_partRow_message_link {
+	color:#005380;
+	text-decoration:underline;
+	border:none;
+}
+
+.TE_mpl_partRow_over {
+	background-color:#faea93;
+}
+.TE_mpl_partRow p {
+	margin:0px;
+}
+.TE_mpl_partRowL {
+	float:left;
+	width:307px;
+	display:table;
+}
+.TE_mpl_options {
+	float:left;
+	border-right:1px solid #7d7d7d;
+}
+.TE_mpl_partDescr {
+	font-size:9px;
+	float:right;
+	text-align:left;
+	padding-top:4px;
+	width:290px;
+}
+.TE_mpl_partDescr span {
+	font-weight:bold;
+	margin-right:5px;
+}
+.TE_mpl_partRowR {
+	float:right;
+	display:table;
+	width:40px;
+}
+.TE_mpl_noteIndicator {
+	float:left;
+	padding-top:2px;
+	cursor:pointer;
+}
+.TE_mpl_partRemove {
+	float:right;
+	padding-top:4px;
+	padding-right:5px;
+	cursor:pointer;
+}
+
+/* ================================= /*
+/* MENUS, NOTES, OPTIONS */
+.TE_mpl_optionsMenu {
+	display:none;
+	position:absolute;
+	/*margin-left:-151px;*/
+	margin-top:-8px;
+	padding:5px;
+	padding-top:0px;
+	padding-right:30px;
+	border-left:1px solid black;
+	background-image:url(../TEimages/TE_mpl_optionsMenu.gif);
+	background-repeat:no-repeat;
+	background-position:top right;
+}
+.TE_mpl_optionsMenuNotes {
+	display:none;
+	position:absolute;
+	/*margin-left:-151px;*/
+	margin-top:-8px;
+	padding:5px;
+	padding-top:0px;
+	padding-right:30px;
+	border-left:1px solid black;
+	background-image:url(../TEimages/TE_mpl_optionsMenuNote.gif);
+	background-repeat:no-repeat;
+	background-position:top right;
+}
+.TE_mpl_optionsMenuNotes p, .TE_mpl_optionsMenu p {
+	margin:0px;
+	margin-top:3px;
+}
+.TE_mpl_viewNote {
+	display:none;
+	position:absolute;
+	border-top:1px solid black;
+	padding:7px;
+	padding-bottom:29px;
+	width:275px;
+	background-image:url(../TEimages/TE_mpl_notes.gif);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	font-size:9px;
+	margin-left:46px;
+	/*margin-top:-95px;*/
+	z-index:4;
+}
+
+/* ================================= /*
+/* MPL FOOTER */
+.TE_mpl_footer {
+	background-image:url(../TEimages/TE_mpl_footer.gif);
+	background-repeat:no-repeat;
+	width:352px;
+	height:21px;
+	/*position:absolute;*/
+	margin-top:-1px;
+	margin-bottom: 5px;
+}
+.TE_mpl_footer_scroll {
+	background-image:url(../TEimages/TE_mpl_footer_scroll.gif);
+	background-repeat:no-repeat;
+	width:370px;
+	height:21px;
+	/*position:absolute;*/
+	margin-top:-1px;
+	margin-bottom: 5px;
+}
+
+/* ================================= /*
+/* MPL ERRORS/WARNINGS/MESSAGES */
+.TE_mpl_messageOverlay {
+	background-color:#ffffb5;
+	width:351px;
+	min-height:20px;
+	border-bottom:1px solid #7d7d7d;
+	border-left:1px solid #7d7d7d;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+	vertical-align: middle;
+}
+.TE_mpl_messageOverlay_scroll {
+	background-color:#ffffb5;
+	width:369px;
+	min-height:20px;
+	border-bottom:1px solid #7d7d7d;
+	border-left:1px solid #7d7d7d;
+	background-image:url(../TEimages/TE_mpl_blackShadow.gif);
+	background-position:right;
+	background-repeat:repeat-y;
+	vertical-align: middle;
+}
+.TE_mpl_messageOverlay img, .TE_mpl_messageOverlay_scroll img {
+	display:inline;
+}
+.TE_mpl_nonReg {
+	font-size:9px;
+	position:relative;
+	margin-top:-18px;
+	margin-left:35px;
+	width:310px;
+}
+.TE_mpl_nonReg_popup {
+	background-color:#EEEEEE;
+	padding:5px;
+	width:200px;
+	display:none;
+	position:absolute;
+	margin-left:0px;
+	border:1px solid black;
+	color:#999999;
+	z-index:6;
+}
+.TE_mpl_nonReg_popup_show {
+	background-color:#EEEEEE;
+	padding:5px;
+	width:200px;
+	position:absolute;
+	margin-left:0px;
+	border:1px solid black;
+	color:#999999;
+	z-index:6;
+}
+
+.TE_mpl_error {
+	width:310px;
+	font-size:9px;
+	margin-top:-18px;
+	margin-left:35px;
+	color:#ff0000;
+	font-weight:bold;
+	position:relative;
+	z-index:0;
+}
+
+.TE_mpl_disabled {
+	color:#999999;
+}
+.TE_mpl_actionsOverlay {
+	position:absolute;
+	background-color:#ededed;
+	filter:alpha(opacity=80);
+	-moz-opacity:.8;
+	-khtml-opacity:.8;
+	opacity:.8;
+	width:349px;
+	margin-left:1px;
+	display:none;
+}
+.TE_mpl_actionsOverlay_scroll {
+	position:absolute;
+	background-color:#ededed;
+	filter:alpha(opacity=80);
+	-moz-opacity:.8;
+	-khtml-opacity:.8;
+	opacity:.8;
+	width:367px;
+	margin-left:1px;
+	display:none;
+}
+
+/* ================================= /*
+/* ACTIONS DIALOG BOXES */
+#TE_mpl_newList_dialog, #TE_mpl_remove_dialog{
+	display:none;
+}
+.TE_mpl_taskOverlays {
+	background-color:#ffffff;
+	margin-top:10px;
+	width:267px;
+	border:1px solid black;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
+	padding:3px;
+	position:absolute;
+	z-index:1;
+	margin-left:40px;
+}
+.TE_mpl_taskOverlays span {
+	background-color:#000000;
+	display:block;
+	margin:-4px;
+	padding:3px;
+	color:#ffffff;
+	font-size:10px;
+	font-weight:bold;
+}
+.TE_mpl_taskOverlaysHeader{
+	font-weight:bold;
+	color:#000000;
+}
+.TE_mpl_taskOverlaysGray {
+	color:#666666;
+}
+.TE_mpl_taskOverlays p {
+	margin:0px;
+	margin-top:8px;
+	margin-bottom:0px;
+	font-size:10px;
+}
+.TE_mpl_taskOverlays_error {
+	color:#ff0000;
+	font-size:9px;
+	margin-top:5px;
+	margin-bottom:-2px;
+	margin-left:2px;
+	font-weight:bold;
+}

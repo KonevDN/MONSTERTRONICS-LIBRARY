@@ -1,0 +1,2459 @@
+/*****************************************************************************
+** CODE IN THIS STYLESHEET IS IMPLEMENTED ON EVERY PAGE OF EVERY SITE
+** there is an IE override sheet called ie.css
+**
+** KEEP THIS CODE INDENTED WITH COMMENTS TO MARK BEGINNING OF SECTIONS - 
+**    EASY TO MAINTAIN!
+****************************************************************e*************/
+
+/* Style to set the default text and page margins */
+body{
+margin:0px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:70%;
+color:#000000;
+background-color:#ededed;
+}
+
+a img{
+border:0; /* Eliminates borders on ALL hyperlinked images */
+}
+
+a,a:link,a:active,a:focus{
+color:#005380;
+text-decoration:underline;
+border:none;
+}
+a:visited{
+color:#4092ad;
+text-decoration:underline;
+border:none;
+}
+a:hover{
+color:#f78932;
+text-decoration:underline;
+border:none;
+}
+
+form{
+margin:0px; /* Eliminates inherited & default margins on ALL forms */
+padding:0px;
+}
+
+#TE_searchButton{
+font-size:80%;
+}
+
+input,select{
+font-size:90%;
+}
+
+/* HEADER CONTROL */
+
+div#TE_header_parent{
+margin-left:auto;
+margin-right:auto;
+width:900px;
+height:54px;
+}
+
+	div#TE_header_logo{
+	margin-top:0px;
+	margin-left:0px;
+	padding-top:10px;
+	padding-left:8px;
+	width:440px;
+	z-index:2;
+	background-color:inherit;
+	}
+
+	div#TE_header_tag{
+	margin-top:-22px;
+	margin-left:241px;
+	background-color:inherit;
+	width:265px;
+	}
+	
+	div#TE_header_search{
+	margin-top:-25px;
+	margin-left:516px;
+	text-align:right;
+	background-color:inherit;
+	color:#005380;
+	width:376px;
+	line-height:25px;
+	}		
+		
+		#TE_Inquira_searchselector{
+		display:none;
+		position:absolute;
+		margin-right:auto;
+		padding-left:6px;
+		padding-right:4px;
+		padding-top:4px;
+		padding-bottom:4px;
+		text-align:left;
+		background-color:#fdfdfd;
+		border:1px solid #7f9db9;
+		z-index:1000000;
+		}
+			.TE_Inquira_searchselector { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:91px;
+			-moz-margin-start:97px;
+			margin-top:-4px;
+			width:196px;
+			}
+			.TE_Inquira_searchselector_2 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:69px;
+			-moz-margin-start:75px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_3 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:89px;
+			-moz-margin-start:95px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_4 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:96px;
+			-moz-margin-start:102px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_5 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:91px;
+			-moz-margin-start:97px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_6 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:108px;
+			-moz-margin-start:114px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_8 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:108px;
+			-moz-margin-start:114px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_9 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:108px;
+			-moz-margin-start:114px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_10 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:83px;
+			-moz-margin-start:89px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_14 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:94px;
+			-moz-margin-start:100px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_15 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:85px;
+			-moz-margin-start:91px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_16 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:93px;
+			-moz-margin-start:99px;
+			margin-top:-4px;
+			width:auto;
+			}
+			.TE_Inquira_searchselector_17 { /**** SEE IE STYLE IN IE.CSS */
+			margin-left:79px;
+			-moz-margin-start:85px;
+			margin-top:-4px;
+			width:auto;
+			}
+				#search_selector{
+				background-color:#fdfdfd;
+				}
+					.search_selector{
+					width:100px;
+					}
+					.search_selector_nonEng{ /**** SETS THE STYLE OF THE LANGUAGE SELECTOR BOX FOR NON-ENGLISH LANGUAGES */
+					width:auto;
+					}
+					
+				#TE_close_searchselector{
+				padding-left:10px;
+				}
+/* END HEADER CONTROL */
+
+/* STYLES FOR CORPORATE HOMEPAGE */
+#TE_corp_topContentContainer {
+display:table;
+width:890px;
+margin-top:-30px;
+}
+
+	#TE_corp_FlashContent {
+	float:left;
+	margin-top:16px;
+	width:510px;
+	height:172px;
+	}
+	#TE_corp_NavNewsContainer {
+	float:right;
+	width:365px;
+	background-color:inherit;
+	display:table;
+	}
+		#TE_corp_homeNav {
+		float:left;
+		width:110px;
+		margin-top:35px;
+		font-size:11px;
+		font-weight:bold;
+		background-color:inherit;
+		}
+			#TE_corp_homeNav ul { 
+			list-style:none;
+			list-style-position:outside;
+			margin:0px;
+			padding-left:0px;
+			}
+
+			#TE_corp_homeNav li { 
+			background-image:url(/_includes/corporate/images/corp_homeNav_bullet.gif);
+			background-repeat:no-repeat;
+			margin:0px;
+			padding:0px;
+			padding-left:15px;
+			padding-top:6px;
+			padding-bottom:6px;
+			}
+		.TE_corp_homeBoxes a:link {
+		background-color:inherit;
+		text-decoration:underline;
+		color:#005380;
+		}	
+		.TE_corp_homeBoxes a:visited {
+		background-color:inherit;
+		text-decoration:underline;
+		color:#4092ad;
+		}	
+		.TE_corp_homeBoxes a:hover {
+		background-color:inherit;
+		text-decoration:underline;
+		color:#f78932;
+		}
+		.TE_corp_homeBoxes {
+		background-color:inherit;
+		margin:0px;
+		}				
+		.TE_corp_homeBoxes ul { 
+		list-style:none;
+		list-style-position:outside;
+		margin:0px;
+		margin-top:10px;
+		line-height:0px;
+		padding:0px;
+		font-size:11px;		
+		}			
+		.TE_corp_homeBoxes li { 
+		background-image:url(/_includes/corporate/images/corp_homeNav_boxbullets.gif);
+		background-repeat:no-repeat;
+		margin:0px;
+		padding-left:15px;
+		line-height:12px;
+		}
+	
+		.TE_corp_homeBoxEC {
+		background-color:inherit;
+		border-left:#FC842D 1px solid;
+		padding-left:5px;
+		line-height:0px;
+		margin-top:13px;
+		}	
+		.TE_corp_homeBoxEC ul { 
+		list-style:none;
+		list-style-position:outside;
+		margin:0px;
+		line-height:0px;
+		margin-top:13px;	
+		padding:0px;	
+		font-size:11px;	
+		}			
+		.TE_corp_homeBoxEC li { 
+		background-image:url(/_includes/corporate/images/corp_homeNav_boxblue.gif);
+		background-repeat:no-repeat;
+		margin:0px;
+		padding:0px;
+		padding-left:15px;
+		line-height:12px;
+		}	
+		.TE_corp_homeBoxEC a:link {
+		background-color:inherit;
+		color:#88807d;
+		}	
+		.TE_corp_homeBoxEC a:visited {
+		background-color:inherit;
+		color:#4092ad;
+		}	
+		.TE_corp_homeBoxEC a:hover {
+		background-color:inherit;
+		color:#f78932;
+		}			
+		#TE_corp_stockInfo {
+		float:right;
+		width:215px;
+		text-align:right;
+		}
+		#TE_corp_newsContent { 
+		float:right;
+		margin-top:22px;
+		background-color:inherit;
+		width:230px;
+		padding-top:5px;
+		overflow:hidden;
+		}		
+			h3.TE_corp_newsContent { 
+			font-family:Verdana, Arial, Helvetica, sans-serif;
+			color:#005380;
+			font-weight:bold;
+			font-size:11px;
+			padding-left:14px;
+			padding-top:3px;
+			margin-bottom:0px;
+			}
+						
+					#TE_corp_newsContent ul { 
+					font-family:Verdana, Arial, Helvetica, sans-serif;
+					color:#000000;
+					list-style:none;
+					list-style-position:outside;
+					margin:0px;
+					padding-left:0px;
+					}
+					#TE_corp_newsContent li { 
+					background-image:url(/_includes/corporate/images/TE_news_link.gif);
+					background-repeat:no-repeat;
+					margin:0px;
+					margin-top:8px;
+					margin-bottom:8px;
+					padding:0px;
+					padding-left:15px;
+					}
+					ul.TE_corp_newsContent a:link {
+						color:#000000;
+						text-decoration:none;
+						border:none;
+					}
+					ul.TE_corp_newsContent a:visited {
+						color:#4092ad;
+						text-decoration:none;
+						border:none;
+					}
+					ul.TE_corp_newsContent a:hover { 
+						color:#f78932;
+						text-decoration:underline;
+						border:none;
+					}
+
+#TE_corp_bottomContentContainer {
+display:table;
+width:884px;
+margin-top:12px;
+margin-left:auto;
+margin-right:auto;
+padding-bottom:10px;
+border-bottom:1px solid #d6d6d6;
+}
+
+	#TE_corp_productSolutions {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#f78932;
+	font-weight:bold;
+	font-size:13px;
+	margin-bottom:5px;
+	padding-left:8px;
+	}
+	
+	/* can be removed in future */
+	#TE_corp_paletteContainerLeft {
+	display:table;
+	float:left;
+	width:501px;
+	}
+		#TE_corp_floatPalette01 {
+		float:left;
+		width:310px;
+		border:0px;
+		}
+		
+		#TE_corp_floatPalette02 {
+		float:right;
+		width:178px;
+		border:0px;
+		}
+	
+	#TE_corp_palleteContainerRight {
+	display:table;
+	float:right;
+	width:370px;
+	}
+		
+		#TE_corp_floatPalette03 {
+		float:left;
+		width:178px;
+		border:0px;
+		}
+		
+		#TE_corp_floatPalette04 {
+		float:right;
+		width:178px;
+		border:0px;
+		}
+	/* end can be removed in future */
+
+	
+/* END STYLES FOR CORPORATE HOMEPAGE */
+
+/* PALETTE STYLES */
+.TE_corp_palette178_top {
+background-image:url(/_includes/corporate/images/palettetop_178.gif);
+background-repeat:no-repeat;
+width:170px;
+height:30px;
+padding-top:12px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#005380;
+font-size:12px;
+text-align:left;
+}
+
+.TE_corp_palette178_mid {
+background-image:url(/_includes/corporate/images/palettemid_178.gif);
+background-repeat:repeat-y;
+width:170px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#005380;
+text-align:left;
+}
+
+.TE_corp_palette178_bottom {
+background-image:url(/_includes/corporate/images/palettebottom_178.gif);
+background-repeat:no-repeat;
+width:178px;
+height:10px;
+margin-bottom:5px;
+}
+
+.TE_corp_palette310_top {
+background-image:url(/_includes/corporate/images/palettetop_310.gif);
+background-repeat:no-repeat;
+width:302px;
+height:30px;
+padding-top:12px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#005380;
+font-size:12px;
+text-align:left;
+}
+
+.TE_corp_palette310_mid {
+background-image:url(/_includes/corporate/images/palettemid_310.gif);
+background-repeat:repeat-y;
+width:302px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#005380;
+overflow:visible;
+text-align:left;
+}
+
+.TE_corp_palette310_bottom {
+background-image:url(/_includes/corporate/images/palettebottom_310.gif);
+background-repeat:no-repeat;
+width:310px;
+height:10px;
+margin-bottom:5px;
+}
+
+.TE_corp_palette600_top {
+background-image:url(/_includes/corporate/images/palettetop_600.gif);
+background-repeat:no-repeat;
+width:592px;
+height:30px;
+padding-top:12px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#005380;
+font-size:12px;
+text-align:left;
+}
+
+.TE_corp_palette600_mid {
+background-image:url(/_includes/corporate/images/palettemid_600.gif);
+background-repeat:repeat-y;
+width:592px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#005380;
+overflow:visible;
+text-align:left;
+}
+
+.TE_corp_palette600_bottom {
+background-image:url(/_includes/corporate/images/palettebottom_600.gif);
+background-repeat:no-repeat;
+width:600px;
+height:10px;
+margin-bottom:5px;
+}
+
+.TE_corp_palette600ds_top {
+background-image:url(/_includes/corporate/images/palettetop_600ds.gif);
+background-repeat:no-repeat;
+width:602px;
+height:30px;
+padding-top:12px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#005380;
+font-size:12px;
+text-align:left;
+}
+
+.TE_corp_palette600ds_mid {
+background-image:url(/_includes/corporate/images/palettemid_600ds.gif);
+background-repeat:repeat-y;
+width:602px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#005380;
+overflow:visible;
+text-align:left;
+}
+
+.TE_corp_palette600ds_bottom {
+background-image:url(/_includes/corporate/images/palettebottom_600ds.gif);
+background-repeat:no-repeat;
+width:610px;
+height:18px;
+margin-bottom:5px;
+}
+
+.TE_corp_palette668_top {
+background-image:url(/_includes/corporate/images/palettetop_668.gif);
+background-repeat:no-repeat;
+width:660px;
+height:30px;
+padding-top:12px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-weight:bold;
+color:#005380;
+font-size:12px;
+text-align:left;
+}
+
+.TE_corp_palette668_mid {
+background-image:url(/_includes/corporate/images/palettemid_668.gif);
+background-repeat:repeat-y;
+width:660px;
+margin-top:-11px;
+padding-top:11px;
+padding-left:8px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#005380;
+overflow:visible;
+text-align:left;
+}
+
+.TE_corp_palette668_bottom {
+background-image:url(/_includes/corporate/images/palettebottom_668.gif);
+background-repeat:no-repeat;
+width:668px;
+height:10px;
+margin-bottom:5px;
+}
+/* END PALETTE STYLES */
+
+/* CORPORATE LEVEL NAVIGATION */
+div#TE_corpnav_header{
+margin-left:auto;
+margin-right:auto;
+background-color:#ededed;
+font-family:Verdana, Arial, Helvetica, sans-serif;	
+font-size:10px;
+color:#535353;
+height:17px;
+text-align:right;
+padding-top:14px;
+padding-bottom:1px;
+padding-right:220px;
+}
+	.TE_corpnav_currentsegment{
+	font-size:11px;
+	font-weight:bold;
+	}
+	
+	#TE_corpnav_header a{
+	color:#5389a6;
+	text-decoration:none;
+	}
+	
+	#TE_corpnav_header a:hover{
+	color:#f4ac73;
+	text-decoration:underline;
+	}
+/* END CORPORATE LEVEL NAVIGATION */
+
+/* LANGUAGE SELECTOR STYLES */
+#TE_langSelector_bottom {
+background-image:url(/_TEincludes/TEimages/LangSelector/langSelector.gif);
+background-repeat:no-repeat;
+background-position:bottom;
+width:201px;
+height:27px;
+}
+#TE_langSelector_langContent {
+width:199px;
+height:315px;
+background-color:#ffffff;
+border-left:1px solid #b0b0b0;
+border-right:1px solid #b0b0b0;
+border-bottom:1px solid #b0b0b0;
+}
+#TE_langSelector_langContentHeader {
+background-color:#ededed;
+height:15px;
+border-bottom:1px solid #b0b0b0;
+text-align:right;
+}
+#TE_langSelector_langCountryHeader {
+margin-left:auto;
+margin-right:auto;
+width:190px;
+margin-top:6px;
+padding-bottom:3px;
+}
+#TE_langSelector {
+position:absolute;
+top:0px;
+margin-left:699px;
+overflow: auto;
+z-index:10000001;
+}
+#TE_langSelector_langHeader {
+padding-left:49px;
+margin-right:5px;
+margin-top:9px;
+font-weight:bold;
+color:#999999;
+float:left;
+}
+#TE_langSelector_languageHeading {
+text-align:left;
+border-bottom:1px solid black;
+font-weight:bold;
+}
+#TE_langSelector_countrySiteHeading {
+text-align:left;
+border-bottom:1px solid black;
+font-weight:bold;
+}
+	ul.TE_langSelector_listSelections {
+	margin:0px;
+	margin-left:-25px;
+    padding-left:0px;
+	list-style-type:none;
+	line-height:16px;
+	margin-top:6px;
+	margin-bottom:6px;
+	}
+	ul.TE_langSelector_listSelections li  {
+	margin-left:40px;
+    list-style-type:none;
+    color:inherit;
+	line-height:17px;
+	}
+#TE_langSelector_expandLink,#TE_langSelector_collapseLink {
+float:right;
+margin-left:5px;
+margin-top:7px;
+width:19px;
+}
+/* END LANGUAGE SELECTOR STYLES */
+
+/* SUPERGRAPHIC CONTROL */
+div#TE_supergr{
+margin-left:auto;
+margin-right:auto;
+background-color:inherit;
+height:29px;
+width:900px;
+padding:0px;
+background-image:url(/_TEincludes/TEimages/TE_supergraphic.gif);
+background-repeat:no-repeat;
+z-index:100000000;
+}
+/* END SUPERGRAPHIC CONTROL */
+
+/* CORPORATE MAIN CONTENT STRUCTURE */
+
+div#TE_corp_mainBody{
+display:table-cell;
+margin-left:auto;
+margin-right:auto;
+background-color:#ffffff;
+width:888px;
+padding:6px;
+padding-top:0px;
+padding-bottom:10px;
+vertical-align:top;
+background-image:url(/_TEincludes/TEimages/TE_corp_divBorder.gif);
+background-repeat:repeat-y;
+border-bottom:1px solid black;
+}
+div#TE_corp_mainBodyFull{
+display:table-cell;
+margin-left:auto;
+margin-right:auto;
+background-color:#ffffff;
+width:888px;
+padding:6px;
+padding-top:0px;
+padding-bottom:10px;
+vertical-align:top;
+border-bottom:1px solid black;
+}
+div#TE_corp_mainBodyFullnoNav{
+display:table-cell;
+margin-left:auto;
+margin-right:auto;
+background-color:#ffffff;
+padding:6px;
+padding-top:0px;
+padding-bottom:10px;
+vertical-align:top;
+border-bottom:1px solid black;
+}
+
+	div#TE_corp_breadcrumbs{
+	margin-top:0px;
+	margin-left:0px;
+	background-color:inherit;
+	width:100%;
+	padding-top:6px;
+	margin-bottom:5px;
+	}
+
+	#TE_corp_pagetitle{
+	font-size:1.6em;
+	line-height:26px;
+	border-bottom:2px solid #000000;
+	padding-top:2px;
+	margin-top:2px;
+	margin-bottom:7px;
+	}
+	
+	div#TE_corp_leftBar{
+	float:left;
+	background-color:inherit;
+	width:187px;
+	padding-right:3px;
+	vertical-align:top;
+	}
+		#TE_corp_leftBar #imenus0 li { /* For menu items that DO NOT have multiple navigation links */
+			width:167px;
+			font-family:Verdana, Arial, Helvetica, sans-serif;
+			color:#000000;
+			line-height:18px;
+			background-color:inherit;
+			margin-left:0px;
+			padding:0px;
+			border-bottom:1px dashed #c3bfbe;
+		}
+		#TE_corp_leftBar #imenus0 div div li {
+			border-bottom:none;
+			color:#FF0000;
+		}
+		#TE_corp_leftBar  #imenus0 div div div div ul {
+			margin:5px 0 0 -8px;
+		}
+	
+	div#TE_corp_content{
+	margin-left:198px;
+	background-color:inherit;
+	height:100%;
+	width:446px;
+	vertical-align:top;
+	padding-right:8px;
+	padding-left:0px;
+	}
+	
+	div#TE_corp_contentFull{
+	margin-left:198px;
+	background-color:inherit;
+	height:100%;
+	width:679px;
+	vertical-align:top;
+	padding-right:8px;
+	padding-left:0px;
+	}
+	
+		div#TE_corp_rightBar{
+		display:table;
+		float:right;
+		background-color:inherit;
+		height:100%;
+		width:220px;
+		margin-right:-5px;
+		vertical-align:top;
+		}
+/* END MAIN CONTENT STRUCTURE */
+
+/* FOOTER CONTROL FOR CORPORATE LEVEL SITE */
+#TE_corp_footer{
+text-align:center;
+line-height:18px;
+color:#000000;
+margin-left:auto;
+margin-right:auto;
+background-color:#FFFFFF;
+width:900px;
+padding-top:15px;
+padding-bottom:15px;
+}
+/* END FOOTER CONTROL */
+
+
+/* CORPORATE NAVIGATION */
+
+#TE_corp_nav{
+width:181px;
+font-size:90%;
+line-height:20px;
+background-color:inherit;
+padding:0px;
+margin:0px;
+}
+	#TE_corp_nav a{
+	text-decoration:none;
+	}
+	#TE_corp_nav a:hover{
+	text-decoration:underline;
+	}
+		
+		.TE_corp_nav_item_expand{ /* For menu items that have more than one navigation link */
+		width:167px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		color:#000000;
+		line-height:18px;
+		background-color:inherit;
+		margin-left:8px;
+		padding:3px;
+		background-image:url(/_TEincludes/TEimages/TE_corpnav_expand.gif);
+		background-repeat:no-repeat;
+		border-bottom:1px dashed #c3bfbe;
+		}
+		
+		.TE_corp_nav_item_noexpand{ /* For menu items that DO NOT have multiple navigation links */
+		width:167px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		color:#000000;
+		line-height:18px;
+		background-color:inherit;
+		margin-left:8px;
+		padding:3px;
+		border-bottom:1px dashed #c3bfbe;
+		}
+
+		.TE_corp_nav_current{ /* For menu items that corresponds to CURRENT page */
+		
+		display:block;
+		width:165px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		color:#000000;
+		line-height:18px;
+		background-color:#inherit;
+		border:1px solid #fbc498;
+		margin-left:8px;
+		padding:3px;
+		}
+			
+			ul.TE_corp_nav_list{
+			margin:0px;
+			margin-left:-25px;
+    		padding-left:0px;
+			list-style-type:none;
+			line-height:16px;
+			}
+			
+			ul.TE_corp_nav_list li{
+			margin-left:40px;
+    		list-style-type:none;
+    		color:inherit;
+			}
+
+/* END CORPORATE NAVIGATION */
+
+/* COMPONENTS HOMEPAGE */
+
+#TE_compHP_tabs {
+margin:0px;
+margin-top:10px;
+padding:10px 10px 0px 0px;
+list-style:none;
+text-decoration:none;
+display:table;
+}
+#TE_compHP_tabs li {
+display:inline;
+margin:0px;
+padding:0px;
+text-decoration:none;
+}
+#ProductsTab a{
+text-decoration:none;
+cursor:pointer;
+}
+#IndustryTab a{
+text-decoration:none;
+cursor:pointer;
+}
+#BrandsTab a{
+text-decoration:none;
+cursor:pointer;
+}
+#AtoZTab a{
+text-decoration:none;
+cursor:pointer;
+}
+	.TE_compHP_tabs a {
+	float:left;
+	background:url("/_TEincludes/TEimages/TE_tabL.gif");
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin:0px;
+	padding:0px 0px 0px 4px;
+	text-decoration:none;
+	}
+	.TE_compHP_tabs a span {
+	float:left;
+	display:block;
+	background:url("/_TEincludes/TEimages/TE_tabR.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding:5px 15px 4px 6px;
+	color:#ffffff;
+	font-weight:bold;
+	text-decoration:none;
+	margin-right:2px;
+	}
+	.TE_compHP_tabs a:hover span {
+	color:#000000;
+	text-decoration:underline;
+	margin-right:2px;
+	}
+		.TE_compHP_tabs_active a {
+		float:left;
+		background:url("/_TEincludes/TEimages/TE_tabL_active.gif");
+		background-repeat: no-repeat;
+		background-position: left top;
+		margin:0px;
+		padding:0px 0px 0px 4px;
+		}
+		.TE_compHP_tabs_active a span {
+		float:left;
+		display:block;
+		background:url("/_TEincludes/TEimages/TE_tabR_active.gif");
+		background-repeat: no-repeat;
+		background-position: right top;
+		padding:5px 15px 4px 6px;
+		color:#000000;
+		font-weight:bold;
+		margin-right:2px;
+		}
+		.TE_compHP_tabs_active a:hover span {
+		color:#000000;
+		text-decoration:underline;
+		margin-right:2px;
+		}
+.TE_compHP_taglineBG {
+width:650px;
+height:135px;
+background-image:url('/_TEincludes/TEimages/TE_componentsTagline.gif');
+background-repeat:no-repeat;
+}
+.TE_compHP_categoryImages {
+margin:0px;
+padding:13px 0px 0px 25px;
+list-style:none;
+}
+.TE_compHP_categoryImages li {
+display:inline;
+margin:5px;
+}
+.TE_compHP_categoryTitle {
+margin-top:28px;
+margin-left:9px;
+color:#ffffff;
+font-weight:bold;
+font-size:12px;
+}
+.TE_compHP_content {
+padding:8px;
+width:630px;
+border-left:2px solid #dbdad8;
+border-right:2px solid #dbdad8;
+border-bottom:6px solid #dbdad8;
+}
+
+p.TE_compHP_links { /* THESE STYLE TEXTUAL CONTENT ON THE COMPONENTS HP */
+margin:0px;
+margin-bottom:12px;
+padding-left:8px;
+font-size:9px;
+}
+
+h4.TE_compHP_links  { /* THESE STYLE TEXTUAL CONTENT ON THE COMPONENTS HP */
+margin:0px;
+margin-bottom:3px;
+font-size:12px;
+}
+/* END COMPONENTS HOMEPAGE */
+
+/*****************************************************************************
+** Fieldset fix for Mozilla browsers to give them rounded corners
+*****************************************************************************/
+fieldset {
+  -moz-border-radius: 8px; 
+}
+/*****************************************************************************
+** Form Elements
+*****************************************************************************/
+select{ font-family: verdana; font-size: 90%;}
+input{ font-family: verdana; font-size: 100%;}
+textarea { font-family: verdana; font-size: 100%;}
+
+/*****************************************************************************
+** TE Outer contaniner that centers the page
+*****************************************************************************/
+#TE_outerDiv{
+  background-color:white;
+  background-repeat:no-repeat;
+  background-position:top left;
+  width:900px;
+  height:auto;
+  overflow:hidden;
+  min-height: 100%;  /* min-height for mozilla */
+  /*z-index:-1;*/
+  margin-left:auto;
+  margin-right:auto;
+}
+#TE_headerStub{	
+  position:absolute;
+  z-index:10;
+}
+#TE_header1px{
+  float:right;
+  width:100%;
+  height:77px;/**/
+}
+#TE_printDate,#TE_SkipToContent{
+  display:none;
+}
+
+/*****************************************************************************
+**	TE main content container
+*****************************************************************************/
+#TE_mainBody{
+  z-index:-1;
+  margin-bottom:1em;
+  padding-bottom:2em;
+  padding-left:0.5em; 
+  padding-right:0.5em;
+  border-bottom:solid 0.1em;		
+}	
+	
+/*****************************************************************************
+**	TE overlay for language disclaimer
+*****************************************************************************/
+#TE_changeLanguageDiv{
+  position:absolute;
+  height:48px;
+  max-width: 898px;
+  min-width: 898px;
+  width: 898px;
+  margin-bottom: 16px;
+  border:#336699 solid 1px;
+  background-color:#eeeeee;
+  text-align:center;
+  z-index:10;
+  padding:0px;
+}
+/*****************************************************************************
+** Default sizes and decoration
+*****************************************************************************/
+/*To be used instead of H1*/
+.TE_pageTitle,.TE_pageTitleOverHeadingBox{
+  font-size: 1.6em;
+  padding-top: 2px;
+  margin-top: 2px;
+  margin-bottom: 7px;
+}
+.TE_greytext {
+  color:#666666;
+}
+.TE_pageTitle{
+  border-bottom: #000000 2px solid;
+  padding-top: 2px;
+  margin-top: 2px;
+  margin-bottom: 7px; 
+}
+.TE_section {
+  background-image:url(/_TEincludes/TEimages/affordance.gif);
+  background-repeat:repeat;
+  background-position: top left;
+  text-align:left;
+  background-color:#F1E9DE;
+  padding:5px;
+  font-size: 1em;
+  border-right: 1px solid #C6A765;
+  border-left: 1px solid #C6A765;
+  border-bottom:black solid 1px;
+  font-weight : bold;
+}
+
+.TE_note{
+  color:#777777; /*check color*/
+  font-style:italic;
+  font-size: 0.8em;
+}
+.TE_important {
+  font-weight: bold;
+  color: red;
+  font-size: 1em;
+}	
+
+/*COULD BE REMOVED - doesn't hurt to keep it*/
+.TE_hr{
+  height:1px;
+  background-color:#666666;
+  display:block;
+  overflow:hidden;
+}
+/*HR inside the tables*/
+.TE_stdTableNoBorder .TE_hr,TE_stdTable  .TE_hr{
+  background-color:#CCCCCC;
+  width:100%;
+  height:1px;
+}
+tr.TE_altcolor{
+  background-color:#DCDCDC;
+}
+tr.TE_altcolorA{ 
+  background-color:#DEF2FC;
+}
+span.TE_inactive {
+  color:#DCDCDC;
+}
+
+/*****************************************************************************
+** TE footer
+
+*****************************************************************************/
+#TE_footer{
+  text-align:center;
+  margin-bottom:2em;
+}
+	
+/*****************************************************************************
+** TE search
+*****************************************************************************/
+#TE_search{
+  position:absolute;
+  width:893px;
+  line-height:2em;
+  top:30px; 
+}
+#TE_search div{
+  color:#FFCE00;
+  float:right;
+  z-index:11;
+}
+/* inquira search styles */
+#TE_search label{
+  padding: 0;
+  font-weight:bold;
+  color:#FFFFFF;
+}
+#TE_search,#TE_search input,#question_box{
+  font-size: 10px;
+}
+#question_box{
+  width:204px;
+}
+#TE_search A,#TE_search A:link,#TE_search A:visited  {
+  PADDING: 2px 8px 2px;
+  COLOR:#FFCE00;
+  TEXT-ALIGN: center;
+  TEXT-DECORATION: underline;
+  font-size: 10px;
+}
+#TE_search a#inquiraTips{
+  margin-left:83px;
+  margin-right:3px;
+  margin-bottom:1em;
+  padding-right:10px;
+  background-image:url(/_TEincludes/images/sub_arrow.gif);
+  background-position : left center;
+  background-repeat : no-repeat;
+}
+#TE_searchButton{
+  margin-bottom:0;
+  margin-left:4px;
+  margin-top:-2px;
+}
+#TE_searchTipsDiv{
+  position:absolute;
+  width:485px;
+  height:422px;
+  border:#336699 solid 2px;
+  background-color:#cce3f8;
+  right:30px;
+  top:100px;
+  text-align:center;
+  padding:0 0 5px 0;
+  z-index:10;
+}
+#TE_searchTipsDiv iframe{
+  width:99%;
+  height:465px;
+  margin:0 0 5px 0;
+  z-index:11;
+}
+#TE_searchTipsDiv h3{
+  text-align:left;
+  padding:0 0 0 10px;
+  margin:0;
+}
+
+div#TE_signIn{
+  margin-left:105px;
+  margin-right:auto;
+  position:absolute;
+  top:30px;
+  height:25px;
+  margin-top:2px;
+  padding-right:10px;
+  width:783px;
+  font-size:0.9em;
+  text-align:right;
+  overflow:hidden;
+  float:right;
+}
+
+div#TE_signIn img {
+	vertical-align:middle;
+}
+	div#TE_signIn a,a:visited,a:link {
+	  	color:#4092ad;
+		text-decoration:underline;
+		border:none;
+	}
+	div#TE_signIn a:hover {
+	  	color:#f78932;
+	}
+
+div#TE_signIn span{
+  float: right;
+  }
+	
+#TE_searchErrorDiv,#TE_blankSearchErrorDiv{
+  position:absolute;
+  width:340px;
+  height:200px;
+  border:#336699 solid 2px;
+  background-color:#ECEFF5;
+  right:100px;
+  top:100px;
+  padding:5px;
+  z-index:20;
+}
+#TE_blankSearchErrorDiv{
+  width:200px;
+  height:60px;
+  z-index:30;
+}
+#TE_searchErrorDiv div,#TE_blankSearchErrorDiv div{
+  text-align:center;
+}
+#ProbText{
+  padding:0 5px 3px 0;
+}
+img.printStretch{
+  width:110px;
+}
+
+/*****************************************************************************
+** Default hyperlink colour
+*****************************************************************************/
+a, a:link, a:active, a:hover, a:focus {
+  color: #005380;
+  border:none;
+}
+a:visited {
+  color: #4092ad;
+  border:none;
+}
+a:hover{
+  color: #f78932;
+}
+img {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+label{
+  padding-bottom:.5em;
+  padding-left:10px;
+}
+label.TE_required{
+  background-image:url(/_TEincludes/TEimages/TE_required.gif);
+  background-repeat:no-repeat;
+  background-position:left;
+}
+/* validate padding & margin on table */
+table,form{
+  padding:0;
+  margin:0; /*make sure that thease elements dont take space*/
+  border-collapse:collapse;
+}
+	
+/*****************************************************************************
+** Green Leaf Styles
+*****************************************************************************/
+/*span.TE_greenLeaf, a.TE_greenLeaf,span.TE_leftGreenLeaf, a.TE_leftGreenLeaf,li.TE_greenLeaf{
+  background-image: url(/_TEincludes/TEimages/TE_greenLeaf.gif);
+  background-repeat: no-repeat;
+  padding-top:1px;
+  padding-bottom:1px;
+  padding-right:20px;
+}
+
+li.TE_greenLeaf a{
+  background-image:none;
+}*/
+
+li.TE_greenLeaf{
+  background-position: right bottom;
+}
+img.TE_greenLeaf{
+ float:right;
+/* position:relative;*/
+  padding-right:28px;
+/*  z-index:0px;*/
+  margin-top:0px;
+  background-position:top;
+}
+	
+/* each use of img.TE_greenLeaf need to have some poisution to adjust it location this can be done here for comon pages or inline for one of pages*/
+/*#TE_quickLinks img.TE_greenLeaf{
+  padding-right:10px;
+}
+*/
+/*span.TE_greenLeaf, a.TE_greenLeaf{
+  background-position: right bottom;
+}	
+span.TE_leftGreenLeaf, a.TE_leftGreenLeaf{
+  background-position: left bottom;
+}
+span.TE_leftGreenLeaf a.TE_greenLeaf{
+  padding-top:8px;
+}*/
+
+a.TE_leftMagGlass{
+  background-image: url(/_TEincludes/TEimages/TE_magglass.gif);
+  background-repeat: no-repeat;
+  padding-top:1px;
+  padding-bottom:1px;
+  padding-left:20px;
+}
+	
+/*****************************************************************************
+** TE Quick Links - Right Menu Style
+*****************************************************************************/
+#TE_quickLinks{
+  float: right;  
+  width: 200px;
+  margin: 0px 5px 5px 5px;
+  padding: 0px 5px 5px 5px;
+}
+
+fieldset#TE_quickLinks ul {
+  margin: 10px 0px 10px 15px;/* adjustment code in IE*/
+  padding: 0px;
+/*  width:180px;*/
+  text-align:left;
+}
+
+fieldset#TE_quickLinks ul li{
+  list-style-image:url(/_TEincludes/TEimages/TE_menuRightArrow.gif); 
+}
+
+fieldset#TE_quickLinks legend, fieldset#TE_features legend{
+  color:#005380;
+  font-size:110%;
+  font-weight:bold;
+}
+fieldset#TE_quickLinks span{
+  display:block;
+}
+
+ul.TE_bullet { /* set the margin and padding on every ul with this class */
+  margin-left:17px;
+  padding:0px;
+}
+ul.TE_bullet li{ 
+  list-style-image:url(/_TEincludes/TEimages/TE_menuRightArrow.gif); 
+}
+
+/*****************************************************************************
+**	TE Features  - Right Menu Style
+*****************************************************************************/
+fieldset#TE_features {
+	width:200px;
+	margin: 5px;	
+	padding: 5px;
+	float: right;
+}
+
+fieldset#TE_features div{
+  text-align:center;
+}
+
+fieldset#TE_features img{
+/*  padding:1%;*/
+  margin-left:auto;
+  margin-right:auto;
+  padding: 5px;  
+}
+
+/*****************************************************************************
+** standard grid table
+*****************************************************************************/
+table.TE_table {
+  border: solid 1px #000000;
+  border-bottom: solid 1px black;
+  border-collapse: collapse;
+}
+.TE_table caption {
+  border-bottom: 1px solid black;
+  text-align:center;
+  background-color:#F7F7F7;
+  padding:4px;
+  font-weight: bold;
+}
+.TE_table th {
+  border-top:#C6A765;  
+  border-bottom: solid 1px black;
+  background-color: #E4EEF4;
+}
+.TE_table td {
+  border: solid 1px #dddddd;
+  padding:3px;
+ }
+.TE_table tr.altColor {
+  background-color: #eeeeee;
+}
+.TE_table tr.footer th, .TE_table tr.footer td {
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  background-color: #E4EEF4;
+}
+.TE_table tr.footer td input {
+  font-size: 90%;
+}
+table.TE_table td ul{
+  margin-left:5px;
+  padding:0 0 0.2em 1.3em;
+}
+table.TE_table td ol{
+  margin-left:12px;
+  padding:0 0 0.2em 1.3em;  
+}
+table.TE_table table td ul {
+  margin-left:-10px;
+}
+table.TE_table table td ol{
+  margin-left:-2px;
+}
+
+/*****************************************************************************
+** standard NON grid table
+*****************************************************************************/
+table.TE_table_nogrid {
+  border: solid 1px #000000;
+  border-bottom: solid 1px black;
+  border-collapse: collapse;
+  padding:3px;
+}
+.TE_table_nogrid caption {
+  border-bottom: 1px solid black;
+  text-align:center;
+  background-color:#F7F7F7;
+  padding:4px;
+  font-weight: bold;
+}
+.TE_table_nogrid td {
+  padding:3px;
+}
+.TE_table_nogrid th {
+  border-top:#C6A765;  
+  border-bottom: solid 1px black;
+  background-color: #E4EEF4;
+}
+.TE_table_nogrid tr.altColor {
+  background-color: #eeeeee;
+}
+.TE_table_nogrid tr.altColor td {
+  border-top:solid 1px #999999;
+}
+.TE_table_nogrid tr.footer th, .TE_table tr.footer td {
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  background-color: #E4EEF4;
+}
+
+table.TE_table_nogrid_noborder {
+  border-collapse: collapse;
+  padding:3px;
+}
+.TE_table_nogrid_noborder caption {
+
+  text-align:center;
+  background-color:#F7F7F7;
+  padding:4px;
+  font-weight: bold;
+}
+.TE_table_nogrid_noborder td {
+  padding:3px;
+}
+.TE_table_nogrid_noborder th {
+  border-top:#C6A765;  
+  background-color: #E4EEF4;
+}
+.TE_table_nogrid_noborder tr.altColor {
+  background-color: #eeeeee;
+}
+
+.TE_table_nogrid_noborder tr.footer th, .TE_table tr.footer td {
+   background-color: #E4EEF4;
+}
+
+.TE_cellblock a , a.TE_cellblock,.TE_cellblock input ,
+.TE_cellblockColor a , a.TE_cellblockColor,.TE_cellblockColor input{
+  display:block;
+  width:100%;
+}
+
+table.TE_cellblockColor td a:hover , a:hover.TE_cellblockColor,ul.TE_cellblockColor li a:hover{
+  background-color:#FEDCA9;
+}
+
+table.TE_cellblock th a:hover{
+  color:#B7DDFF;
+  background-color:#005380;
+  text-decoration:none;
+}	
+
+/*****************************************************************************
+** basic grid table
+*****************************************************************************/
+table.TE_tableGrid {
+  border: solid 1px #cccccc;
+  border-collapse: collapse;
+}
+.TE_tableGrid th {
+  background-color:#f4f4f4;
+}
+.TE_tableGrid td {
+  border: solid 1px #dddddd;
+}
+.TE_tableGrid tr.altColor {
+  background-color: #eeeeee;
+}
+
+
+/*****************************************************************************
+** Product Table section
+*****************************************************************************/
+table.TE_stdProductTableWide{
+  border:black solid 1px;
+  table-layout:auto;
+  padding:0;
+}
+.TE_stdProductTableWide h1,.TE_stdProductTableWide h2,.TE_stdProductTableWide h3,.TE_stdProductTableWide h4{
+  margin:0 0 0.2em 0.2em;
+  padding:0;
+}		
+.TE_stdProductTableWide table h1,.TE_stdProductTableWide table h2,.TE_stdProductTableWide table h3,.TE_stdProductTableWide table h4{
+  margin:0 0 0 -1em;
+  padding:0;
+}
+.TE_stdProductTableWide th,.TE_BrownBackground{
+  background-image:url(/_TEincludes/TEimages/affordance.gif) ;
+  background-repeat:repeat;
+  background-position: top left; 
+  text-align:left;
+  background-color:#F1E9DE;
+  padding:5px;
+  border-bottom:black solid 1px;
+}
+.TE_stdProductTableWide table th{
+  background-image:none; 
+}
+.TE_stdProductTableWide td{
+  vertical-align:top;
+  border:black solid 1px;
+  padding:0;
+}
+table.TE_stdProductTableWide table{
+  margin:-2px;
+  width:100%;
+}
+table.TE_stdProductTableWide table td{
+  vertical-align:top;
+  border:none;
+  padding-left:15px;
+}	
+table.TE_stdProductTableWide table tbody{
+  /*	*/
+}
+table.TE_stdProductTableWide td ul{
+  margin-left:5px;
+  padding:0 0 0.2em 1.3em;
+}
+table.TE_stdProductTableWide td ol{
+  margin-left:12px;
+  padding:0 0 0.2em 1.3em;  
+}
+table.TE_stdProductTableWide table td ul {
+  margin-left:-10px;
+}
+table.TE_stdProductTableWide table td ol{
+  margin-left:-2px;
+}
+table.TE_stdProductTableWide table th{
+  text-align:left;
+  font-size:0.8em;
+  background-color:#F5F5F5;
+  border:none;
+  padding:2px;
+  margin:-2px;
+}	
+
+/*****************************************************************************
+**	#TE_BreadCrumb
+*****************************************************************************/
+#TE_BreadCrumb{
+  width:95%;
+  height:2.4em;
+  overflow:hidden;
+  padding-top:10px;
+  padding-left:10px;
+
+}
+
+#TE_BreadCrumb a, #TE_BreadCrumb span {
+  white-space: nowrap;
+}
+
+/*****************************************************************************
+** TE corp Menu
+*****************************************************************************/
+#TE_corpMenu{
+  margin-top:5px;
+  /*background-color:inherit;*/
+  width:100%;
+  padding-left:10px;
+  padding-top:0;
+  height:20px;
+  background-image:url(/_TEincludes/TEimages/components_nav_bg.gif);
+}
+#TE_corpMenu a#TE_home img{
+  padding-top:3px;
+  padding-right:1em;
+}
+#TE_corpMenu a#TE_home{
+  /*  */
+}	
+ 
+/*****************************************************************************
+** raised table - as used in Feature Selection and the Product List
+*****************************************************************************/
+.TE_raisedtablebackground {
+  line-height: 1.5em;
+  background: #919191;
+  padding:0 1px 1px 0;
+  margin: 0px 0px 4px 0px;
+}
+.TE_raisedtable{
+  width: 100%;
+  border: 1px solid #000;
+  background: #fff;
+  background-color : #FFFFEF;
+}
+
+div#TE_outerDiv div#TE_corpMenu  a#TE_home{
+  width:10px;
+  padding:0;
+  margin-top:2px;
+  height:20px;
+  display:block;
+  padding-right: 9px;
+}
+div#TE_outerDiv div#TE_corpMenu  a:hover#TE_home{
+  background-position:0 -30px ;
+  background:transparent;
+}
+/* menu will be positioned at this element */
+#TE_menuLoader {
+  position:absolute;
+  top:0;
+  left:20px;
+  z-index:99;
+}
+
+/*****************************************************************************
+** Tool Tips
+*****************************************************************************/
+.TE_toolTipGroup{
+  cursor:help;
+}
+
+.TE_toolTip{
+  background-color:#CCE3F8;
+  z-index:200;
+  border:solid 1px #0087CA;
+  padding:0.5em;
+}
+
+/*****************************************************************************
+** Forms
+*****************************************************************************/
+.TE_error{
+  background-color:#FFCCCC;
+  background-image: url(/_TEincludes/TEimages/error.gif);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-right:0.5em;/* insure space for the exclamation point */
+}
+.TE_errorBorder{
+  background-image: url(/_TEincludes/TEimages/error.gif);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  border:2px solid red;
+  margin-bottom:1px;
+  margin-right:0.5em;/* insure space for the exclamation point */
+}
+
+/*****************************************************************************
+** No Image
+*****************************************************************************/
+.TE_noImage{
+  vertical-align : middle;
+  border: 1px solid black;
+  height: 114px;
+  width: 200px;
+  background:white;
+  text-align : center;
+}
+.TE_noImageText{
+  margin: 10px 10px 10px 10px;
+  padding-top: 40px;
+  padding-bottom: 42px;
+  background:#ededed;
+  font-size: 90%;
+}
+.TE_noImageThumb{
+  vertical-align:middle;
+  border: 1px solid black;
+  height: 57px;
+  width: 100px;
+  background:white;
+  text-align : center;
+  cursor: pointer; 
+}
+.TE_noImageTextThumb{
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background:#ededed;
+  font-size: 90%;
+  cursor: pointer;  
+}
+.TE_noImageThumbNoCursor{
+  vertical-align:middle;
+  border: 1px solid black;
+  height: 57px;
+  width: 100px;
+  background:white;
+  text-align : center; 
+}
+.TE_noImageTextThumbNoCursor{
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background:#ededed;
+  font-size: 90%;  
+}
+
+/*****************************************************************************
+** TE_WarningBox, TE_ErrorBox, TE_InfoBox, TE_Confirmation
+**   Apply these to DIV tags to display an error/warning/information box with
+**   an icon.  This will usually appear at the top of a page.
+**   NOTE: Currently, warning and error are identical styles.
+*****************************************************************************/
+div.TE_WarningBox, div.TE_ErrorBox, div.TE_InfoBox, div.TE_Confirmation 
+{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 50px;
+  min-height: 50px;
+}
+
+div.TE_WarningBox, div.TE_ErrorBox 
+{
+  background: White url(/_TEincludes/TEimages/top_box_warn.gif) no-repeat 10px 7px;
+  border: 1px solid red;
+}
+
+div.TE_InfoBox 
+{
+  background: White url(/_TEincludes/TEimages/top_box_info.gif) no-repeat 10px 7px;
+  border: 1px solid #0000FF;
+}
+
+.TE_Confirmation
+{
+background: White url(/_TEincludes/TEimages/check_icon01.gif) no-repeat 10px 7px;
+border: 1px solid #1ea81e;
+padding: 6px;
+min-height: 50px;
+}
+
+.TE_MessageDiv_firstLineMessage{
+	padding-top: 4px;
+	font-weight:bold;
+}
+.TE_MessageDiv_secondLineMessage{
+	padding-top: 6px;
+}
+
+/************************************************************************************************************/
+/*  DIV Style Used in Product News Area                                          */
+/************************************************************************************************************/	
+	div.TE_dottedborder {
+	  margin : 5px;
+	  padding: 5px;
+	  border: 1px dashed #E0CFAB;
+	  list-style-type: disc;
+	}
+	div.TE_dottedborder ul {
+	  margin : 3px;
+	  padding: 0px 0px 3px 18px;
+	  padding-right: 10px;
+	  list-style-type: disc;
+	}
+	div.TE_dottedborder li {
+	  margin : 3px;
+	  padding: 0px 0px 3px 18px;
+	  padding-right: 10px;
+	  list-style-type: disc;
+	}
+	div.TE_dottedborder a {
+	  margin : 3px;
+	  padding: 0px 0px 3px 18px;
+	}
+/************************************************************************************************************/
+/*  Account Widget Style                                         */
+/************************************************************************************************************/	
+
+	.TE_account{
+		background-color : #EDEDED;
+		border : 1px solid #CDCDCD;
+		width : 100%;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		float:right;
+	}
+	.TE_account div {
+		float:right;
+		width:30%;
+		padding-left:180px;
+	}
+	.TE_account div strong {
+		margin-left:-160px;
+	}
+	
+/************************************************************************************************************/
+/*  Account Widget Style 2                                      */
+/************************************************************************************************************/	
+		
+	.TE_account2{
+	  background-color : #EDEDED;	
+	  border : 1px solid #CDCDCD;
+	  width : 100%;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	}
+
+	
+/************************************************************************************************************/
+/*  Page Load Style                             */
+/************************************************************************************************************/
+		
+	.TE_pageload  {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	border: solid 1px #000000;
+	background: #F7F7D3 url(/_TEincludes/TEimages/dots.gif) no-repeat;
+	background-position:30px 20px;
+	text-align:center;
+	height: 100px;
+	width: 150px;
+	position:absolute;
+	visibility:hidden;
+	}
+
+	.TE_pageload div {
+	padding-bottom:2px;	
+	padding-top:20px;
+	}
+	
+	
+/************************************************************************************************************/
+/*  NEW Page Load Style                             */
+/************************************************************************************************************/
+			
+.TE_pageLoadOuterDiv{
+	line-height: 1.5em;
+	background: #919191;
+	padding:0 1px 1px 0;
+	margin: 0px 0px 4px 0px;
+	margin-left:13px; 
+	margin-top:13px; 
+	position: absolute;
+	width: 240px;
+	display:block; 
+}
+.TE_pageLoadInnerDiv{
+	width: 100%;
+	border: 1px solid #000;
+	background: #fff;
+	background-color : #FFFFEF;
+}
+.TE_pageLoadImageDiv{
+	margin:8px;
+	background-image:url(/_TEincludes/TEimages/loading.gif);
+	background-repeat:no-repeat;
+	vertical-align:middle;
+}
+.TE_pageLoadTextDiv{
+	margin-left:22px;
+}
+
+	
+/************************************************************************************************************/
+/*Form Input Area Style */
+/************************************************************************************************************/
+	.TE_inputArea {
+ 	background-color:#f7f7f7;
+	border:none;
+	}
+/************************************************************************************************************/
+/*Bulleted Lists */
+/************************************************************************************************************/	
+.TE_gpiNotes ul {
+	margin:0px; 
+	padding-bottom:0px;
+}
+.TE_gpiNotes li {
+	margin-left:-25px;
+	padding:0px 0px 0px 0px;
+	list-style:bullet;
+}
+/************************************************************************************************************/
+/*Styles For New Site Tools Ad */
+/************************************************************************************************************/
+.TE_nst_boxtop{	
+	/*make this the same size as the top image*/	
+	display:block;	
+	width:220px;	
+	height:40px;	
+	/*set the image as a background*/	
+	background-position:left top;	
+	background-repeat:no-repeat;	
+	background-image:url(/_TEincludes/TEimages/BlankBlueBox_toptext.jpg);
+}	
+.TE_nst_topcontent{	
+	/*set the font style for the box title*/	
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18pt;	color:#f68933; font-weight:bold;	
+	/*shift the title down a bit and center it*/	
+	padding-right:5px;
+	padding-top:5px;	
+	text-align:center;	
+}	
+.TE_nst_boxbottom{	
+	/*make this the same width as the bottom image*/	
+	/*don’t set the height as this needs to be flexible*/	
+	display:block;	
+	width:220px;	
+	/*set the image as a background*/	
+	background-position:left bottom;	
+	background-repeat:no-repeat;	
+	background-image:url(/_TEincludes/TEimages/BlankBlueBox_bottom.jpg);	
+}	
+.TE_nst_maincontent{	
+	/*set the font style for the main content*/	
+	color:#196694;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10pt; font-weight:bold;
+	display:block;	
+	/*align the main content nicely*/	
+	padding-left:10px;	
+	padding-bottom:14px;	
+	padding-right:14px;	
+}
+.TE_nst_maincontent-tiny{
+	font-size:9pt; font-weight:bold;
+	text-align:right;
+}
+/***************[ ADS ON ELECTRONIC COMPONENTS PAGE ]********************************************************/
+#addContainer {
+	clear:both;
+}
+#pictureSearchAdButton {
+	height:80px;
+	background-image:url('/images/picture_search.png');
+}
+#pictureSearchAdButton span {
+	text-align:right;
+	right:10px;
+}
+#pictureSearchAdButton {
+	width:213px;
+	background-repeat:no-repeat;
+	position:relative;
+	display:block;
+	margin:10px 0 0;
+}
+#pictureSearchAdButton span {
+	font-size:7pt;
+	position:absolute;
+	bottom:8px;
+}
+
+#myTEAdvantageAdButton {
+	width:213px;
+	background:url(/_TEincludes/TEimages/myTEadvantage.png) no-repeat 0 0;
+	display:block;
+	margin:10px 0 0;
+	padding:60px 0 0;
+}
+#myTEAdvantageAdButton em {
+	background:url(/_TEincludes/TEimages/myTEadvantage.png) no-repeat -213px bottom;
+	font-size:7pt;
+	font-style:normal;
+	text-align:center;
+	text-decoration:underline;
+	display:block;
+	padding:6px 0 10px;
+}
+
+/************************************************************************************************************/
+/*Styles For Customer Feedback Form */
+/************************************************************************************************************/
+.TE_Feedback_QuestionDiv{
+	margin-top:20px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	background-color:#fff;
+	height:25px
+}
+.TE_Feedback_AnswerDiv{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:left;
+	background-color:#fff;
+	height:35px;
+	width:620px;
+	margin-left:38px;
+	vertical-align:bottom;
+	background-image:url(../TEimages/customer_feeback_scale.gif);
+	background-repeat:no-repeat;
+}
+.TE_Feedback_AnswerDiv label{
+	padding-right:14px;
+	padding-left:0;
+	margin-left:0;
+}
+.TE_Feedback_AnswerDiv input{
+	padding-left:0;
+	margin-left:0;
+}
+#TE_Feedback_CommentDiv{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-align:left;
+	background-color:#fff;
+	height:245px;
+	padding-left:40px;
+	vertical-align:bottom;
+}
+#TE_Feedback_CommentArea{
+	width:615px;
+	height:125px;
+}
+#TE_Feedback_SubmitDiv{
+	background-color:#fff;
+	height:35px;
+	width:615px;
+	margin-top:15px;
+	vertical-align:bottom;
+}
+#TE_Feedback_NameEmailDiv{
+	margin-top:-180px;
+	margin-left:625px;
+	background-color:#fff;
+	height:185px;
+	width:200px;
+	border:1px solid #7f9db9;
+	padding:10px;
+}
+#TE_Feedback_NameDiv{
+	margin-bottom:7px;
+}
+#TE_Feedback_EmailDiv{
+	margin-top:20px;
+	margin-bottom:7px;
+}
+#TE_Feedback_Instruction{
+	background-color:#f5f5f5;
+	margin-top:20px;
+	width:190px;
+	padding:5px;
+}
+div#TE_Feedback_MessageDiv{
+	width:470px;
+	border:1px solid #7f9db9;
+	padding:8px;
+	margin-left:130px;
+	margin-top:-20px;
+	font-size:1.0em;
+	text-align:center;
+	font-weight:bold;
+	background-color:#FF6666;
+}
+#TE_Feedback_ThankYouMessageDiv{
+	width:300px;
+	border:1px solid #7f9db9;
+	padding:40px;
+	font-size:15px;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:35px;
+}
+#TE_Feedback_ThankYouMessageDiv ul{
+	margin-top:7px;
+	margin-bottom:0px;
+	line-height:20px;
+	font-size:12px;
+	font-weight:normal;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#TE_Feedback_footer{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top:5px;
+	height:18px;
+	width:888px;
+	background-image:url(/_TEincludes/TEimages/customer_feedback_balloon.gif);
+	background-repeat:no-repeat;
+	background-position:44px 0px;
+	background-color:#f2f8fd;
+	border:1px solid #bde1f2;
+	text-align:center;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+/* END STYLES FOR CUSTOMER FEEDBACK FORM */
+
+.TE_attention{
+	border: 1px solid #BDE1F2; 
+	margin: 2px; 
+	padding: 4px; 
+	background-color:#F2F8FD;
+}
+
+/* STYLES FOR SEARCH AND PRODUCT FEATURE SELECTOR */
+
+.TE_secondaryPartListActions{
+	margin-top:8px; 
+	margin-bottom:4px; 
+	margin-left:20px; 
+	margin-right:5px; 
+	padding:4px; 
+	border: 1px solid #EEEEEE; 
+	background-color: #F9F9F9;
+}
+.TE_compliancePartListText{
+	color: #8C8C8C; 
+	margin-left:20px;
+}
+.TE_pfsProductFeatureList{
+	margin-bottom:0px; 
+	padding-bottom:0px; 
+	color:#4E4E4E;
+	margin-top:0px;
+}
+	.TE_pfsProductFeatureList ul{
+		margin-left:0px;
+	}
+	.TE_pfsProductFeatureList li{
+		margin-left:-25px;
+	}
+	
+.TE_grayBorderTable{
+	border: 1px solid #cccccc;
+}
+.TE_grayBorderTable th{
+	background-color: #E4EEF4; 
+	border-bottom:1px solid #CCCCCC;
+}
+.TE_grayBorderTableLinkRow{
+	border-bottom:1px solid #CCCCCC;
+	background-color:#F7F7F7;
+}
+.TE_grayBorderGridTable{
+	border: 1px solid #cccccc;
+	margin-left:2px;
+}
+.TE_grayBorderGridTable th{
+	background-color:#F3F3F3;
+	border-bottom:1px solid #CCCCCC;
+}
+.TE_partMatchDisplay{
+	font-size:110%;
+	padding-left:4px;
+	padding-top:4px;
+}
+.TE_selectedFacet{
+	padding: 4px; 
+	margin-top:2px;
+	margin-bottom:8px;
+	margin-left:6px;
+	border: 1px solid #BDE1F2; 
+	background-color:#F2F8FD;
+}
+.TE_availableSelection{
+	padding-left: 2px; 
+	margin-left:2px; 
+	margin-top:1px; 
+	padding-top:1px;
+}
+.TE_featureGroupName{
+	padding-left: 1px; 
+	margin-left:1px; 
+	margin-top:0px; 
+	padding-top:0px; 
+	padding-bottom:1px; 
+	margin-bottom:2px;
+}
+.TE_commonFeature{
+	padding: 4px; 
+	margin-top:2px;
+	margin-bottom:8px;
+	margin-left:6px;
+	color:#999999;
+	background-color:white; 
+	border: 1px solid #999999;;
+}
+.TE_featureSelectionSection{
+	border-top: 1px solid #C9C9C9;
+	padding:2px;
+}
+/* END STYLES FOR SEARCH AND PRODUCT FEATURE SELECTOR */
+
+/*+++++++++++++++++++++++++++++++++++++*/
+/* Begin CSS Popout Menu */
+#TE_comp_menu {
+	width:900px;
+	height:21px;
+	display:table;
+	background-image:url(../TEimages/components_nav_bg.gif);
+	background-repeat:no-repeat;
+	padding-left:5px;
+}
+#TE_comp_menu h2{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	color:#005380;
+	font-size:11px;
+	display:block;
+	white-space:nowrap;
+	margin:0px;
+	padding:2px 25px 3px 3px;
+	background-image:url(../TEimages/TE_MainMenu_dwn.gif);
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#TE_comp_menu a{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	text-decoration:none;
+	color:#005380;
+	display:block;
+}
+#TE_comp_menu a:active{
+	color:#005380;
+	display:block;
+	font-weight:normal;
+	text-decoration:none;
+}
+#TE_comp_menu a:visited{
+	color:#4092AD;
+	display:block;
+	font-weight:normal;
+	text-decoration:none;
+}
+#TE_comp_menu a:hover{
+	color:#005380;
+	background-color:#e9e7e7;
+	display:block;
+	font-weight:normal;
+	text-decoration:underline;
+}
+#TE_comp_menu h2 a{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+	background:transparent;
+	color:#005380;
+}
+#TE_comp_menu h2 a:active{
+	color:#005380;
+	font-weight:bold;
+	text-decoration:none;
+}
+#TE_comp_menu h2 a:visited{
+	color:#4092AD;
+	font-weight:bold;
+	text-decoration:none;
+}
+#TE_comp_menu h2 a:hover{
+	color:#005380;
+	background-color:#e9e7e7;
+	font-weight:bold;
+	text-decoration:underline;
+}
+#TE_comp_menu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:auto;
+}
+#TE_comp_menu ul li{
+	width:auto;
+	padding:2px;
+}
+#TE_comp_menu ul ul{
+	position:absolute;
+	z-index:5000;
+	top:auto;
+	display:none;
+	border:1px solid #d2d2d2;
+	background:#f6f6f5;
+	padding:3px;
+	width:175px;
+	
+}
+.TE_menu_flyRight {
+	background-image:url(../TEimages/TE_MainMenu_right.gif);
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#TE_comp_menu ul ul li{
+	width:100%;
+	padding:2px;
+	display:block;
+}
+#TE_comp_menu ul ul ul{
+	top:0;
+	left:100%;
+	margin-top:2px;
+	width:250px;
+}
+/*+++++++++++++++++++++++++++++++++++++*/
+/* Handle CSS :hover states */
+div#TE_comp_menu h2:hover {
+	background-color:#e9e7e7;
+}
+div#TE_comp_menu li:hover ul ul,
+div#TE_comp_menu li li:hover ul ul,
+div#TE_comp_menu li li li:hover ul ul,
+div#TE_comp_menu li li li li:hover ul ul {
+	display:none;
+}
+div#TE_comp_menu li:hover ul,
+div#TE_comp_menu li li:hover ul,
+div#TE_comp_menu li li li:hover ul,
+div#TE_comp_menu li li li li:hover ul {
+	display:block;
+}
+
+/*Main Action Items within new Gray bar*/
+.mainActionItemsBar { background:url('/_TEincludes/TEimages/bg_grayBox_F.png') no-repeat 0 0; padding:0 0 0 5px; display:inline-block; float:left; margin:5px 0 5px 3px; }
+.mainActionItemsBar span { background:url('/_TEincludes/TEimages/bg_grayBox_F.png') no-repeat right -66px; display:block; padding:0 5px 0 0; }
+.mainActionItemsBar span em { background:url('/_TEincludes/TEimages/bg_grayBox_F.png') repeat-x 0 -33px; display:block; padding:0 2px; }
+.mainActionItemsLinks:link, .mainActionItemsLinks:visited { height:33px; color:#005380; background-repeat:no-repeat; background-position:left center; line-height:33px; font-style:normal; font-size:7pt; text-decoration:none; display:inline-block; }
+.mainActionItemsLinks:active, .mainActionItemsLinks:hover { color:#F78932; }
+.mainActionItemsLinks p { text-decoration:underline; display:inline; margin:0; padding:0; }
+.partListLink { background-image:url('/_TEincludes/TEimages/TE_mpl_addPart_small.gif'); padding:0 0 0 16px; }
+.requestLink { background-image:url('/_TEincludes/TEimages/RequestSample_F.png'); padding:0 0 0 30px; }
+.checkLink { background-image:url('/_TEincludes/TEimages/checkPricing_F.png'); padding:0 0 0 28px; }
+.viewLink { background-image:url('/_TEincludes/TEimages/viewProductdetailsFeatures.png'); padding:0 0 0 25px; }
+.findLink { background-image:url('/_TEincludes/TEimages/findSimilar_final.png'); padding:0 0 0 26px; }
+.compareLink { }
+.compareFix { vertical-align:middle; }
+.leftMarginLink { margin:0 0 0 10px; }
+/*End Styles for Main Action Items*/
+/*Dojo Overrides*/
+.dijitCalendarYearLabel{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:100%;}
+.dijitComboBox { height:16px !important; }
+.dijitArrowButtonInner { height:15px !important; }
+.dijitValidationIcon { height:16px !important; }

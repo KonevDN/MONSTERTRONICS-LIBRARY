@@ -1,0 +1,315 @@
+"use strict";
+
+(function($, window, document){
+
+  _.templateSettings = {
+    evaluate:    /\[\[(.+?)\]\]/g,
+    interpolate: /\[\[=(.+?)\]\]/g,
+    escape:      /\[\[-(.+?)\]\]/g
+  };
+
+  var SVG_ICON_PATH = "/themes/custom/sitime/images/icons.svg?4";
+
+	var _bindInViewLogic = function(){
+		if(!window.initModules || !window.initModules.length) return false;
+		var initModules = window.initModules,
+				$win = $(window);
+		var curScroll, modPos, threshold;
+		threshold = -75;
+		var _checkScroll = function(){
+			curScroll = $win.scrollTop() + $win.height() + threshold;
+			_.each(initModules, function(module){
+				modPos = module.$el.offset().top;
+
+				if(modPos < curScroll){
+					module.$el.addClass('js-in-view');
+					if(typeof module.onView === 'function' && !module.__hasOnViewed){
+						module.onView.call(module);
+            module.__hasOnViewed = true;
+          }
+        }
+				else module.$el.removeClass('js-in-view');
+			});
+		}
+		$win.on('scroll', _.throttle(_checkScroll, 25));
+		_checkScroll();
+
+    ///scroll top
+    $("a[href='#top']").click(function(e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 0);
+      return false;
+    });
+	};
+
+
+	//------------
+
+	/* Handling modules in this manner to keep events and DOM modifications
+	scoped to each particular instance of a given module.
+
+	This will help avoid wierd errors down the line if there are
+	two of the same module on the page. */
+
+	var Module = function(element, moduleDef){
+		var _this = this;
+		for(var property in moduleDef){ this[property] = moduleDef[property]; }
+		this.$el = element;
+		this.$ = function(el){ return _this.$el.find(el) };
+		this.init();
+	}
+
+	window.defineModule = function(moduleDef){
+		var addedModules = window.addedModules = window.addedModules || [];
+		addedModules.push(moduleDef);
+	}
+
+
+
+	//------------
+
+  var prependSvgIcons = function(fn){
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", SVG_ICON_PATH, true);
+    ajax.send();
+    ajax.onload = function(e) {
+      var div = document.createElement("div");
+      div.innerHTML = ajax.responseText;
+      document.body.insertBefore(div, document.body.childNodes[0]);
+    }
+  }
+
+  /**
+	 * Drupal form selects need an extra wrapper to be styled properly
+   */
+  var wrapDrupalFormSelects = function(){
+  	$('.drupal-form select').wrap('<div class="drop-down__wrapper"></div>')
+	}
+
+
+  $(document).ready(function(){
+    prependSvgIcons();
+    wrapDrupalFormSelects();
+		var initModules = window.initModules = window.initModules || [];
+		var addedModules = window.addedModules;
+		if(addedModules && addedModules.length){
+			for(var i=0; i < window.addedModules.length; i++){
+				$(addedModules[i].el).each(function(){ initModules.push(new Module($(this), addedModules[i])); });
+			}
+		}
+		_bindInViewLogic();
+	});
+
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+  
+  var ga_category = "";
+  var ga_action = "";
+  var ga_label = "";
+  function _sitGoogleEventTracker(ga_category, ga_action, ga_label) {
+    ga_category = ga_category || "";
+    ga_action = ga_action || "";
+    ga_label = ga_label || "";
+    _gaq.push(['_trackEvent', ga_category, ga_action, ga_label]);
+  }
+
+  // Custom
+  $(document).ready(function() {
+
+    /*
+    * GA Event Tracking
+    * Capture site-wide user interactions as GA events
+     */
+    // non-logged-in link clicks
+    $('body.not-logged-in').on('click', 'a', function(e) {
+      var link = $(this);
+      ga_category = "Link Click";
+      ga_action = link.attr('href');
+      ga_label = false;
+      // Header Clicks
+      if (link.closest('header').length === 1) {
+        ga_label = "Header";
+      // Footer Clicks
+      } else if (link.closest('footer').length === 1) {
+        ga_label = "Footer";
+      // Content Region Clicks
+      } else if (link.closest('#block-sitime-content').length === 1) {
+        ga_label = "Content Region";
+        // Trap JS Triggers
+        if (ga_action == "javascript:void(0)") {
+          ga_action = $.trim(link.text());
+        }
+      }
+      // Trap Video Modals
+      if (link.attr('lightbox-player')) {
+        ga_category = "Lightbox Video";
+        ga_action = link.attr('lightbox-player');
+        ga_label = window.location.href;
+      }
+      // Trap Sales Reps/Dist
+      // -- This is in the modules.js statically as the links don't scope to this click function
+      if (ga_label !== false) {
+        _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+      }
+    });
+    // Careers Filters
+    $('.career-search__filter select').change(function() {
+      var select = $(this);
+      ga_category = "Job Filters";
+      ga_action = select.attr('name');
+      ga_label = select.find(':selected').text();
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+    // Quality Documents Filters
+    $('.quality-reports__dropdown select, .product-docs__dropdown select').change(function() {
+      var select = $(this);
+      ga_category = "Quality/Additional Documents";
+      ga_action = select.find(':selected').text();
+      ga_label = window.location.href;
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+    // FAQs Filters
+    $('.faqs__filter select').change(function() {
+      var select = $(this);
+      ga_category = "FAQs Filter";
+      ga_action = select.find(':selected').text();
+      _sitGoogleEventTracker(ga_category, ga_action);
+    });
+    // Form Submits
+    $('form').submit(function() {
+      var form = $(this);
+      ga_category = "Form Submit";
+      ga_action = form.attr('id');
+      ga_label = window.location.href;
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+    // News Sidebar Filters
+    $('.media-coverage__wrapper select[name="archive"], .press-release__wrapper select[name="archive"], .blogs__wrapper select[name="archive"]').change(function() {
+      var select = $(this);
+      ga_category = "News Filter";
+      ga_action = select.attr('id')+': '+select.find(':selected').text();
+      ga_label = window.location.href;
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+    // News Search Bar
+    $('input.search-box__field').keydown(function(e) {
+      if(e.keyCode == 13) {
+        ga_category = "News Search";
+        ga_action = $(this).val();
+        ga_label = window.location.href;
+        _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+      }
+    });
+    // Solutions Search Filters
+    $('body').on('click', '.filter-search--product .filter-search__filter-item', function() {
+      var filter = $(this);
+      ga_category = "Solutions Search Filter";
+      ga_action = filter.text();
+      ga_label = (!filter.hasClass('js-selected')) ? 'Removed' : 'Added';
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+    // Resource Library Filters
+    $('body').on('click', '.filter-search--resource .filter-search__filter-item', function() {
+      var filter = $(this);
+      ga_category = "Resource Library Filter";
+      ga_action = filter.text();
+      ga_label = (!filter.hasClass('js-selected')) ? 'Removed' : 'Added';
+      _sitGoogleEventTracker(ga_category, ga_action, ga_label);
+    });
+
+    // request samples form P#
+    if (getUrlVars()['pn'] && $('input#edit-sitime-part-number').length > 0) {
+      var urlpn = decodeURIComponent(getUrlVars()['pn']);
+      $('input#edit-sitime-part-number').val(urlpn);
+    }
+
+    // title bar buttons
+    var langcode = drupalSettings.path.currentLanguage;
+
+    switch(langcode) {
+      default:
+        var where_to_buy_text = 'Where To Buy';
+        var contact_sales_text = 'Contact Sales';
+        var request_samples_text = 'Request Samples';
+        var contact_sitime_text = 'Contact SiTime';
+        var lang_identifier = '';
+        break;
+      case 'zh-hans':
+        var where_to_buy_text = '去哪买';
+        var contact_sales_text = '联系销售';
+        var request_samples_text = '申请样片';
+        var contact_sitime_text = '';
+        var lang_identifier = '/cn';
+    }
+
+    var cart_svg = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 21" style="enable-background:new 0 0 22 21;" xml:space="preserve"><style type="text/css">.st1{fill:#FFFFFF;}</style><path id="Shape" class="st1" d="M21.8,3.4c-0.1-0.1-0.2-0.2-0.4-0.2H4.2L3.7,0.9c0-0.2-0.3-0.4-0.5-0.4H0.6C0.3,0.5,0.1,0.7,0.1,1s0.2,0.5,0.5,0.5h2.4l2.2,11.1C5.4,13.9,6.7,15,8.2,15h10.4c0.3,0,0.5-0.2,0.5-0.5c0-0.3-0.2-0.5-0.5-0.5H8.3c-0.7,0-1.5-0.4-1.8-1l13.3-1.8c0.2,0,0.4-0.2,0.4-0.4l1.8-7.3C21.9,3.7,21.9,3.5,21.8,3.4z M19.3,10.5L6,12.2L4.4,4.1h16.4L19.3,10.5z"/><path id="Shape_1_" class="st1" d="M7.8,15.9c-1.3,0-2.3,1-2.3,2.3c0,1.3,1,2.3,2.3,2.3c1.3,0,2.3-1,2.3-2.3C10.1,16.9,9.1,15.9,7.8,15.9z M7.8,19.6c-0.7,0-1.4-0.6-1.4-1.4c0-0.7,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4C9.2,18.9,8.5,19.6,7.8,19.6z"/><path id="Shape_2_" class="st1" d="M16.9,15.9c-1.3,0-2.3,1-2.3,2.3c0,1.3,1,2.3,2.3,2.3c1.3,0,2.3-1,2.3-2.3C19.2,16.9,18.2,15.9,16.9,15.9z M16.9,19.6c-0.7,0-1.4-0.6-1.4-1.4c0-0.7,0.6-1.4,1.4-1.4s1.4,0.6,1.4,1.4C18.3,18.9,17.6,19.6,16.9,19.6z"/></svg>';
+
+    var cart_link = $('.product-detail__action-links a:last').attr('href');
+
+    if ($('body').hasClass('path-design-tools')) {
+      $('.title-bar__wrapper').append('<div class="title-bar__buttons"><a class="title-bar__button" href="' + lang_identifier + '/contact-sales"><span>' + contact_sales_text + '</span></a><a class="title-bar__button" href="' + lang_identifier + '/request-samples"><span>' + request_samples_text + '</span></a><a class="title-bar__button" href="' + lang_identifier + '/contact-us"><span>' + contact_sitime_text + '</span></a></div>');
+    }
+
+    if ($('body').hasClass('node-171')) {
+      $('.title-bar__wrapper').append('<div class="title-bar__buttons"><a class="title-bar__button" href="' + lang_identifier + '/contact-sales"><span>' + where_to_buy_text + '</span></a></div>');
+    }
+    if ($('body').hasClass('vid-products-category')) {
+      $('.title-bar__wrapper').append('<div class="title-bar__buttons"><a class="title-bar__button" href="' + lang_identifier + '/contact-sales"><span>' + contact_sales_text + '</span></a><a class="title-bar__button" href="' + lang_identifier + '/request-samples"><span>' + request_samples_text + '</span></a></div>');
+    }
+    if ($('body').hasClass('node-chronos-product')) {
+      $('.title-bar__wrapper').append('<div class="title-bar__buttons"><a class="title-bar__button" href="' + lang_identifier + '/contact-sales"><span>' + contact_sales_text + '</span></a><a class="title-bar__button req" href="' + lang_identifier + '/request-samples"><span>' + request_samples_text + '</span></a><div class="order-now-wrapper"><a href="' + cart_link + '" class="title-bar__button order-now-cart"><span class="order-now-icon">'+ cart_svg + '</span></a><a href="' + cart_link + '" class="title-bar__button order-now-button"><span class="order-now-text">' + Drupal.t('Order Now') +'</span></a></div></div>');
+    }
+    if ($('body').hasClass('node-41')) {
+      $('.title-bar__wrapper').append('<div class="title-bar__buttons"><a class="title-bar__button" href="' + lang_identifier + '/contact-sales"><span>' + contact_sales_text + '</span></a><a class="title-bar__button req" href="' + lang_identifier + '/request-samples"><span>' + request_samples_text + '</span></a></div>');
+    }
+    if ($('body').hasClass('mature-product')) {
+      $('.title-bar__wrapper .title-bar__buttons .req').attr('launch-modal', 'limited-samples');
+    }
+
+    jQuery(document).ready(function() {
+      var langcode = drupalSettings.path.langCode;
+
+      switch (langcode) {
+        case 'zh-hans':
+          var clickId = '571';
+          break;
+        default:
+          var clickId = '11';
+          break;
+      }
+
+      jQuery('#lang option[value="' + clickId + '"]').click();
+      jQuery('#lang').change();
+    });
+
+    // Newsletter subscription form
+    if ($('form#subscribe-form').length > 0) {
+      setTimeout(function() { $('<input type="email" name="email" value="">').appendTo('form#subscribe-form .form-item'); }, 4000);
+      $('form#subscribe-form').submit(function() {
+          if($('form#subscribe-form input[name="email"]').val() != '') {
+              $.ajax({
+                  type: "POST",
+                  url: "/api/newsletter",
+                  dataType : 'json',
+                  data: $('form#subscribe-form').serialize(),
+                  success: function (result) {
+                      $('form#subscribe-form').replaceWith('<p>Thank you for subscribing.</p>');
+                  },
+                  error: function (xhr, status, error) {
+                      alert('An error occurred while processing your request.  You may already be signed up for our list.');
+                  }
+              });
+              return false;
+          }
+      });
+    }
+  });
+
+
+
+})(jQuery, window, document);

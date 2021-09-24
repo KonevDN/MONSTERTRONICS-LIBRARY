@@ -1,0 +1,12 @@
+"use strict";
+
+(function($, window, document){
+  $( document ).ready(function() {
+    setInterval(function(){
+      if ($.cookie("fileLoading")) {
+        $.removeCookie("fileLoading");
+        location.href = "/admin";
+      }
+    }, 600);
+  });
+})(jQuery, window, document);

@@ -1,0 +1,6 @@
+/* New styling for product pages */
+ul { margin-top: 2px; margin-left: 18px; padding-left: 10px; /* controls the spacing in front of the bullets */ }
+a#hrow { font-size: 12pt; font-family: Arial, Helvetica, sans-serif; color: Black; font-weight: Bold; }
+a#titlerow { font-size: 14pt; font-style: italic; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #0000CC; }
+a#shrow { font-size: 14pt; font-style: italic; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #0000CC; }
+a#search { font-size: 14pt; font-style: italic; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #08A6A6; }

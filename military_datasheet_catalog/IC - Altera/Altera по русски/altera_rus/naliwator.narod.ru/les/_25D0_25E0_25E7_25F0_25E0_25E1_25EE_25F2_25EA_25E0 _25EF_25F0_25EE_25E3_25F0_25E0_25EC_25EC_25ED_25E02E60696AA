@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>404</title>
+<style type="text/css">
+body {
+    font: 0.8em Arial, sans-serif;
+    margin: 0;
+    padding: 0 0 1em 0;
+    background: #ffffff;
+}
+a:link, a:visited, a:active {
+    color: #0000ee;
+}
+h1 {
+    font-size: 150%;
+    font-weight: normal;
+    margin: 0 0 -0.7em 0;
+}
+td.logoCell {
+    background: #ffffff;
+    padding: 0 20px;
+}
+td.headCode {
+    font-family: sans-serif;
+    font-size: 250%;
+    padding: 0 11px;
+    color: #ffffff;
+    background-color: #999999;
+}
+td.headText {
+    padding: 1px 5px;
+}
+td.lnk {
+    text-align: center;
+    color: #666666;
+    border: #dddddd 1px solid;
+}
+td.lnkCapture {
+    font-size: 85%;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#999999;
+}
+form.yasearch {
+    margin: 0;
+}
+form.yasearch table {
+    width: 85%;
+    min-width: 220px;
+    height: 30px;
+}
+form.yasearch table td i {
+    display: block;
+    width: 10px;
+}
+form.yasearch table td.yainput {
+    width: 100%;
+}
+form.yasearch table td.yainput div {
+    float: left;
+    width: 100%;
+}
+form.yasearch table td.yainput input {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+}
+.b-bk {
+	position:relative;
+	z-index:1;
+	margin:10px 0 0;
+}
+table.foot {
+    border: solid #808080;
+    border-width: 1px 0 0 0;
+}
+table.foot td {
+    font-size: 85%;
+}
+* html .g-png {
+    zoom: expression(
+        runtimeStyle.zoom = 1,
+        runtimeStyle.filter +=
+            "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +
+                getElementsByTagName("img")[0].src + "')"
+    );
+    background: none;
+}
+
+* html .g-png q {
+    font-size: 0;
+    p\osition: absolute;
+    w\idth: 100%;
+    height: expression(runtimeStyle.height = parentNode.offsetHeight + "px");
+}
+
+* html .g-png img {
+    visibility: expression(
+        runtimeStyle.visibility="hidden",
+        parentNode.insertBefore(createElement("q"), this)
+    );
+}
+
+* html a.g-png,
+* html a .g-png,
+* html .g-png a {
+    cursor: hand;
+}
+</style>
+</head>
+<body>
+    <table height="48" cellspacing="1" cellpadding="0" border="0">
+        <tr valign="bottom">
+            <td class="logoCell"><a href="../../www.yandex.ru/default.htm" class="g-png"><img src="../../img.yandex.net/i/logo_999.png" width="78" height="34" alt="Яндекс" border="0" /></a></td>
+            <td class="headCode">404</td>
+            <td class="headText">Нет такой страницы</td>
+        </tr>
+    </table>
+    <br />
+    <table width="100%" cellspacing="20" cellpadding="0" border="0">
+        <tr valign="top">
+            <td width="50%">
+                <h1>Несуществующая страница</h1>
+                <p>Страница, которую вы&#160;читаете, не&#160;существует.</p>
+                <p style="margin-bottom: 0">Верные способы попасть в&#160;никуда:</p>
+                <ul style="margin-top: 0">
+                    <li>написать <b>рудз</b>.yandex.ru вместо <b>help</b>.yandex.ru (скачайте и&#160;установите <a href="../../www.yandex.ru/redir@dtype=stred&pid=66&cid=1298&url=http_3A_2F_2Fpunto.ru_2F">Punto&#160;Switcher</a>, если не хотите больше так ошибаться)</li>
+                    <li>написать i<b>ne</b>x.html, i<b>dn</b>ex.html или index.<b>htm</b> вместо index.html</li>
+                </ul>
+                <p>Если вы&#160;считаете, что мы&#160;завели вас сюда специально, опубликовав неверную ссылку, пришлите нам эту ссылку по&#160;адресу <a href="mailto:404@yandex-team.ru?subject=404">404@yandex-team.ru</a>.</p>
+                <p>А если вы&#160;действительно хотите что-то найти в&#160;интернете, воспользуйтесь настоящим поиском Яндекса:</p>
+
+                <form class="yasearch" method="get" action="http://yandex.ru/yandsearch/">
+                    <input name="clid" type="hidden" value="48402" />
+                    <table cellspacing="0" cellpadding="0" border="0">
+                       <tr valign="middle">
+                            <td class="yainput" align="left">
+                                <div><input id="firstfocus" name="text" type="text" size="26" value="" /></div>
+                            </td>
+                            <td><i></i></td>
+                            <td align="center">
+                                <input type="submit" value="Найти" />
+                            </td>
+                       </tr>
+                    </table>
+                </form>
+
+                <p>И&#160;помните: вы&#160;это не&#160;читали.</p>
+                <a href="../../terms.yandex.ru/@id=263">Что такое страница 404/403?</a>
+            </td>
+            <td width="50%">
+                <table width="336" height="280" cellspacing="1" cellpadding="0" border="0">
+                    <tr>
+                        <td class="lnk">
+							<script language=JavaScript> 
+							
+							if ( typeof( globalseed ) == "undefined") {
+								var globalseed  = Math.round(Math.random()*65535); 
+							}
+							
+							var haveFlash89803362800 = false;
+							
+							function CAWBrowser(){
+							
+								var ua = navigator.userAgent;
+								this.msie = (ua && ( parseFloat( navigator.appVersion )  >=4 ) && ( ua.indexOf("Opera") < 0 ) && ( ua.indexOf("MSIE 4") < 0 ) && ( ua.indexOf( "MSIE" ) >=0) );
+								this.win = (ua && ((ua.indexOf( "Windows 95" ) >=0) || (ua.indexOf("Windows NT") >=0 ) || (ua.indexOf("Windows 98") >=0) ) );
+								this.mac = (navigator.platform && (navigator.platform.indexOf('Mac')!=-1));
+								this.opera7 = ((ua.indexOf('Opera') != -1) && window.opera && document.readyState) ? 1 : 0;
+								this.gecko   = (ua.toLowerCase().indexOf('gecko') != -1) && (ua.indexOf('safari') == -1);
+							
+								haveFlash89803362800 = (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) ? navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin : 0;
+							
+								if( haveFlash89803362800 ){
+									haveFlash89803362800 = (parseInt(haveFlash89803362800.description.substring(haveFlash89803362800.description.indexOf(".")-2))>=8);
+								}else if ( this.msie && this.win && !this.mac){
+									awcr = unescape('%0d%0a');
+									awcav = unescape('%22');
+							        	document.write ('<SCR' + 'IPT LANGUAGE=VBScript>' + awcr  
+										+ ' on error resume next ' + awcr  
+										+ ' haveFlash89803362800 = (IsObject(CreateObject('+ awcav
+										+ 'ShockwaveFlash.ShockwaveFlash.8' + awcav + ')))' + awcr  
+										+ '</SCR' + 'IPT> ' + awcr   );
+								}
+								
+								this.other = !( (this.gecko || this.msie) && this.win && !this.mac);
+								this.desc =  this.msie ? "msie " : this.gecko ? "gecko " : this.opera7 ? "opera7(other) " : this.other? "other" : "ukn";
+								this.flash = haveFlash89803362800 ? 8 : 0;	
+							}
+							
+							
+							
+							var aw_br = new CAWBrowser();
+							var jssrc = "http://awaps.yandex.ru/8/8980/336280.?"	+ globalseed + 
+								"-0-" + globalseed  + "&swfcode=6&awcode=41&subsection=0&flash=" + aw_br.flash;
+							
+							var jssrc_code = '<sc'+'ript src="' + jssrc +'"></sc'+'ript>';
+							
+							document.write(jssrc_code);
+							
+							
+							</script>
+							<noscript>
+								<a href=../../awaps.yandex.ru/1/8980/336280.gif target=_blank  ><img src=../../awaps.yandex.ru/0/8980/336280.gif@subsection=0 width=336 height=280 border=0></a>
+							</noscript>
+
+                        </td>
+                    </tr>
+                </table>
+                <table cellspacing="1" cellpadding="4" border="0">
+                    <tr>
+                        <td class="lnkCapture">Этого баннера здесь нет</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="b-bk" >
+        <!-- Яндекс.Директ -->
+
+        <script type="text/javascript">
+        //<![CDATA[
+        yandex_partner_id = 60337;
+        yandex_site_bg_color = 'FFFFFF';
+        yandex_site_charset = 'windows-1251';
+        yandex_ad_format = 'direct';
+        yandex_font_size = 1;
+        yandex_direct_type = 'horizontal';
+        yandex_direct_limit = 3;
+        yandex_direct_header_bg_color = 'FEEAC7';
+        yandex_direct_title_color = '0000CC';
+        yandex_direct_url_color = '006600';
+        yandex_direct_all_color = '0000CC';
+        yandex_direct_text_color = '000000';
+        yandex_direct_hover_color = '0066FF';
+        yandex_direct_favicon = true;
+        document.write('<sc'+'ript type="text/javascript" src="../../an.yandex.ru/system/context.js"></sc'+'ript>');
+        //]]>
+        </script> 
+    </div>
+    <table class="foot" width="100%" cellspacing="10" cellpadding="0" border="0">
+        <tr valign="top">
+            <td width="50%">&#169;&#160;2010&#160;&#171;<a href="../../www.yandex.ru/default.htm">Яндекс</a>&#187;</td>
+            <td width="50%"><a href="../../company.yandex.ru/default.htm">О компании</a></td>
+        </tr>
+    </table>
+<script type="text/javascript">
+window.onload = function() {
+    document.getElementById('firstfocus').focus();
+};
+</script>
+</body>
+</html>

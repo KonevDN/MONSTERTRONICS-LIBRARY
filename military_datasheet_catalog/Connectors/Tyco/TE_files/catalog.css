@@ -1,0 +1,945 @@
+/************************************************************************************************************/
+/* CODE IN THIS STYLESHEET IS IMPLEMENTED ON SOME ECATALOG SITES 					    */
+/*													    */
+/* KEEP THIS CODE INDENTED WITH COMMENTS TO MARK BEGINNING OF SECTIONS - EASY TO MAINTAIN! 		    */
+/************************************************************************************************************/
+
+/*****************************************************************************
+** Default hyperlink colour
+*****************************************************************************/
+a, a:link, a:visited, a:active, a:hover, a:focus {
+  color: #0057a6;
+  border:none;
+}
+a:hover{
+  color: #de8703;
+}
+
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display Boxes Reduces Vertical Whitespace Around Un-ordered Lists        */
+/************************************************************************************************************/	
+	div.TE_catalog_docsDiv ul {
+	  margin : 0; 
+	  padding:2px 0px 1px 18px;
+	  list-style-type: disc;
+	}
+	div.TE_catalog_docsDiv li {
+	  margin : 0 0 3px 18px;
+	  padding: 0;
+	  list-style-type: disc;
+	}
+	
+/************************************************************************************************************/
+/*  Border Style        */
+/************************************************************************************************************/	
+	.TE_catalog_border {
+	border: solid 2px #ededed;
+	}
+	
+/************************************************************************************************************/
+/*  Catalog Error style       */
+/************************************************************************************************************/	
+	.TE_catalog_errormsg {
+	margin-top: 6px; 
+	padding-bottom: 0px; 
+	padding-left: 12px; 
+	font-size: 120%;
+	}	
+
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display Marketing Part Number                                            */
+/************************************************************************************************************/
+	div.TE_catalog_marketingPartNbrDiv {
+          text-align: center;		
+	  font-size: 120%;
+	  font-weight: bold;
+	}
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display Marketing Part Number                                            */
+/************************************************************************************************************/
+	div.TE_catalog_aliasPartNbrDiv {
+	  text-align: center;
+	  font-size: 120%;
+	  font-weight: normal;
+	}	
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display TCPN                                                             */
+/************************************************************************************************************/
+	div.TE_catalog_tcpnDiv {
+	  text-align: center;
+	  font-size: 80%;
+	  font-weight:normal;
+	  color: Gray;
+	}	
+
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display Replacement Parts Link                                           */
+/************************************************************************************************************/
+	div.TE_catalog_partStatusDiv {
+	  text-align: center;	  
+	  font-size: 100%;
+	  font-weight: normal
+	}	
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Display Class Display Name                                               */
+/************************************************************************************************************/
+	div.TE_catalog_classDisplayNmDiv {
+	  margin : 0px 2px 0px 3px;
+	  padding: 0px 2px 0px 3px;
+	  font-size: 120%;
+	  font-weight: bold;
+	}
+	
+/************************************************************************************************************/
+/*  IMG Style Used in eCatalog PDP For Primary Image                                                        */
+/************************************************************************************************************/
+	div.TE_catalog_priImageDiv {
+	  vertical-align: top;
+      border: 1px solid black;
+      padding: 3px;
+      width: 200px;
+	  height: 114px;
+	}
+	div.TE_catalog_priImageDiv img {
+	  width: 200px;
+	  height: 114px;
+	}
+
+
+
+/************************************************************************************************************/
+/*  IMG Style Used in eCatalog PDP For Part Status Image                                                    */
+/************************************************************************************************************/
+	img.TE_catalog_partStatusImg {
+	  width: 21px;
+	  height: 21px;
+	  border: 0;
+	}
+
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For RoHS Display Area                                                    */
+/************************************************************************************************************/
+	div.TE_catalog_rohsDiv {
+      margin: 2px 2px 5px 8px;
+      padding: 2px 2px 5px 8px;
+	}
+	div.TE_catalog_rohsDiv a {
+	  font-size: 90%;
+	}
+	div.TE_catalog_rohsDiv img {
+	  width: 17px;
+	  height: 23px;
+	  border: 0;
+	}
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP Product Highlights Display Area                                          */
+/************************************************************************************************************/	
+	div.TE_catalog_prodHighDiv {
+	  margin : 10px 2px 10px 14px;
+	  padding: 10px 2px 10px 5px;
+	  border: 1px dashed #E0CFAB;
+	  width: 350px;
+	  list-style-type: disc;
+	}
+	div.TE_catalog_prodHighDiv ul {
+	  margin : 3px;
+	  padding: 0px 0px 3px 18px;
+	  list-style-type: disc;
+	}
+	div.TE_catalog_prodHighDiv a {
+	  margin : 3px;
+	  padding: 0px 0px 3px 18px;
+	}
+	
+	div.TE_catalog_prodHighFiller {
+	  height: 97px;
+	}
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For Paging Display Area                                                  */
+/************************************************************************************************************/
+	div.TE_catalog_pagingDiv {
+	  text-align: center;
+	  width:auto;
+	}
+	
+	div.TE_catalog_pagingDiv img {
+	  width: 14px;
+	  height: 16px;
+	  border: 0;
+	}
+	
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For Local Paging Display Area                                            */
+/************************************************************************************************************/
+	div.TE_catalog_localPagingDiv {
+	  text-align: left;
+	  padding: 4px 0px 2px 10px;
+	}
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For Left Half of Documentation and Additional Information Display Box    */
+/************************************************************************************************************/
+	div.TE_catalog_leftHalfDocAddInfDBDiv {
+	  padding: 5px;
+	}
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For Right Half of Documentation and Additional Information Display Box   */
+/************************************************************************************************************/
+	div.TE_catalog_rightHalfDocAddInfDBDiv {
+	  padding: 5px;
+	}	
+	
+/************************************************************************************************************/
+/*  DIV Style Used in eCatalog PDP For Both Halfs of Product Features Display Box                           */
+/************************************************************************************************************/
+	div.TE_catalog_halfProdFeatDBDiv {
+	  padding: 5px;
+	}		
+	
+/************************************************************************************************************/
+/*  Style Used in eCatalog Browse Menus                           */
+/************************************************************************************************************/	
+
+	table.columnpics {
+	    border-collapse: separate;
+	}	
+	td.columnpics {
+		border:solid 2px #ededed;
+	}
+	td.columnpics img {
+		border:solid 1px #cccccc;
+	}
+	
+/************************************************************************************************************/
+/*  UL Style Used in eCatalog Menus                           */
+/************************************************************************************************************/	
+	
+	UL.TE_catalog_ULnopadding {
+	 margin-top:0px;
+	 margin-left:15px;
+	 padding-left:0px;
+	 padding-right:3px;
+	}
+	
+	UL.TE_catalog_ULnopadding_LIarrow {
+	 margin-top:0px;
+	 margin-left:15px;
+	 padding-left:0px;
+	 padding-right:3px;
+	 list-style-image:url(/_TEincludes/ver/920/TEimages/arrow_orange_sm.gif); 
+
+	 }
+
+/************************************************************************************************************/
+/*  New styles for Part Comparison                          */
+/************************************************************************************************************/  
+
+
+table.TE_catalog_partComparisonBorder {
+  font-size: 70%; 
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.TE_catalog_partComparisonBorder td {
+  border-top: 1px solid #F1E9DE;
+  border-left: 1px solid #F1E9DE;
+  border-collapse: collapse;
+}
+
+table.TE_catalog_partComparisonSide{
+  font-size: 70%; 
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+table.TE_catalog_partComparisonSide td{
+  border-top: 1px solid Silver;
+  border-left: 1px solid Silver;
+  border-collapse: collapse;
+  background-color : #F5F5F5;
+}
+
+table.TE_catalog_partComparisonContent{
+  font-size: 70%; 
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+table.TE_catalog_partComparisonContent td{
+  border-top: 1px solid Silver; 
+  border-left: 1px solid Silver;
+}
+
+
+/************************************************************************************************************/
+/*  Styles for No Image Available                          */
+/************************************************************************************************************/  
+
+.TE_noImageThumb{
+  vertical-align:middle;
+  border: 1px solid black;
+  height: 57px;
+  width: 100px;
+  background:white;
+  text-align : center;
+  cursor: pointer; 
+}
+.TE_noImageTextThumb{
+  margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  background:#ededed;
+  font-size: 90%;
+  cursor: pointer;  
+}
+/******************************************************************************/
+/*  Styles for Feature Selector                                               */
+/******************************************************************************/  
+.TE_featureSelector_MatchesLinksBox {
+	padding: 4px 0px 5px 9px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TE_featureSelectorLinks {
+	color: gray; 
+}
+
+.TE_featureSelector_SelectFeaturesMsg {
+	padding: 4px 2px 4px 4px; 
+	background-color: #FFFFEF; 
+	font-size: 110%;
+}
+
+.TE_featureSelector_SelectFeaturesTable {
+	border: 1px solid black;
+}
+
+.TE_featureSelector_FeatureTable {
+	border-top: 1px solid gray;
+}
+
+.TE_featureSelector_FeatureTable th {
+	background-color: #F4F4F4;
+}
+
+.TE_featureSelectorList {
+	margin-top: 6px; 
+	padding-left:0px; 
+	margin-left: 6px;
+}
+
+.TE_featureSelectorList li{
+	background-image: url(/_TEincludes/ver/920/TEimages/arrow_lmenu.gif);
+	list-style-type: none;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	margin-left: 1px;
+	padding-left: 10px;	
+	padding-top: 3px;
+}
+
+.TE_featureSelectorListBox {
+	margin-top: 5px; 
+	margin-left: 7px;
+	padding-left: 0px; 
+}
+
+.TE_featureSelectorListBox select {
+	width: 365px;
+	font-family: verdana;
+	font-size: 95%;
+}
+
+.TE_featureSelector_noSelectionWarn {
+	display: none;
+	color: red;
+	font-size: 85%;
+	font-weight: bold;
+}
+
+.TE_featureSelector_ClearSelections {
+	border-right: 1px solid #E5E5E5;
+	color: #4C4C4C;
+	padding: 2px 4px 3px 4px;
+}
+
+.TE_featureSelector_SelectedFeaturesMsg1 {
+	padding: 2px 4px 3px 4px;
+}
+
+.TE_featureSelector_SelectedFeaturesMsg2 {
+	color: gray;
+	padding-left: 8px;
+}
+
+.TE_featureSelector_DeselectFeature {
+	border-right: 1px solid #E5E5E5;
+	padding: 0px 4px 3px 4px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.TE_featureSelector_SelectedFeature {
+	padding: 0px 4px 3px 4px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TE_featureSelector_CommonFeaturesMsg {
+	border-top: 1px solid darkgray; 
+	padding: 4px 0px 1px 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TE_featureSelector_CommonFeatures {
+	color: #4C4C4C;
+	padding-left: 8px;
+	text-align: left;
+	vertical-align: top;
+}
+
+/******************************************************************************/
+/*  Styles for Product List                                                   */
+/******************************************************************************/ 
+.TE_productList_Matches {
+	padding: 2px 0px 1px 4px; 
+	font-size: 120%;
+}
+
+.TE_productList_Msgs {
+	padding: 0px 0px 2px 8px; 
+}
+
+.TE_productList_Features {
+	margin-left: 0px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TE_productList_Features ul {
+	margin-top: 1px; 
+	margin-left: 4px; 
+	padding-left: 16px;
+}
+
+.TE_productList_PartsTable {
+	border: 1px solid gray;
+}
+
+.TE_productList_PartSubFooter {
+	padding-right: 20px; 
+	background-color: #F7F7F7; 
+	border-bottom: 1px solid gray;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.TE_productList_PartComment {
+	padding-right: 20px;
+	background-color: #F7F7F7; 
+	text-align: left;
+	vertical-align: middle;
+}
+
+.TE_productList_PartsHeader {
+	border-bottom: 1px solid gray;
+	background-color: #EAEAEA;
+	text-align: center;
+	vertical-align: top;
+}
+
+.TE_productList_PartsFooter {
+	border-top: 1px solid black;
+	background-color: #EAEAEA;
+	text-align: center;
+	vertical-align: top;
+}
+
+.TE_productList_SynSalesFooter {	
+	padding-left: 4px;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+/************************************************************************************************************/
+/*  Styles for 2 column w/pics                         */
+/************************************************************************************************************/  
+
+.TE_columnTitle{ 
+	border-top: 2px solid #ededed; 
+	border-right: 2px solid #ededed; 
+	border-left: 2px solid #ededed; 
+	padding: 3px; 
+} 
+.TE_columnContent{ 
+	border-right: 2px solid #ededed; 
+	border-left: 2px solid #ededed; 
+	padding: 3px; 
+} 
+.TE_columnContent img{ 
+	border:solid 1px #cccccc; 
+} 
+.TE_columnOverview{ 
+	border-bottom: 2px solid #ededed;  
+	border-right: 2px solid #ededed;  
+	border-left: 2px solid #ededed; 
+	padding: 3px; 	
+}
+
+/* FEATURE SELECTOR STYLES **ADDED OCT 2007 ** */
+/* ======================================================================== */
+/* STYLES FOR GENERAL STRUCTURE */
+
+.TE_featSelector_containerTable {
+	border:0px;
+	padding:0px;
+	width:888px;
+	margin-left:auto;
+	margin-right:auto;
+}
+div#TE_featSelector_productList {
+	width:625px;
+	margin:0px;
+	margin-top:1px;
+}
+
+/* ======================================================================== */
+/* GENERAL STYLES FOR FACET DISPLAY */
+
+#TE_featSelector_facets {
+	width:255px;
+	border:1px solid silver;
+}
+.TE_featSelector_header {
+	background-color:#E4EEF4;
+	border:1px solid silver;
+}
+.TE_featSelector_header span {
+	font-size:10px;
+	font-weight:normal;
+	color:#666666;
+}
+#TE_featSelector_facets div {
+	padding:3px;
+	margin:-1px;
+}	
+#TE_featSelector_facets h3 {
+	font-weight:bold;
+	font-size:13px;
+	margin:0px;
+	border:0px;
+}
+#TE_featSelector_facets li span { /* STYLES GRAY NUMBER DISPLAY FOR FEATURES (xx) */
+	color:#999999;
+	font-weight:normal;
+	border-top:0px;
+	display:inline;
+	padding-top:0px;
+}
+.TE_featSelector_listHeaders { /* STYLES SPANS FOR EACH FACET LIST HEADING */
+	font-weight:bold;
+	display:block;
+	padding:3px;
+	margin-top:4px;
+	margin-bottom:4px;
+	margin-left:-2px;
+	margin-right:-2px;
+	background-color:#ededed;
+}
+	
+/* ======================================================================== */
+/* FACET LIST SINGLE SELECT */
+
+.TE_featSelector_singleSelect {
+	list-style:none;
+	margin:0px;
+	margin-top:0px;
+	padding:3px;
+	border:0px;
+}
+.TE_featSelector_singleSelect li { 
+	list-style:none;
+	line-height:16px;
+	margin:0px;
+	margin-left:0px;
+	padding-left:17px;
+	background-image:url(/_TEincludes/ver/920/TEimages/arrow_blue.gif);
+	background-repeat:no-repeat;
+}
+
+/* ======================================================================== */
+/* FACET LIST MULTI SELECT */
+
+.TE_featSelector_multiSelect {
+	list-style:none;
+	margin:0px;
+	margin-top:0px;
+	padding:3px;
+	border:0px;
+	width:240px;
+}
+.TE_featSelector_multiSelect li {
+	list-style:none;
+	line-height:16px;
+	margin:0px;
+	margin-left:-23px;
+	padding-left:17px;
+	width:90%;
+}
+.TE_featSelector_multiSelect label {
+	padding:0px;
+	padding-left:22px;
+	display:block;
+}
+input.selectCheck  {
+	margin-left:-17px;
+}
+li.selectButton {
+	text-align:left;
+	margin-left:-2px;
+	padding-top:7px;
+}
+li.TE_showMultiSelect { /* HIDES MULTI LIST UNTIL USER SWITCHES MODE */
+	list-style:none;
+	background-image:none;
+	font-weight:bold;
+}
+
+/* ======================================================================== */
+/* LIST EXCEPTIONS */
+
+.TE_std_inactive {
+	display:none;
+}
+li.TE_showAllValues {
+	background-image:none;
+	font-weight:bold;
+	padding-top:4px;
+}
+.TE_featSelector_fullListOnly {
+	background-image:url(/_TEincludes/ver/920/TEimages/arrow_blue.gif);
+	background-repeat:no-repeat;
+}
+
+/* ======================================================================== */
+/* SELECT FEATURE STATES */	
+
+.TE_featSelector_selectedFacet {
+	padding: 4px; 
+	margin-top:2px;
+	margin-bottom:0px;
+	margin-left:6px;
+	margin-right:6px;
+	border:1px solid #BDE1F2; 
+	background-color:#F2F8FD;	
+}
+.TE_featSelector_selectedFacet ul {
+	list-style:none;
+	line-height:16px;
+	margin:0px;
+	margin-top:-1px;
+	padding:3px;
+	border:1px solid silver;
+}
+.TE_featSelector_selectedFacet li { 
+	list-style:none;
+	margin:0px;
+	margin-left:0px;
+	padding-left:21px;
+	line-height:18px;
+}
+.TE_featSelector_selectedFacet img {
+	position:absolute;
+	margin-left:-21px;
+	margin-top:-1px;
+	z-index:0;
+}
+.TE_featSelector_forcedFeature{
+	padding:3px; 
+	margin-top:2px;
+	margin-bottom:0px;
+	margin-left:6px;
+	margin-right:6px;
+	color:#999999;
+	background-color:white; 
+	border: 1px solid #999999;
+	list-style:none;
+}
+.TE_featSelector_forcedFeature ul {
+	list-style:none;
+	line-height:16px;
+	margin:0px;
+	margin-top:-1px;
+	padding:3px;
+	border:1px solid silver;
+}
+.TE_featSelector_forcedFeatureBold{
+	background-image:url(/_TEincludes/ver/920/TEimages/arrow_gray.gif);
+	background-repeat:no-repeat;
+	font-weight:bold;
+	list-style:none;
+	margin:0px;
+	margin-left:-3px;
+	padding-left:15px;
+}
+.TE_featSelector_forcedFeatureComment {
+	border:0px;
+	list-style-type:none;
+	background-image:none;
+	padding-left:0px;
+	padding-top:6px;
+}
+
+
+/* ======================================================================== */
+/* STYLING FOR MATCHING PART DISPLAY */
+
+.TE_featSelector_matchingProdTable {
+	border:1px solid black;
+	margin-bottom:10px;
+	width:620px;
+	margin-left:5px;
+	background-color:#ffffef;
+	height:55px;
+}
+.TE_featSelector_matchingProdTable td {
+	padding:5px;
+}
+.TE_featSelector_matchingProdTable span {
+	font-size:13px;
+}
+.TE_featSelector_matchingProdTable p {
+	margin:0px;
+	padding:0px;
+	text-align:right;
+}
+
+/* ======================================================================== */
+/* STYLES FOR PART DISPLAY */
+
+.TE_featSelector_partDisplay {
+	padding:5px;
+	margin-bottom:10px;
+	width:620px;
+	margin-left:5px;
+	background-color:#ffffff;
+	border-top:1px solid silver;
+	border-bottom:1px solid silver;
+	border-right:1px solid silver;
+	border-left:1px solid silver;
+}
+.TE_featSelector_partDisplay th {
+	padding-left:5px;
+	background-color: #E4EEF4;
+	border-top:1px solid silver;
+	border-bottom:1px solid silver;
+}
+.TE_featSelector_partDisplayImg {
+	text-align:center;
+	padding:5px;
+	border-left:1px solid silver;
+	border-bottom:1px solid silver;
+}
+.TE_featSelector_partDisplayTextContain {
+	border-right:1px solid silver;
+}
+.TE_featSelector_partDisplayText td {
+	width:50%;
+	padding:0px;
+	color:#666666;
+}
+.TE_featSelector_partDisplayText div {
+	margin-left:20px;
+}
+.left_list li { 
+	list-style:disc;
+	margin:0px;
+	margin-left:-25px;
+	padding-left:-5px;
+	padding-right:6px;
+	color:#4E4E4E;
+}
+.right_list li { 
+	list-style:disc;
+	margin:0px;
+	margin-left:-25px;
+	padding-left:-5px;
+	color:#4E4E4E
+}
+.TE_featSelector_actions {
+	padding-right:3px;
+	padding-bottom:3px;
+	border-bottom:1px solid silver;
+}
+.TE_featSelector_actions div {
+	background-color:#f9f9f9;
+	border:1px solid #eeeeee;
+	width:474px;
+	float:right;
+	padding:5px;
+}
+
+/* ======================================================================== */
+/* STYLES FOR MULTI-SELECT OVERLAY */
+
+.TE_featSelector_overlay {
+	border:1px solid #000000;
+	margin-left:auto;
+	margin-right:auto;
+	width:880px;
+	position:absolute;
+	z-index:2;
+	background-color:#ffffef;
+	padding:0px;
+}
+.TE_featSelector_overlay span{
+	border:0px;
+	color:#999999;
+	font-weight:normal;
+}
+.TE_featSelector_featureRow td {
+	text-align:left;
+	border-top:1px solid silver;
+	border-bottom:1px solid silver;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.TE_featSelector_featureRow input {
+	position:absolute;
+	margin:0px;
+	margin-left:-20px;
+	margin-top:0px;
+	margin-bottom:auto;
+	padding:0px;
+}
+.TE_featSelector_featureRow label {
+	display:block;
+	margin-top:auto;
+	margin-bottom:auto;
+	padding:0px;
+	padding-left:20px;
+}
+.TE_featSelector_featureRowSubmit {
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#ededed;
+	text-align:center;
+	border:1px solid silver;
+}
+.TE_featSelector_featureRowHead {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.TE_featSelector_featureRowHead div {
+	display:inline;
+	float:left;
+}
+.TE_featSelector_featureRowHead img {
+	float:right;
+}
+
+/* ======================================================================== */
+/* STYLES FOR FIND SIMILAR OVERLAY */
+
+.TE_findSimilar_overlay {
+	border:1px solid #000000;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	position:absolute;
+	z-index:2;
+	background-color:#ffffef;
+	padding:4px;
+}
+.TE_findSimilar_overlay span{
+	border:0px;
+	color:#999999;
+	font-weight:normal;
+}
+.TE_findSimilar_featureRow td {
+	text-align:left;
+	padding:0px;
+	padding-bottom:8px;
+}
+.TE_findSimilar_featureRow input {
+	padding:0px;
+}
+.TE_findSimilar_featureRow label {
+	padding:20px;
+}
+.TE_findSimilar_featureRowSubmit {
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#ededed;
+	text-align:center;
+	border:1px solid silver;
+}
+.TE_findSimilar_featureRowHead {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.TE_findSimilar_featureRowHead div {
+	display:inline;
+	float:left;
+}
+.TE_findSimilar_featureRowHead img {
+	float:right;
+}
+.TE_findSimilar_featureDisplay2 {
+	border:0px;
+	padding:0px;
+	padding-bottom:0px;
+	font-size:10px;
+}
+.TE_findSimilar_featureDisplay2 ul{
+	margin-top:0px;
+	margin-bottom:0px;
+	color:#666666;
+}
+.TE_findSimilar_featureDisplay2 li{
+	list-style:none;
+	padding:2px;
+	margin-left:-15px;
+}
+.TE_findSimilar_heading {
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	padding-left:4px;
+	padding-top:8px;
+}
+#TE_findSimilar_processingTop, #TE_findSimilar_processingBottom {
+	margin-left:310px;
+	margin-top:-17px;
+	text-align:left;
+	display:none;
+}
+
+/* ======================================================================== */
+/* STYLES FOR SELECT/DESELECT ALL DISPLAY */
+#TE_featSelector_compareOverlay {
+	background-color:#ffffef;
+	padding:6px;
+	margin:0px;
+	margin-top:-170px;
+	width:150px;
+	height:30px;
+	border:1px solid black;
+	position:absolute;
+	left:510px;
+}
+#TE_featSelector_compareOverlay_close {
+	width:150px;
+	padding:0px;
+	text-align:right;
+	border:0px;
+	background-color:#ffffef;
+}

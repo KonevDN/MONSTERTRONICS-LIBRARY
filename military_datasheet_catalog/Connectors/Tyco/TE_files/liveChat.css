@@ -1,0 +1,331 @@
+/* ======================================================================== */
+/* STYLES FOR LIVE CHAT BUTTON */
+#TE_lc_mainContainer {
+	height : 30px;
+	margin-top : -6px;
+	position : relative;
+	z-index:1;
+}
+#TE_lc_imageLink {
+	float:right;
+}
+#TE_lc_imageLink a {
+	height:29px;
+	color:#c66100;
+	background:url('/_TEincludes/ver/920/TEimages/liveProductSupport_bg.png') no-repeat 0 0;
+	font-weight:bold;
+	text-align:left;
+	padding:0 0 0 38px;
+	float:left;
+}
+#TE_lc_imageLink a span {
+	height:29px;
+	background:url('/_TEincludes/ver/920/TEimages/liveProductSupport_bg.png') no-repeat right -58px;
+	cursor:pointer;
+	padding:0 38px 0 0;
+	float:left;
+}
+#TE_lc_imageLink a span em {
+	height:29px;
+	background:url('/_TEincludes/ver/920/TEimages/liveProductSupport_bg.png') repeat-x 0 -29px;
+	line-height:24px;
+	font-style:normal;
+	cursor:pointer;
+	padding:0 0 0 10px;
+	float:left;
+}
+#TE_lc_textLink {
+	float : right;
+	margin-right : 20px;
+	display : none;
+}
+
+/************************************************************************************************************
+****************[  C O M M O N   P O P U P   S T Y L E S  ]**************************************************
+************************************************************************************************************/
+
+/*--------------[  S I Z E   S T Y L E S  ]----------------------------------------------------------------*/
+
+.TE_popupTopLeftCorner, .TE_popupTopRightCorner, .TE_popupBottomLeftCorner, .TE_popupBottomRightCorner {
+	height : 8px;
+	width : 8px;
+}
+.TE_popupTopBorder, .TE_popupBottomBorder {
+	height : 7px;
+}
+.TE_popupBottomEdge {
+	height : 5px;
+}
+
+/*--------------[  I M A G E   S T Y L E S  ]--------------------------------------------------------------*/
+
+.TE_popupTopLeftCorner, .TE_popupTopRightCorner, .TE_popupBottomLeftCorner, .TE_popupBottomRightCorner {
+	background : url('/_TEincludes/ver/920/TEimages/TE_livechat_box.gif') no-repeat;
+}
+.TE_popupTopLeftCorner {
+	background-position : 0 0;
+}
+.TE_popupTopRightCorner {
+	background-position : -8px 0;
+}
+.TE_popupBottomLeftCorner {
+	background-position : 0 -8px;
+}
+.TE_popupBottomRightCorner {
+	background-position : -8px -8px;
+}
+
+/*--------------[  C O L O R   S T Y L E S  ]--------------------------------------------------------------*/
+
+.TE_popupContentContainer, .TE_popupHeader, .TE_popupTopBorder, .TE_popupBottomBorder {
+	background : #FFB66B;
+}
+.TE_popupContent, .TE_popupBottomEdge {
+	background : #FFF;
+}
+
+/*--------------[  B O R D E R   S T Y L E S  ]------------------------------------------------------------*/
+
+.TE_popupTopBorder {
+	border-top : solid 1px #000;
+}
+.TE_popupBottomBorder {
+	border-bottom : solid 1px #000;
+}
+.TE_popupContentContainer {
+	border-style : solid;
+	border-color : #000;
+	border-width : 0 1px;
+}	
+
+/*--------------[  M A R G I N   A N D   P A D D I N G   S T Y L E S  ]------------------------------------*/
+
+.TE_popupContent {
+	margin : 0 auto;
+}
+.TE_popupContentContainer {
+	padding : 0 2px;
+}
+.TE_popupBody {
+	padding : 0 10px 5px;
+}
+.TE_popupHeader {
+	padding : 0 8px 6px;
+	margin : 0 0 10px;
+}
+
+/*--------------[  F O N T   A N D   L I N E   H E I G H T   S T Y L E S  ]--------------------------------*/
+
+.TE_popupHeader span, #TE_lc_msg1, #TE_lc_errmsg1 {
+	font-weight : bold;
+}
+.TE_popupTopLeftCorner, .TE_popupTopRightCorner, .TE_popupBottomLeftCorner, .TE_popupBottomRightCorner, .TE_popupTopBorder, .TE_popupBottomBorder, .TE_popupBottomEdge {
+	font-size : 1pt;
+	line-height : 1pt;
+}
+
+/*--------------[  F L O A T   A N D   C L E A R   S T Y L E S  ]------------------------------------------*/
+
+.TE_popupContentContainer {
+	float : none;
+}
+.TE_popupHeader, .TE_popupHeader span, .TE_popupTopLeftCorner, .TE_popupBottomLeftCorner, .TE_popupTopBorder, .TE_popupBottomBorder {
+	float : left;
+}
+.TE_popupHeader img, .TE_popupTopRightCorner, .TE_popupBottomRightCorner {
+	float : right;
+}
+.TE_popupHeader span, .TE_popupTopLeftCorner, .TE_popupBottomLeftCorner {
+	clear : left;
+}
+.TE_popupHeader img, .TE_popupTopRightCorner, .TE_popupBottomRightCorner {
+	clear : right;
+}
+.TE_popupHeader, .TE_popupBody, .TE_popupContentContainer {
+	clear : both;
+}
+.TE_popupTopBorder, .TE_popupBottomBorder {
+	clear : none;
+}
+
+/*--------------[  O V E R W R I T E   I N H E R I T E D   S T Y L E S  ]----------------------------------*/
+
+.TE_popupBox {
+	background : transparent;
+	border : 0;
+}
+
+/************************************************************************************************************
+****************[  I D   S P E C I F I C   S T Y L E S  ]****************************************************
+************************************************************************************************************/
+
+/*----------[  L I V E   C H A T   A V A I L A B L E   S T Y L E S  ]----------------------------------*/
+
+#TE_lc_windowTrue {
+	width : 346px;
+	position : absolute;
+	top : 0;
+	right : 0;
+	display : none;
+	float : right;
+	clear : both;
+}
+#TE_lc_windowTrue .TE_popupTopBorder, #TE_lc_windowTrue .TE_popupBottomBorder, #TE_lc_windowTrue .TE_popupBottomEdge {
+	width : 330px;
+}
+#TE_lc_windowTrue .TE_popupHeader {
+	width : 324px;
+}
+#TE_lc_windowTrue #TE_lc_msg1 {
+	margin-left : 5px;
+	display : block;
+}
+#TE_lc_windowTrue #TE_lc_errmsg1 {
+	height : 35px;
+	min-height : 35px;
+	width : 250px;
+}
+#TE_lc_windowTrue .TE_popupBody table {
+	margin : 10px auto 0;
+}
+#TE_lc_windowTrue .TE_popupBody table td {
+	padding : 3px;
+}
+.TE_popupBody table td input {
+	width : 106px;
+	font-size : 90%;
+}
+#p_firstname, #p_lastname {
+	width : 100px;
+}
+#p_email {
+	width : 200px;
+}
+
+/*----------[  L I V E   C H A T   U N A V A I L A B L E   S T Y L E S  ]------------------------------*/
+
+#TE_lc_windowFalse {
+	width : 346px;
+	position : absolute;
+	top : 0;
+	right : 0;
+	display : none;
+}
+#TE_lc_windowFalse .TE_popupTopBorder, #TE_lc_windowFalse .TE_popupBottomBorder, #TE_lc_windowFalse .TE_popupBottomEdge {
+	width : 330px;
+}
+#TE_lc_windowFalse .TE_popupHeader {
+	width : 324px;
+}
+#TE_lc_windowFalse .TE_InfoBox {
+	height : 35px;
+	min-height : 35px;
+	width : 250px;
+	border-color : #0000FF;
+	font-weight : bold;
+}
+#TE_lc_windowFalse p {
+	padding : 0 10px;
+}
+#TE_lc_windowFalse p span {
+	font-weight : bold;
+}
+
+/*------------------------------[  LIVE CHAT NEW STYLES  ]------------------------------*/
+#liveChatOverlay {
+	width : 50em;
+	padding : 5px 5px 0;
+	display : block;
+	clear : none;
+}
+#liveChatOverlay fieldset {
+	border : none;
+	text-align : left;
+	margin : 0;
+	padding : 0;
+}
+#liveChatOverlay div {
+	float : left;
+	clear : both;
+	margin : 2px 0;
+}
+#liveChatOverlay label {
+	width : 10em;
+	float : left;
+	clear : left;
+	padding : .2em 0 0 0;
+}
+#liveChatOverlay input {
+	float : left;
+}
+#liveChatOverlay select {
+	float : left;
+}
+#liveChatOverlay #save {
+	margin-left : 10em;
+}
+#liveChatOverlay #emailSupport {
+	background : url('/_TEincludes/ver/920/TEimages/email.jpg') no-repeat 0 0;
+}
+#liveChatOverlay #knowledgeSupport {
+	width : 33%;
+	float : left;
+	background : url('/_TEincludes/ver/920/TEimages/knowledgebase.jpg') no-repeat 0 0;
+	border-right : dashed 1px #CCC;
+	border-left : dashed 1px #CCC;
+}
+#liveChatOverlay #callSupport {
+	background : url('/_TEincludes/ver/920/TEimages/phone.jpg') no-repeat 0 0;
+}
+#liveChatOverlay #emailSupport, #liveChatOverlay #knowledgeSupport, #liveChatOverlay #callSupport {
+	width : 184px;
+	text-align : left;
+	float : left;
+	clear : none;
+	padding-bottom : 5px;
+}
+#liveChatOverlay #emailSupport span, #liveChatOverlay #knowledgeSupport span, #liveChatOverlay #callSupport span {
+	height : 23px;
+	line-height : 23px;
+	font-weight : bold;
+	margin-left : 2.5em;
+}
+#liveChatOverlay #emailSupport p, #liveChatOverlay #knowledgeSupport p, #liveChatOverlay #callSupport p {
+	height : 5em;
+	margin : .5em 0 .25em 0;
+	padding : 0 10px;
+}
+#liveChatOverlay #emailSupport a, #liveChatOverlay #knowledgeSupport a, #liveChatOverlay #callSupport a {
+	background : url('/_TEincludes/ver/920/TEimages/arrow.gif') no-repeat 0 2px;
+	float : right;
+	clear : both;
+	margin-right : 5px;
+	padding-left : 10px;
+}
+#liveChatOverlay .disabled {
+	color : #999999;
+}
+#support {
+	border-top:solid 1px #CCC;
+	margin-top:1em;
+	float : left;
+	clear : both;
+}
+
+/*------------------------------[  LIVE CHAT REPLACEMENT STYLES FOR TE_lc_windowTrue ]------------------------------*/
+#TE_liveChat_windowTrue {
+	width : 596px;
+	position : absolute;
+	top : 0;
+	right : 0;
+	display : none;
+	float : right;
+	clear : both;	
+	z-index:1;
+}
+#TE_liveChat_windowTrue .TE_popupTopBorder, #TE_liveChat_windowTrue .TE_popupBottomBorder, #TE_liveChat_windowTrue .TE_popupBottomEdge {
+	width : 580px;
+}
+#TE_liveChat_windowTrue .TE_popupHeader {
+	width : 574px;
+}

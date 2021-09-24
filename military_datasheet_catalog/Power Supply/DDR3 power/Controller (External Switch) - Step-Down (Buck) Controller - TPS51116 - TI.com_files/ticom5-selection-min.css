@@ -1,0 +1,144 @@
+/* Selection */
+#selection { position: relative; height: auto !important; min-height: 500px; _height: 160px }
+#selection, #selection table, #selection input, #selection select, #selection a.btn1, #selection a.btnGry, #selection a.btndisabled, #selectionTop { font-family: arial; font-size: 11px; }
+a.btn1:hover, a.btnGry:hover, #selection a.btndisabled { text-decoration: none; }
+#selection .param { position: relative; border-collapse:collapse; border-top:3px solid #5e5e5e; border-left:1px solid #e0e0e0; line-height: 11px; }
+#selection .param th, .param td { border-right:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; vertical-align: top; }
+#selection .param th, .param .title td { padding: 5px; background: #f7f7f7; color: #000; vertical-align: bottom; text-align:left; font-weight:bold; }
+#selection .param .title td { padding: 10px 5px 5px 5px; }
+#selection .param th.head { text-align: center;}
+#selection .param .filter td { white-space: nowrap; padding: 1px; line-height: 10px; }
+#selection .param .filter .head { background: #ffffb3; line-height: 20px; padding: 0; width: 150px; }
+#selection .param .filter .head .label { position: absolute; text-align: left; padding: 20px 0 10px 20px; }
+#selection .param .filter .head .value { position: relative; text-align: right; padding: 20px 20px 10px 0; }
+#selection .param .filter .head .value b { font-size: 18px; }
+#selection .param .filter .head .btn { width: auto; position: relative; text-align: center;}
+#selection .param .filter .head .btn .reset { background: #d12424 url(/assets/images/btn_reset.png) no-repeat; padding: 1px 5px 2px 23px; width: auto; overflow: visible; *padding: 1px 5px 1px 21px; }
+#selection .param .filter .head .resetdisabled { background: #d12424 url(/assets/images/btn_reset_disabled.png) no-repeat; padding: 1px 5px 2px 23px; width: auto; overflow: visible; *padding: 1px 5px 1px 21px; }
+#selection .param .filter .check { height: 14px; padding: 1px 0px 0px 0px; zoom: 1; }
+#selection .param .filter .check label { zoom: 1; }
+#selection .param .filter .check .box { position: absolute; *margin: 0 0 0 -15px; }
+#selection .param .filter .check .value { display:block; margin: 0 0 0 0.25em; }
+#selection .param .filter div.check:hover { background: #a9e1b6; cursor: pointer; }
+#selection .param .filter .check input { margin: 0; *margin: -4px -2px -1px -4px; }
+#selection .param .filter .statusBox { margin:20px; width: 144px}
+#selection .param .filter .statusBox .btn { position:static !important }
+#selection .param .filter .statusBox .resetbtnFix { clear:both; padding-top: 20px; }
+#selection .param .filter .statusBox .statusBoxLabel { float: left;} 
+#selection .param .filter .statusBox .statusBoxCount { float: right; text-align: right; }
+#selection .param .filter .statusBox .statusBoxCount b { font-size: 18px; }
+#selection .count { position: absolute; background: #ffffb3; border: 1px solid #5e5e5e; padding: 5px; text-align:center; z-index: 20; width: auto }
+#selection .param .filter .textnom { margin: 4px 0; *margin: 3px 0 1px 0; text-align: center; white-space: nowrap; }
+#selection .param .filter .textmax, .param .filter .textmin { position: relative; background:url(/assets/images/iconsSelection.png) no-repeat 0 -477px; height: 18px; padding: 0 0 0 10px; margin: 4px 0 5px 0; }
+#selection .param .filter .textmin { background-position: 0 -507px; margin: 5px 0 4px 0; }
+#selection .param .filter .textmax input,
+#selection .param .filter .textmin input,
+#selection .param .filter .textnom input { width: 100%; height: 14px; border: 1px solid #1c5180; color: #000; }
+#selection .param .filter .textnom input { width: 30px; }
+#selection .param .filter .slider { background: url(/assets/images/iconsSelection.png) no-repeat 0 -90px; margin: 0 0 0 8px; }
+#selection .param .filter .sliderOn { position: absolute; width: 4px; background:url(/assets/images/iconsSelection.png) no-repeat 0 -220px; }
+#selection .param .filter .sliderNA { position: absolute; width: 4px; background:url(/assets/images/iconsSelection.png) no-repeat 0 -350px; }
+#selection .param .filter .slider .deadzone, .param .filter .slider .valuemax, .param .filter .slider .valuemin { position: absolute; margin: 0 0 0 8px; }
+#selection .param .filter .padmax, .param .filter .padmin { position: absolute; background:url(/assets/images/iconsSelection.png) no-repeat 0 -540px; width: 15px; height: 8px; margin: 0 0 0 -7px; cursor: pointer;}
+#selection .param .filter .padmin { background-position: 0 -570px; }
+#selection .param .filter .padmax .count,
+#selection .param .filter .padmin .count { position: absolute; background: #ffffb3; border: 1px solid #5e5e5e; padding: 5px; text-align: center; z-index: 20; top: -12px; right: 16px; *right: 15px; white-space: nowrap; }
+#selection .param .disabled { color: #c9c8c6; }
+#selection .param .sort { background: #f7f7f7; }
+#selection .param .sort td { vertical-align: middle; padding: 1px; text-align: center; }
+#selection .param .sort .head { text-align: left; white-space: nowrap; }
+#selection .param .sort .head input { padding: 1px 0; margin: 0 10px 0 0; }
+#selection .param .sort .sortAsc, .param .sort .sortDes { background: url(/assets/images/iconsSelection.png) no-repeat 0 -594px; width: 8px; height: 8px; display: inline-block; padding: 2px; cursor: pointer; }
+#selection .param .sort .sortDes { background-position: 0 -624px; }
+#selection .param .sort .sortAsc.on { background-position: 0 -654px; }
+#selection .param .sort .sortDes.on { background-position: 0 -684px; }
+#selection .param .result td { padding: 5px; }
+#selection .param .result .head { padding: 0; width: 150px;  }
+#selection .param .result .check { position: absolute; padding: 4px 13px 13px 4px; background: url(/assets/images/iconsSelection.png) no-repeat 4px 4px; width: auto; overflow: visible; }
+#selection .param .result.selected .check,
+#selection .param .result.hilighted .check { background-position: 4px -26px; }
+#selection .param .result .name { padding: 5px 5px 5px 22px; }
+#selection .param .hilight { background: #daf2e0; }
+#selection .selectionColor { background-color: #ff5555; }
+#selection .param .hilighted { background: #daf2e0; }
+#selection .panel { display: inline-block; height: 40px; *width: 514px; background: #e7e7e7; border: 1px solid #5e5e5e; border-radius: 5px 5px 0 0;
+background: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#d0d0d0));
+background: -moz-linear-gradient(top, #e7e7e7, #d0d0d0); 
+background: -ms-linear-gradient(top, #e7e7e7, #d0d0d0); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#d0d0d0'); }
+#selection .panel span div { display: inline;}
+#selection .panel span div a { display: inline-block; height: 17px; color: #000; font-weight: bold; padding: 13px 10px 10px 35px; text-decoration: none; border-right: 1px solid #5e5e5e; background: url(/assets/images/iconsSelection.png) no-repeat 10px -772px; }
+#selection .panel span div a.email { background-position: 7px -812px; padding-left: 37px; }
+#selection .panel span div a.download { background-position: 7px -852px; padding-left: 31px; }
+#selection .panel span div a.save { background-position: 7px -892px; padding-left: 35px; border: 0; }
+#selection .panel img { margin: 0 5px -8px 0; border: 0; overflow: visible; }
+#selection .rowRollOverColor { background-color: #DDEEFF !important }
+#selection .param thead tr div.scrollchkbox { overflow: scroll; overflow-y: scroll; overflow-x: hidden; height: 168px; width: 100%; }
+#selection .param thead tr label { background: url(/assets/images/iconsSelection.png) no-repeat 1px 0; white-space: nowrap; font-weight:normal; padding: 1px 0px 2px 14px; display: block; }
+#selection .param thead tr label.selected { background-position: 1px -30px; }
+#selection .param thead tr label.disabled { background-position: 1px -60px; }
+#selection .param thead { cursor:default; }
+#selection .param thead.filterWait { cursor:wait; }
+#selectionTop .menu,
+#selection .part,
+#selection .showhide { position: absolute; background: #fff; *border: 1px solid #e0e0e0; border-top: 3px solid #ff0000; padding: 10px; -moz-box-shadow: 0 10px 10px #333; -webkit-box-shadow: 0 10px 10px #333; box-shadow: 0 10px 10px #333; }
+#selectionTop .menu { overflow: auto; width: 400px; }
+#selectionTop .menu li { font-weight: bold; padding: 10px 0 0 0; }
+#selectionTop .menu li li, #selectionTop .menu li li li { font-weight: normal; padding: 3px 0 0 15px; }
+#selectionTop .menu li li li { background-position: 8px 8px; }
+#selectionTop .menu li.hilighted { background: #ffffb3; }
+#selectionTop .menu a { color: #000; }
+#selectionTop .menu a.treeExp, #selectionTop .menu a.treeCol { display: inline-block; background: url(/assets/images/iconsSelection.png) no-repeat 0 -940px; height: 9px; width: 15px; }
+#selectionTop .menu a.treeCol { background-position: 0 -970px; }
+#selection .partCheckbox {float: left; width: 20px; display: inline-block;}
+#selection .partDescription { display: inline-block; width: 115px; margin-left: 3px; }
+#selection .part { margin-top: 40px;  z-index: 30; }
+.part .close,
+.showhide .close { position: absolute; width: 80px; height: 40px; top: -40px; right: 0; background: url(/assets/images/iconsSelection.png) no-repeat 0 -1270px; cursor: pointer; z-index: 31; }
+.part .link { float: left; padding: 0 10px 0 0;  }
+.part .link h2 { width: auto; font-size: 18px; margin: 0 0 10px 0; }
+.part .link ul { width: auto; margin: 0; padding: 0; line-height: 11px; }
+.part .link li { background: none; padding: 0 0 10px 0; }
+.part .link li a { background: url(/assets/images/iconsSelection.png) no-repeat 0 -1000px; padding: 0 0 0 21px; }
+.part .link li.detail a { background-position: 0 -1030px; }
+.part .link li.buy a { background-position: 0 -1060px; }
+.part .link li.tool a { background-position: 0 -1090px; }
+.part .link li.doc a { background-position: 0 -1120px; }
+.part .diagram { float: left; }
+.part .diagram .btn1 { position: absolute; top: 10px; right: 10px; display: none; }
+.part .diagram.zoomed .btn1 { display: block; }
+.part .diagram img { cursor: url(/assets/images/zoomIn.png), default; *cursor: pointer; }
+.part .diagram.zoomed img { cursor: url(/assets/images/zoomOut.png), default; *cursor: pointer; }
+#selection .showhide { z-index: 40; }
+.showhide .cnt, .showhide .cnt2 { float: left; padding: 5px; }
+.showhide .cnt { padding-top: 100px; }
+.showhide .cnt3 { clear: both; text-align: right; padding: 20px 0 5px 0; }
+.showhide h2 { font-size: 18px; margin: 0; }
+.showhide .order { display: inline-block; background: url(/assets/images/iconsSelection.png) no-repeat 0 -1150px; width: 25px; height: 20px; }
+.showhide .order.down { background-position: 0 -1180px; }	  
+.showhide .order.hide { display: block; background-position: 0 -1210px; width: 40px; }	   
+.showhide .order.show { display: block; background-position: 0 -1240px; width: 40px; margin-top: 2px; }
+#selection .error,
+#selection div.info { position: absolute; background: #ffffb3; border: 1px solid #5e5e5e; padding: 5px; z-index: 40; }
+#selection .error p,
+#selection div.info p { line-height: 11px; margin: 5px 0; }
+#selection div#selectionToolSaveFunctions.info {padding:5px 30px 5px 5px;}
+#selection .saveTipClose {background:url(/assets/images/btn_close.png) no-repeat left top; border:none; height:20px; position:absolute; right:10px; top:5px; width:20px;}
+#selection .error { width: 150px; *width: 160px; margin: -5px 0 0 -50px; text-align: center; white-space:normal; display: none;}
+#selection .error .btn1 { width: auto; height: auto; color: #fff; margin: 5px 0 0 0; }
+#selection div.stickyheader .sticky-hide { visibility: hidden; padding: 0 !important; border: 0 none !important }
+#selection #selectionLoader { font-size: 2em; padding: 20px 80px 20px 20px; border: 2px solid #ccc; position: absolute; top: 0px; margin-top: 80px; left:42%; background: url(/assets/images/loading-squares.gif) no-repeat 90% 50% #fff; z-index: 1001; display: block; text-align: center; }
+#selection #selectionLoader.loadMore {margin:10px auto; position:static; width:200px;}
+#selection #grid { position: relative; }
+#selection #grid #displayGrid { position: relative }
+#selection #grid #displayGrid.show { top: 0; visibility: visible }
+.param .sort img:hover { cursor: pointer; cursor: hand }
+span.info.more { background: #ffff99 url(/assets/images/iconsSelection.png) no-repeat 32px -722px; padding: 0 18px 0 0; }
+span.info { background: #ffff99; color: #ea272a; font-weight: bold; }
+#btnCompare.btn1, #btnCompare.btndisabled { width: 130px; }
+.checkmark {background:url(/assets/images/iconsSelection.png) no-repeat 0 -750px; display:block; height:14px; width:14px; }
+#selection #grid #displayGrid .ctrllock { background: #aaa url(/assets/images/loader.gif) no-repeat center center;  filter: alpha(opacity=10); left: 0; height: 171px; opacity: 0.1; -moz-opacity: 0.1; position: absolute; z-index: 12000; width: 100%; }
+
+/*ESP FIXES*/
+#selection .info {float:none; margin:0;}
+td button.btn3 {width:auto; zoom:1;}

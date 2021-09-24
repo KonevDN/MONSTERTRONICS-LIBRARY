@@ -1,0 +1,68 @@
+
+/* CSS on this stylesheet is applied on top of other styles when ANY page is printed */
+
+/* Remove background colors from tables */
+
+body{
+background-image:none !important;
+background-repeat: no-repeat;
+margin-top:0;
+padding:0;
+background-color:#FFFFFF;
+font-size: 55%;
+}
+TABLE { 
+	background-color:transparent;
+}
+
+/* Hide pagemenu, "click here for menu", pagemenu cell, main menu div */
+
+.TE_rtop,.TE_artop,#TE_corpMenu,#TE_BreadCrumb,.TE_printHide,#TE_search,
+#TE_menuLoader,#TE_signIn,table#TE_Tabbox th,.menu_preview_cell,#xTooltipElement
+{display: none;
+}
+	
+	#TE_outerDiv{
+	width:670px;
+	overflow:visible;
+	}
+	#TE_headerStub{	
+	position:absolute;
+	}
+	#TE_header1px{
+	float:right;
+	margin-bottom: 20px;
+	height:77px;}
+	
+	#TE_printDate{
+	display:inline;
+	position:absolute;
+	top:60px;
+	right:10px;
+	color:#CCCCCC;
+	}
+	div.TE_catalog_priImageDiv img {
+	width:150px;
+	height:86px;
+	}
+	DIV.TE_catalog_priImageDiv {
+	width: 150px; 
+	height: 86px
+	}
+	div.TE_catalog_prodHighDiv {	
+	width:250px;
+	}
+	div.TE_dottedborder {	
+	width:150px;
+	}
+	.TE_noImage{
+	width: 150px; 
+	height: 86px
+	}
+	.TE_noImageText{
+	padding-top: 27px;
+  	padding-bottom: 31px;
+	}	
+	
+	
+	  

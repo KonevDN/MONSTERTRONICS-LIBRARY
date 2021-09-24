@@ -1,0 +1,575 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-type" content="text/html;charset=UTF-8" /><meta name="google-site-verification" content="wrFjGpdblfwomRRv9W7kPLuRX5xSARyyEHkjfKFdwbM" /><title>
+	Samtec | high speed, rugged / power, micro interconnects
+</title><link rel="Stylesheet" href="/StyleSheet.css" />
+
+    <script type="text/javascript" src="/includes/common.js"></script>
+
+    <script type="text/javascript" src="/includes/jquery/jquery.js"></script>
+
+    <script type="text/javascript" src="/includes/jquery/jquery.cycle.lite.min.js"></script>
+    
+     <script type="text/javascript" src="/includes/jsvat.js"> </script>
+
+    
+    <script type="text/javascript">
+        rnd.today = new Date();
+        rnd.seed = rnd.today.getTime();
+        function rnd() {
+            rnd.seed = (rnd.seed * 9301 + 49297) % 233280;
+            return rnd.seed / (233280.0);
+        }
+        function rand(number) {
+            return Math.ceil(rnd() * number);
+        }
+        $(document).ready(function() {
+            var imgno = rand(3)
+            $("#divImg").attr("innerHTML", "<img src='/images/img" + imgno.toString() + ".jpg' usemap='#Map" + imgno.toString() + "' border='0' >");
+            $("#divImg").show("slow");
+        });
+     </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="404Handler.aspx?404%3bhttp%3a%2f%2fwww.samtec.com%3a80%2fsignalintegrity%2ffinal_inch%2fcss%2fui-lightness%2fjquery-ui-1.7.2.custom.css" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_SamtecScriptManager_HiddenField" id="ctl00_SamtecScriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMzEzNjYwOTkPZBYCZg9kFgICAw9kFgQCAQ9kFgRmDxYEHgRocmVmBSBqYXZhc2NyaXB0OlNlcnZpY2VDZW50ZXJMb2dpbigpOx4JaW5uZXJodG1sBSU8c3Ryb25nPlNlcnZpY2UgQ2VudGVyIExvZ2luPC9zdHJvbmc+ZAICDw8WAh4EVGV4dAUHQnV5IE5vd2RkAgMPFgIfAmVkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBRJjdGwwMCRjdGxUb3AkYnRuR28FGmN0bDAwJGN0bFRvcCRjaGtSZW1lbWJlck1lylkhpxiZBro4xMjMAOYPdSY9+A8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=NnVdabuEyWsOLmU2gy1fqqNb1bsx3xn3uIo3wcwkE-_oRWs9HEXyvclNtG-PnzrJr1Zcr6JGbabGydxy1wbEratUf9Y1&amp;t=634777049873641938" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=arjT5PAvfkIUu00Yp9epFUE0nVIIGnbetQU3c_Z45z2pTkzuL1fvlESMLxjQWIV5qjvtHb5COnvyOnzPzIdRIjGsrUrYsvsNe7slSIdfAzXQ1ffmkVY8IzeLbaps_AtVcRmarqraBCd7PWu2bLjvp_nZQYQOPK1Mx0Qtr3Y-RQhu29E30&amp;t=47cb7a8b" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=RnYjhUUuzev5_fA-E89VNTNnjxM5uvGkPR4lRjpsKEzxlkACuBiqgT0uU3sNGgFl3CO4vC8Se2g3az1gEHTFFZLG-uxlnsU5S-LDLyE8TLZDz-A6E2tK1GAUp2tdVVhNl04da5TOu9nkat8bs03VKdQzS834Scq_Afw9EP3Re2Jh-LnE0&amp;t=47cb7a8b" type="text/javascript"></script>
+<script src="/404Handler.aspx?_TSM_HiddenField_=ctl00_SamtecScriptManager_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.0.30930.24885%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a72c8f9c1-0293-486b-a479-9656fe9ba4ae%3ae2e86ef9%3a1df13a87%3a8ccd9c1b" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCALRwtWvAQKilIXkAwKaku6HDQKw05m/BwKwybXLDwL7pJnuCwKf0IWoDwL00vS/AyyyjyZD7PvflgGl3bhqNJYakpFe" />
+</div>
+    <!--  Server-2  --><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$SamtecScriptManager', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    <table cellspacing="0" cellpadding="0" width="100%" style="width: 100%; min-height: 100%;">
+        <tr>
+            
+            <td style="vertical-align: top;">
+                
+<script type="text/javascript">
+
+    engine = null;
+    if (window.navigator.appName == "Microsoft Internet Explorer") {
+        // This is an IE browser. What mode is the engine in?
+        if (document.documentMode) // IE8
+            engine = document.documentMode;
+        else // IE 5-7
+        {
+            engine = 5; // Assume quirks mode unless proven otherwise
+            if (document.compatMode) {
+                if (document.compatMode == "CSS1Compat")
+                    engine = 7; // standards mode
+            }
+        }
+        // the engine variable now contains the document compatibility mode.
+    }
+
+    function ServiceCenterLogin() {
+        $("#divSCLogin").toggle();
+        if ($("#ctl00_ctlTop_txtLogin").value == '' || $("#ctl00_ctlTop_txtLogin").value == undefined) {
+            $('#ctl00_ctlTop_txtLogin').focus();
+        }
+        else {
+            $('#ctl00_ctlTop_txtPassword').focus();
+        }
+    }
+    function OpenPopUp() {
+        window.open("/internet_communicator/ic_request_form.aspx?pathname=/ContactUs/default.aspx&section=..", "CallBack", "width=520,height=460,scrollbars=no");
+    }
+    function ForgotPW() {
+        window.open('/ForgotPW.aspx?M=SS', null, 'resizable=0,scrollbars=yes,width=650,height=250');
+    }
+
+    $(document).ready(function () {
+        $('#ctl00_ctlTop_txtSearch').keydown(function (event) {
+            if (event.keyCode == 13) {
+                window.open("/Search/Search.aspx?q=" + this.value, "_self");
+                return false;
+            }
+            else { return true; }
+        });
+
+    });
+</script>
+<style type="text/css">
+.mainHead{ background: url(/images/header/headBg.jpg) repeat-x; width:1024px; height:129px; font-size:11px; font-family:Arial,Helvetica; font-weight:normal;}
+.headL{ float:left; width:228px; background:#FFF; padding:0;}
+.headR{
+                float:left;
+                width:740px;
+                background: url(/images/header/header_spacer2.jpg) no-repeat;
+                margin:0;
+                padding:0px;
+}
+.headLogin{ margin:10px 0 0 0; text-align:right;}
+.inHL{ float:left; width:495px;}
+.headNav{
+                margin:0;
+                width:580px;
+                height:24px;
+}
+.headNav ul{ margin:0;}
+.headNav ul li{ display:inline; margin:0 3px; list-style:none; float:left}
+.headNav ul li a{ display:inline; color:#CA0000; text-decoration:none;}
+.headNav ul li a:hover{color:#0033FF;}
+.headSearch{
+                background:url(/images/header/header_searchwindow.jpg) no-repeat top left;
+                width:580px;
+                height:35px;
+                padding:0;
+                border-top:solid 2px #009899;
+                border-bottom:solid 2px #009899;
+}
+.headSearch input{float:left}
+.headSBtn{margin:5px 0 0 0; float:left;}
+.headLinks{
+                text-align:right;
+                margin: 0 40px 0 0;
+}
+.inHR{ float:left; width:80px;}
+.clear{ clear:both:}
+</style>
+
+<div class="mainHead">
+    <div class="headL"><a href="/" title="Samtec Homepage"><img width="228" height="128" src="/images/header/header_logo_left.jpg" border="0"/></a></div>
+    <div class="headR">
+        <div class="headLogin">
+            <a href="javascript:ServiceCenterLogin();" id="ctl00_ctlTop_lnkSC" onmouseout="this.style.color='#0033FF';" onmouseover="this.style.color='Red';" style="text-decoration: none; color: rgb(0, 51, 255); font-size: 8pt;"><strong>Service Center Login</strong></a>
+            
+        </div>
+        <div class="inHL">
+            <div class="headNav">
+                <ul>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/ProductInformation/CatalogPages.aspx">Catalog</a></li>
+                    <li>|</li>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/ProductInformation/Prints.aspx">Prints</a></li>
+                    <li>|</li>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/Search/Search.aspx">Search</a></li>
+                    <li>|</li>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/suddenservice/samples/samples.aspx">Samples</a></li>
+                    <li>|</li>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/SuddenService/PublicPD/PD.aspx">Price &amp; Delivery</a></li>
+                    <li>|</li>
+                    <li><a id="ctl00_ctlTop_hypOnlineOrder" class="QuickLink" href="/SuddenService/OnlineOrder/OnlineOrder.aspx" style="font-size: 10pt;">Buy Now</a></li>
+                    <li>|</li>
+                    <li><a style="font-size: 10pt;" class="QuickLink" href="/Media/media_room_default.aspx">Media</a></li>
+                </ul><div class="clear"></div>
+            </div> 
+            <div class="headSearch">
+                <div class="headSBtn">
+                    <input name="ctl00$ctlTop$txtSearch" type="text" size="60" id="ctl00_ctlTop_txtSearch" style="height: 1.2em;width: 30em;" />
+                    <input type="hidden" name="ctl00$ctlTop$tbweSearch_ClientState" id="ctl00_ctlTop_tbweSearch_ClientState" />
+                </div>
+                <div style="float:left;">
+                <input type="image" name="ctl00$ctlTop$btnGo" id="ctl00_ctlTop_btnGo" onmouseout="this.src='/images/header/header-go_googlesearch.jpg';" onmouseover="this.src='/images/header/header-go_googlesearch_over.jpg';" class="NoBorder" src="/images/header/header-go_googlesearch.jpg" style="border-width:0px;border-width: 0px;" /> 
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="headLinks">                            
+                <a title="Environmental Compliance" border="0" href="/standard_products/environmental_compliance/samtec_compliance/our_environment.aspx">
+                <img width="26" height="27" class="style1" src="/images/header/environ_icon.jpg" border="0"/></a>
+                <a title="Twitter" border="0"  href="http://www.twitter.com/SAMTECINC/">
+                <img width="26" height="27" class="style1" src="/images/header/twitter_icon.jpg" border="0"/></a>
+                <a title="Facebook" border="0" href="http://www.facebook.com/samtecinc">
+                <img width="26" height="27" class="style1" src="/images/header/facebook_icon.jpg" border="0"/></a>
+            </div> 
+            <div class="clear"></div>                           
+        </div>
+        <div class="inHR">
+            <a href="/signalintegrity/SI-fusion.aspx?WT.mc_id=SI_Header" border="0" title="SI Fusion"><img src="/images/header/siFusion.png" /></a>  
+        </div>
+                    
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="divSCLogin" style="position: absolute; left: 54em; top: 2em; display: none;">
+                <img src="../images/loginbackground.png" alt="" />
+                <table style="position: absolute; left: 0; top: 0;">
+                    <tr>
+                        <td style="color: White;">
+                            <strong>Login</strong>
+                        </td>
+                        <td>
+                            <input name="ctl00$ctlTop$txtLogin" type="text" id="ctl00_ctlTop_txtLogin" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: White;">
+                            <strong>Password</strong>
+                        </td>
+                        <td>
+                            <input name="ctl00$ctlTop$txtPassword" type="password" id="ctl00_ctlTop_txtPassword" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <span style="color:White;"><input id="ctl00_ctlTop_chkRememberMe" type="checkbox" name="ctl00$ctlTop$chkRememberMe" checked="checked" /><label for="ctl00_ctlTop_chkRememberMe">Remember Me</label></span>&nbsp;&nbsp;<a href="javascript:ForgotPW();" style="color: White;">Forgot
+                                    Password</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="Cancel" onclick="$('#divSCLogin').hide();" />
+                                    </td>
+                                    <td>
+                                        <input type="submit" name="ctl00$ctlTop$btnLogin" value="Login" id="ctl00_ctlTop_btnLogin" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>   
+
+            </td>
+            
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        
+                        <td style="vertical-align: top;">
+                            <table id="ctl00_ctlLeft_LeftNavTable" width="189" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td id="ctl00_ctlLeft_tdHighSpeed" style="background-color:#FF3300;height:19px;text-align:center;">
+		    <a href="/highspeed/default.aspx" class="LeftNavMenu">HIGH SPEED BOARD-TO-BOARD</a></td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdMicroEdgeCard" style="background-color:#FF3300;height:19px;text-align:center;">
+		    <a href="/microedgecard/default.aspx" class="LeftNavMenu">EDGE CARD / MICRO BACKPLANE</a></td>
+	</tr>
+	<tr>
+		<td><img id="Img1" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdMicroBoardToBoard" style="background-color:#FF3300;height:19px;text-align:center;">
+		    <a href="/microboardtoboard/default.aspx" class="LeftNavMenu">MICRO PITCH BOARD-TO-BOARD</a></td>
+	</tr>
+	<tr>
+		<td><img id="Img2" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdStdB2B" style="background-color:#FF3300;height:19px;text-align:center;">
+		    <a href="/standardboardtoboard/default.aspx" class="LeftNavMenu">STANDARD BOARD-TO-BOARD</a></td>
+	</tr>
+	<tr>
+		<td><img id="Img3" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdRuggedPower" style="background-color:#FF3300;height:19px;text-align:center;">
+		    <a href="/ruggedpower/default.aspx" class="LeftNavMenu">RUGGED / POWER</a></td>
+	</tr>
+	<tr>
+		<td><img id="Img4" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdHighSpeedCable" style="background-color:#990099;height:19px;text-align:center;">
+		    <a href="/highspeedcable/default.aspx" class="LeftNavMenu">HIGH SPEED CABLE ASSEMBLIES</a></td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdActiveOptics" style="background-color:#990099;height:19px;text-align:center;">
+		    <a href="/active-optics/default.aspx" class="LeftNavMenu">ACTIVE OPTICS</a></td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdRFCable" style="background-color:#990099;height:19px;text-align:center;">
+		    <a href="/rfcable/default.aspx" class="LeftNavMenu">RF CABLE AND COMPONENTS</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_15" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdDiscreteWire" style="background-color:#990099;height:19px;text-align:center;">
+		    <a href="/idcdiscretewire/default.aspx" class="LeftNavMenu">IDC / DISCRETE WIRE</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_17" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdPanelIO" style="background-color:#339900;height:19px;text-align:center;">
+		    <a href="/panelio/default.aspx" class="LeftNavMenu">PANEL &amp; I/O</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_19" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdIndustryStandards" style="background-color:#339900;height:19px;text-align:center;">
+	        <a href="/IndustryStandards/Default.aspx" id="ctl00_ctlLeft_A1" class="LeftNavMenu">STANDARDS / PLATFORMS</a></td>
+	</tr>
+	<tr>
+		<td><img id="Img5" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdCustom" style="background-color:#339900;height:19px;text-align:center;">
+		    <a href="/customproducts/default.aspx" class="LeftNavMenu">CUSTOM PRODUCTS</a></td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/sidebar_21.png" width="183" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdProductInfo" style="background-color:#0000CC;height:19px;text-align:center;">
+		    <a href="/productinformation/default.aspx" class="LeftNavMenu">PRODUCT INFORMATION</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_23" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdQualityTools" style="background-color:#0000cc;height:19px;text-align:center;">
+		    <a href="/qualitytools/default.aspx" class="LeftNavMenu">QUALITY / PROCESSING / TOOLS</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_25" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdSignalIntegrity" style="background-color:#0000cc;height:19px;text-align:center;">
+		    <a href="/signalintegrity/default.aspx" class="LeftNavMenu">SIGNAL INTEGRITY SERVICES</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_27" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdRuggedPowerIntegrity" style="background-color:#0000cc;height:19px;text-align:center;">
+		    <a href="/ruggedpowerintegrity/default.aspx" class="LeftNavMenu">RUGGED / POWER INTEGRITY</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_29" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdSuddenService" style="background-color:#0000cc;height:19px;text-align:center;">
+		    <a href="/SuddenService/Default.aspx" class="LeftNavMenu">SUDDEN SERVICE</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_31" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdServiceCenter" style="background-color:#0000cc;height:19px;text-align:center;">
+		    <a href="/servicecenter/default.aspx" class="LeftNavMenu">SERVICE CENTER</a></td>
+	</tr>
+	<tr>
+		<td><img id="sidebar_33" src="/images/navigation/spacer.gif" width="183" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td id="ctl00_ctlLeft_tdTechLibrary" style="background-color:#0000CC;height:19px;text-align:center;">
+		    <a href="/technicallibrary/default.aspx" class="LeftNavMenu">TECHNICAL LIBRARY</a></td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/sidebar_35.png" width="183" alt="" /></td>
+	</tr>
+</table>
+
+                        </td>
+                        
+                        <td style="width: 10px;">
+                            &nbsp;
+                        </td>
+                        <td style="vertical-align: top;">
+                            <table>
+                                <tr>
+                                    <td style="text-align: right;">
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 804px;">
+                                        
+    <div id="ctl00_MasterContent_pnlContent" style="width:600px;">
+	
+        <div id="divImg" style="display:none;"></div>
+        <map id="Map3" name="Map3">
+            <area alt="" shape="rect" coords="53,237,96,263" href="javascript:compose('ehelpdesk','','')" />
+            <area alt="" shape="rect" coords="475,265,531,286" href='http://www.samtec.com/search/site.aspx' />
+            <area alt="" shape="poly" coords="330,125,298,159,265,224,286,242,292,248,325,188,355,146" href='http://www.samtec.com' />
+        </map>
+        <map id="Map2" name="Map2">
+            <area alt="" shape="rect" coords="397,261,560,281" href='http://www.samtec.com/search/site.aspx' />
+            <area alt="" shape="rect" coords="282,262,373,282" href="javascript:compose('ehelpdesk','','')" />
+            <area alt="" shape="rect" coords="224,257,273,283" href='http://www.samtec.com' />
+        </map>
+        <map id="Map1" name="Map1">
+            <area alt="" shape="rect" coords="21,137,150,156" href='http://www.samtec.com/search/site.aspx' />
+            <area alt="" shape="rect" coords="22,156,109,175" href="javascript:compose('ehelpdesk','','')" />
+            <area alt="" shape="rect" coords="412,245,554,282" href='http://www.samtec.com' />
+        </map>
+     
+</div>
+     
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="border-bottom: solid 1px black;">
+                
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tr style="height:17;">
+		<td style="background-image:url('/images/navigation/footer_01.png');"></td>
+	</tr>
+	<tr  style="background-color:#FFFFCC; height:25;">
+		<td align="center">
+		    <a href="/ContactUs" class="QuickLink" style="font-size:10pt;">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/AboutUs" class="QuickLink" style="font-size:10pt;">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/Jobs" class="QuickLink" style="font-size:10pt;">Jobs</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/standard_products/environmental_compliance/samtec_compliance/our_environment.aspx" class="QuickLink" style="font-size:10pt;">Environmental Compliances</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/Help" class="QuickLink" style="font-size:10pt;">Help</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/News/News_Center.aspx" class="QuickLink" style="font-size:10pt;">Recent News</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		    <a href="/standard_products/new_products/menu.aspx" class="QuickLink" style="font-size:10pt;">New Products</a>
+		</td>
+	</tr>
+	<tr style="background-color:#FFFFCC; height:25;">
+		<td align="center"><img src="/images/spacerBottom.gif" height="25" width="1" border=0>
+		    <a href="/"><img src="/images/navigation/flag_usa.gif" border="0" alt="" /></a>&nbsp;
+		    <a href="/intl_sites/France"><img src="/images/navigation/flag_france.gif" border="0" alt="" 
+                style="height: 17px" /></a>&nbsp;
+		    <a href="/intl_sites/Italy"><img src="/images/navigation/flag_italy.gif" border="0" alt="" 
+                style="height: 17px" /></a>&nbsp;
+		    <a href="/intl_sites/China"><img src="/images/navigation/flag_china.gif" border="0" alt="" 
+                style="height: 17px" /></a>&nbsp;
+		    <a href="/intl_sites/Japan"><img src="/images/navigation/flag_japan.gif" border="0" alt="" 
+                style="height: 17px" /></a>&nbsp;
+		    <a href="/intl_sites/Korea"><img src="/images/navigation/flag_korea.gif" border="0" alt="" 
+		        style="height: 17px" /></a>&nbsp;
+        </td>
+	</tr>
+	<tr>
+		<td><img src="/images/navigation/footer_04.png" width="100%" height="13" alt="" /></td>
+	</tr>
+	<tr style="background-color:#FFFFCC;">
+		<td align="center">
+		    <a href="/aboutus/copyright.aspx" class="SmallText">Copyright © Samtec, Inc</a>&nbsp;&nbsp;&nbsp;
+		    <label class="SmallText">Tel: 1-800-SAMTEC-9</label>&nbsp;&nbsp;&nbsp;
+		    <label class="SmallText">1-812-944-6733</label>&nbsp;&nbsp;&nbsp;
+		    <label class="SmallText"><a href="javascript:compose('info','','')">Email Us</a></label>
+		</td>
+	</tr>
+</table>
+
+            </td>
+        </tr>
+        
+    </table>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get('ctl00_SamtecScriptManager_HiddenField').value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_ctlTop_tbweSearch_ClientState","WatermarkCssClass":"WaterMark","WatermarkText":"Enter Keyword or Series","id":"ctl00_ctlTop_tbweSearch"}, null, null, $get("ctl00_ctlTop_txtSearch"));
+});
+//]]>
+</script>
+</form>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-11472501-2");
+            pageTracker._setDomainName(".samtec.com");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script>
+
+    <!-- START OF SmartSource Data Collector TAG -->
+    <!-- Copyright (c) 1996-2010 WebTrends Inc.  All rights reserved. -->
+    <!-- Version: 9.3.0 -->
+    <!-- Tag Builder Version: 3.1  -->
+    <!-- Created: 12/29/2010 12:50:40 PM -->
+    <script src="/Includes/webtrends.js" type="text/javascript"></script>
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+    <!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+    <!-- ----------------------------------------------------------------------------------- -->
+    <script type="text/javascript">
+    //<![CDATA[
+        var _tag = new WebTrends();
+        _tag.dcsGetId();
+    //]]>
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+        _tag.dcsCustom = function () {
+            // Add custom parameters here.
+            //_tag.DCSext.param_name=param_value;
+        }
+        _tag.dcsCollect();
+    //]]>
+    </script>
+    <noscript>
+    <div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://statse.webtrendslive.com/dcs33rqozuz5bdysuif8heei3_2l4g/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.3.0&amp;WT.dcssip=www.Samtec.com"/></div>
+    </noscript>
+    <!-- END OF SmartSource Data Collector TAG -->
+
+</body>
+</html>

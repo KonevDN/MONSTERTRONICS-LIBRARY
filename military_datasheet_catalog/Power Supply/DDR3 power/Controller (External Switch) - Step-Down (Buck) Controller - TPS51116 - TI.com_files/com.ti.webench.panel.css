@@ -1,0 +1,307 @@
+div.TIwebenchPanel div,div.TIwebenchPanel span,
+div.TIwebenchPanel h1,div.TIwebenchPanel h2,
+div.TIwebenchPanel h3,div.TIwebenchPanel h4,
+div.TIwebenchPanel h5,div.TIwebenchPanel h6,
+div.TIwebenchPanel p,div.TIwebenchPanel blockquote,
+div.TIwebenchPanel pre,div.TIwebenchPanel  a,
+div.TIwebenchPanel em,div.TIwebenchPanel font,
+div.TIwebenchPanel img,div.TIwebenchPanel ins,
+div.TIwebenchPanel kbd,div.TIwebenchPanel q,
+div.TIwebenchPanel s,div.TIwebenchPanel samp,
+div.TIwebenchPanel small,div.TIwebenchPanel strike,
+div.TIwebenchPanel strong,div.TIwebenchPanel sub,
+div.TIwebenchPanel sup,div.TIwebenchPanel tt,
+div.TIwebenchPanel var,div.TIwebenchPanel b,
+div.TIwebenchPanel u,div.TIwebenchPanel i,
+div.TIwebenchPanel center,div.TIwebenchPanel dl,
+div.TIwebenchPanel dt,div.TIwebenchPanel dd,
+div.TIwebenchPanel ol,div.TIwebenchPanel ul,
+div.TIwebenchPanel li,div.TIwebenchPanel fieldset,
+div.TIwebenchPanel form,div.TIwebenchPanel label,
+div.TIwebenchPanel legend,div.TIwebenchPanel table,
+div.TIwebenchPanel caption,div.TIwebenchPanel tbody,
+div.TIwebenchPanel tfoot,div.TIwebenchPanel thead,
+div.TIwebenchPanel tr,div.TIwebenchPanel th,
+div.TIwebenchPanel td {
+	margin: 0;
+	padding: 0;
+	/*border: 0;*/
+	outline: 0;
+	/*font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;*/
+}
+
+div.TIwebenchPanel body {
+	line-height: 1;
+}
+div.TIwebenchPanel ol,div.TIwebenchPanel ul {
+	list-style: none;
+}
+div.TIwebenchPanel blockquote,div.TIwebenchPanel q {
+	quotes: none;
+}
+div.TIwebenchPanel blockquote:before,div.TIwebenchPanel blockquote:after,
+div.TIwebenchPanel q:before,div.TIwebenchPanel q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+div.TIwebenchPanel :focus {
+	outline: 0;
+}
+/* remember to highlight inserts somehow! */
+div.TIwebenchPanel ins {
+	text-decoration: none;
+}
+div.TIwebenchPanel del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+div.TIwebenchPanel table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of reset css */
+#wbpanel table{
+	font-family: "Arial", Verdana, Helvetica, sans-serif;
+	/*color:#525252;*/
+	color:#000;
+	font-size:12px;
+}
+/*table {
+	font-size:12px;}
+td {font-family: "Arial", Verdana, Helvetica, sans-serif;
+	color:#525252;}
+th {}*/
+.tbl {
+	width:300px;
+	border:2px solid #5e5e5e;
+	border-collapse:collapse;
+	margin:5px;
+	padding: 0;
+	table-layout:auto;
+	font-family: "Arial", Verdana, Helvetica, sans-serif;
+}
+.tblheading {
+	background-color:#5e5e5e;
+	height:30px;
+	color:#000;
+	padding:5px;
+	font-weight:bold;
+	font-size:14px;
+	text-align:left;
+	font-family: "Arial", Verdana, Helvetica, sans-serif;
+	vertical-align:middle;
+}
+.tblheading a:link, a:visited {
+	color:#000;
+	text-decoration: none;
+}
+.tbltr {
+	background-color:#ebebeb;
+	padding: 3px;
+}
+.tbltr a:link, a:active {
+	color:#118899;
+	text-decoration: none;
+}
+.tbltr a:link, a:visited {
+	color:#00BBCC;
+	text-decoration: none;
+/*	color:#FF0000;
+	font-weight:bold;*/
+}
+.innertblbg {
+	background-color:#ebebeb;
+}
+/*.tblinput {
+	font-size:12px;
+}*/
+div.TIwebenchPanel .txtInputBox {
+	text-align:center;
+	font-size:10px;
+}
+div.TIwebenchPanel .txtselectbox {
+	text-align:left;
+	font-size:12px;
+}
+div.TIwebenchPanel input.disabled {
+	border: 2px solid;
+	width:60px;
+	text-align:center;
+	font-size:10px;
+	-webkit-border-radius:0;-khtml-border-radius:0;-moz-border-radius:0;border-radius:0;
+	}
+div.TIwebenchPanel .btn1 { 
+	cursor:pointer;
+	color:#fff;
+	font-weight:bold; 
+	font-size:12px;
+	font-family: "Arial",Arial,Helvetica,sans-serif;
+	border:1px solid;
+	*border:1px solid;
+	overflow:visible; 
+	text-align:center;
+	padding:1px 5px; 
+	width:auto;
+	/* *width:30px; */
+	height:20px;
+}
+div.TIwebenchPanel .btn1 {
+	background:#d12424 url(http://www.ti.com/assets/en/images/homepage/btn-red-bg.gif) top left repeat;
+	border-color:#730000 #730000 #730000 #730000;
+}
+div.TIwebenchPanel a.btn1 {
+	color:#FFF;
+	text-decoration:none;
+	white-space:nowrap;
+}
+div.TIwebenchPanel a:visited.btn1, div.TIwebenchPanel a:active.btn1 {
+	color:#FFF;
+}
+div.TIwebenchPanel a:hover.btn1 {
+	color:#FFF;
+	text-decoration: underline;
+}
+div.TIwebenchPanel .expanded {
+	display:inline;
+}
+div.TIwebenchPanel .collasped {
+	display:none;
+}
+.WnavigationActive {
+	background: #FFFFFF;
+	border: 1px solid #5e5e5e;
+	border-top: 5px solid #CC0000;
+	border-bottom:0;
+	position: relative;
+	z-index: 10;
+	width: 59px;
+	top: 2px;
+	padding:0;
+	margin:0;
+	text-decoration: none;
+}
+.WnavigationActive span {
+	border:none;
+	text-decoration: none;
+	position:relative;
+	z-index: 10;
+	top: 2px;
+	color: #000;
+  	font-family: "Arial", Verdana, Helvetica, sans-serif;
+	line-height:14px;
+	padding:3px 0 0 0;
+	margin:0;
+}
+.WnavigationInactive {
+	border:none;
+	border-top: 6px solid #5e5e5e;
+	text-decoration: none;
+	position:relative;
+	z-index:0;
+	top:0;
+	padding:0;
+	margin:0;
+	width: 59px;
+}
+.WnavigationInactive span {
+	display:block;
+	background: #ebebeb;
+	border:1px solid #5e5e5e;
+	text-decoration:none;
+	position:relative;
+	z-index:0;
+	top:2px;
+	color: #000;
+	font-family: "Arial", Verdana, Helvetica, sans-serif;
+	line-height:14px;
+	padding:0 0 5px 0;
+	margin:0;
+}
+.WnavigationHover {
+	border:none;
+	border-top: 6px solid #5e5e5e;
+	text-decoration:none;
+	position:relative;
+	width: 59px;
+	z-index:0;
+	padding:0;
+	margin:0;
+	top:0;
+}
+
+.WnavigationHover a:hover {text-decoration:none;}
+
+
+.WnavigationHover span {
+	display:block;
+	text-decoration:none;
+	background-color:#FFFFFF;
+	border:1px solid #5e5e5e;
+	color: #CC0000;
+	font-family: "Arial", Verdana, Helvetica, sans-serif;
+	line-height:14px;
+	position:relative;
+	z-index:0;
+	top:2px;
+	padding:0;
+	margin:0;
+}
+td.WTabnavigation span{
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:0;
+	margin-top: 0px;
+	padding: 3px 0 3px 0;
+}
+td.WTabnavigation td{
+	list-style: none;
+	text-decoration: none;
+}
+td.WTabnavigation ul {
+	padding-left:1px;
+}
+td.WTabnavigation li
+{
+	float: left;
+	list-style: none;
+	margin-left: 0px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	padding-bottom: 3px;
+	padding-top: -3px;
+	margin-left:2px;
+	margin-right:1px;
+	margin-bottom:-2px;
+}
+div.WTabContent {
+  float: left;
+  border-top: 1px solid #5e5e5e;
+  cursor: auto;
+  padding: 0px;
+  width: 100%;
+/*  min-height: 227px; */
+  background-color:#FFFFFF;
+  font-family: "Arial", Verdana, Helvetica, sans-serif;
+}
+div.WTabContent td, div.WTabContent th {
+  padding: 2px 0;
+  margin:0;
+  font-family: "Arial", Verdana, Helvetica, sans-serif;
+  color:#000;
+  font-size:12px;
+}
+div.WTabContent INPUT, div.WTabContent OPTION, div.WTabContent SELECT {
+  font-size: 12px;
+}
+
+div.TIwebenchPanel {
+  width: 320px;
+  height: 240px;
+  border: 2px solid #5e5e5e;
+}

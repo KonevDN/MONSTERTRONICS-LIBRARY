@@ -1,0 +1,38 @@
+.literature-hb-volume { 
+    display: inline;
+    margin: 0.1em;
+    padding: 0.2em; 
+	font-size : 12pt;
+} 
+
+.literature-hb-topic { 
+    display: inline;
+    margin: 0.1em;
+    padding: 0.2em; 
+	font-size : 10pt;
+}
+
+.literature-hb-section { 
+    display: inline;
+    margin: 0.1em;
+    padding: 0.2em; 
+}
+
+.literature-hb-twisty{
+    display: inline;
+	font: bold 1em Arial; 
+	color: blue;
+	margin: 0.1em;
+    padding: 0.2em; 
+}
+
+.literature-hb-collapsable {
+	margin: 0.1em;
+    padding: 0.2em; 
+}
+
+.literature-subarea {
+	position:relative; left:-18px; top:-10px; 
+}
+
+div.content { width:680px; overflow:auto;}

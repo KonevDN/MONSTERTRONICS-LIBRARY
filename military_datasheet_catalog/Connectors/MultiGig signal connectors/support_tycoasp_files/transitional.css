@@ -1,0 +1,155 @@
+/* CSS Document */
+
+
+	.TE_dojoHelpToolTip{
+		padding: 8px; 
+		width:300px; 
+		/*display:none;*/
+	}
+	.TE_dojoHelpToolTipText{
+		/*display:none;*/
+	}
+	.TE_partEntryArea{
+		padding-top: 12px; 
+		padding-bottom: 6px;
+	}
+	.TE_partEntryTable{
+		background-color:#f7f7f7;
+	}
+	.TE_partNumberEntrySection{
+		padding: 4px;
+		width: 330px;
+		float: left;
+	}
+	.TE_partTypeEntrySection{
+		padding-top: 4px;
+		width: 250px;
+		float: left;	
+	}
+	.TE_partOptionalInputSection{
+		padding: 4px;
+	}
+	#TE_noBulletList{
+		width:250px;
+	}
+	#TE_noBulletList ul{
+		list-style:none;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left:0px;
+		padding-left:0px;
+		padding-right:0px;
+		margin-right:0px;
+	}	
+	#TE_noBulletList li{
+		list-style:none;
+		padding-top: 4px;
+		margin-left: 1px;
+		margin-top: 0px;
+		padding-left: 2px;
+		margin-left: 1px;
+		padding-right:0px;
+		margin-right:0px;		
+	}
+	#TE_partDetailArea{
+		padding-top:10px;
+		padding-left: 3px;
+	}
+	#TE_partDisplayArea{
+		text-align:center;
+	}
+	#TE_partStatusDisplay{
+		padding-top:10px;
+	}
+	#TE_rohsComplianceDisplay{
+		padding-top:10px;
+	}
+	#TE_descriptionTextArea{
+		padding-top: 2px;
+		padding-left:2px;
+	}
+	#TE_brandTextArea{
+		padding-left:2px;
+	}	
+	ul.TE_temp{
+		margin-top:0px;
+		padding-top:0px;
+		margin-left:14px;
+	}
+	.TE_topPaddedLabelDisplay{
+		padding-top:4px;
+	}
+	.TE_gpi_ul {
+	  margin : 0; 
+	  padding:2px 0px 1px 10px;
+	}
+	.TE_gpi_li {
+	  margin : 0 0 3px 10px;
+	  padding: 0;
+	  list-style-image:url(/_TEincludes/TEimages/TE_menuRightArrow.gif);
+	}		
+	.TE_updateRequestDetails{
+		border:1px solid silver; 
+		padding-top:4px; 
+		padding-bottom:4px; 
+		padding-left:2px; 
+		padding-right:2px;	
+	}
+	.TE_sectionLabel{
+		font-weight:bold;
+	}
+	
+	.TE_gpi_pricingDetailsSection{
+		border: 1px solid rgb(231, 231, 231); 
+		width:49%; 
+		float:left; 
+		height:100%;	
+	}
+	.TE_gpi_availabilityDetailsSection{
+		border: 1px solid rgb(231, 231, 231); 
+		width:49%; 
+		float:left; 
+		height:100%;	
+	}
+	.TE_availabilityRemarks{
+		margin-top:0px;
+		padding-top:1px;
+		margin-bottom:12px;
+	}
+	
+	.TE_Innertable{
+	  border: 1px solid silver;
+	}
+	
+	.TE_Innertable_grid{
+	  border: 1px solid silver;
+	}
+	
+	.TE_Innertable_grid td {
+  		border: solid 1px #dddddd;
+ 	}
+	
+	.TE_innertableColumnHeading{
+	  border-bottom: 1px solid silver;
+	  background-color: #F4F4F4;
+	  font-weight: bold;
+	  vertical-align:top;
+	}
+	.TE_innderTableColumnData{
+		vertical-align:top;
+	}
+	.TE_rightAlignedPricing{
+		float:right;
+	}
+	.TE_Innertable caption.level2{  
+	  background-color:#F7F7F7;
+	  padding-top:4px;
+	  padding-bottom:4px;
+	  padding-left:0px;
+  	  
+	}
+	div.Innertable_padding {
+		padding:4px;
+		list-style:armenian;
+	}
+	

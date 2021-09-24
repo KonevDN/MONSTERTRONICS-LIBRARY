@@ -1,0 +1,17 @@
+body {background-color: #ffffff; margin: 0px; font: 11pt verdana; color: #4b4b4b; text-align: left; direction: ltr;}
+.noMargins {border: none; margin: 0px; padding: 0px;}
+.nullText {font-size: 1px;}
+.hand {cursor: pointer;}
+
+.mainDiv {font: 11px verdana; color: #4b4b4b; background-color: #ebebeb; padding-left: 11px; padding-right: 11px; padding-top: 13px; padding-bottom: 12px;}
+.galleryTitle {font: bold 16px arial; color: #4b4b4b; width: 100%; padding-bottom: 11px; line-height: 20px;}
+.galleryDesc {font: 11px verdana; color: #4b4b4b; width: 100%; padding-bottom: 12px; line-height: 14px;}
+.galleryProp {font: bold 11px verdana; color: #4b4b4b; width: 100%; padding-bottom: 12px; line-height: 14px;}
+.galleryPropValue {font: 11px verdana; color: #4b4b4b;}
+.galleryPropTag {font: 11px verdana; color: #ea272a;}
+.galleryRelatedBox {border: solid 1px #9d9d9d; width: 211px; height: 398px; background-color: #ffffff;}
+.galleryRelated {font: bold 13px arial; color: #4b4b4b; padding-top: 5px; padding-left: 21px;}
+.galleryThumbTitle {font: 11px verdana; color: #000000; padding-top: 4px; line-height: 11px;}
+
+
+.debug {border: solid 1px green;}
