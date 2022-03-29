@@ -1,0 +1,4 @@
+git config --global core.longpaths true
+git config --system core.longpaths true
+git rebase
+git rebase --continue
